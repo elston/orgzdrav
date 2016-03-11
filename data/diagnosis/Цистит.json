@@ -1,0 +1,48 @@
+{
+    "forma": {
+        "order": 1,
+        "label": "<s> </s>",
+        "value": {
+            "id": "hrn",
+            "name": "хронический"
+        },
+        "mu": "",
+        "type": {
+            "name": "ComboBoxLocal",
+            "config": {
+                "hidden": false,
+                "width": 150,
+                "style": {
+                    "margin": "0px 0px 0px 0px"
+                },
+                "data": [
+                    ["act", "острый"],
+                    ["hrn", "хронический"]
+                ]
+            }
+        }
+    },
+    "stage": {
+        "order": 1,
+        "label": "<s> </s>",
+        "value": {
+            "id": "hrn",
+            "name": "хронический"
+        },
+        "mu": "",
+        "type": {
+            "name": "ComboBoxLocal",
+            "config": {
+                "hidden": false,
+                "width": 150,
+                "style": {
+                    "margin": "0px 0px 0px 0px"
+                },
+                "data": [
+                    ["act", "обострение"],
+                    ["rem", "ремиссия"]
+                ]
+            }
+        }
+    } 
+}

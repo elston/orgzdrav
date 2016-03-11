@@ -1,0 +1,26 @@
+{
+    "category": {
+        "order": 1,
+        "label": "<s>, </s>",
+        "value": {
+            "id": "pmt",
+            "name": "преждевременное"
+        },
+        "mu": "",
+        "type": {
+            "name": "ComboBoxLocal",
+            "config": {
+                "hidden": false,
+                "width": 150,
+                "style": {
+                    "margin": "0px 0px 0px 0px"
+                },
+                "data": [
+                    ["pmt", "преждевременное"],
+                    ["ptl", "дородовое"],
+                    ["erl", "ранее"]
+                ]
+            }
+        }
+    }
+}

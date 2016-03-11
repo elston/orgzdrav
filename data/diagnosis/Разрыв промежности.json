@@ -1,0 +1,28 @@
+{
+    "category": {
+        "order": 1,
+        "label": "<s> </s>",
+        "value": {
+            "id": "zro",
+            "name": "угрожающий"
+        },
+        "mu": "",
+        "type": {
+            "name": "ComboBoxLocal",
+            "config": {
+                "hidden": false,
+                "width": 150,
+                "style": {
+                    "margin": "0px 0px 0px 0px"
+                },
+                "data": [
+                    ["zro", "угрожающий"],
+                    ["one", "I степени"],
+                    ["two", "II степени"],
+                    ["tre", "III степени"],
+                    ["for", "IV степени"]                                        
+                ]
+            }
+        }
+    }
+}

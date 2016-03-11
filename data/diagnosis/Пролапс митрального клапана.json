@@ -1,0 +1,19 @@
+{
+    "degree": {
+        "order": 1,
+        "value": "",
+        "label": "<s> </s>",
+        "mu": "-й степени",        
+        "type": {
+            "name": "NumberField",
+            "config":{
+                "width": 20,
+                "hidden": false,
+                "allowDecimals": false,
+                "allowNegative": false,
+                "minValue":1,
+                "maxValue":3
+            }
+        }
+    }
+}

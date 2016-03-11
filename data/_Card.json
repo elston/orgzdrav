@@ -1,0 +1,379 @@
+{
+    "id": "01766a7d-cebd-408d-be15-587066161018",
+    "fio": "Авдеева Татьяна Сергеевна",
+    "birthday": "2012-12-12",
+    "organization": {
+        "id": "c71ddfe1-ca69-445f-a2fd-60da7f1f92c6",
+        "name": "ККБ №2",
+        "lavelmz": 2,
+        "fullname": "Краевая клиническая больница №2",
+        "is_perinatalcenter": true
+    },
+    "cardname": {
+        "id": "delivery",
+        "name": "Роды"
+    },
+    "store": {
+        "obmenka": {
+            "data": {
+                "visit": "2016-02-14",
+                "gestation": 8
+            },
+            "object": {
+                "id": "obmenka",
+                "form": "ObmenkaGridForm",
+                "name": "Oбменная карта",
+                "renderer": "obmenkaRenderer"
+            },
+            "datetime": "2016-02-14 14:32 +0300"
+        },
+        "children": [{
+            "data": {
+                "diagnoses": [{
+                    "id": "6eea2727-1000-465d-bb6b-3a80f890cd69",
+                    "name": "Бронхит",
+                    "fields": {}
+                }],
+                "childheight": 45,
+                "childnumber": 1,
+                "childweight": 3500,
+                "birthdatetime": "2016-02-14 14:31 +0300"
+            },
+            "object": {
+                "id": "children",
+                "form": "ChildrenGridForm",
+                "name": "История новорожденного",
+                "renderer": "childrenRenderer"
+            },
+            "datetime": "2016-02-14 14:31 +0300"
+        }, {
+            "data": {
+                "diagnoses": [{
+                    "id": "7918712d-5780-4504-b792-8f2ca7770e27",
+                    "name": "Гастрит",
+                    "fields": {}
+                }, {
+                    "id": "6eea2727-1000-465d-bb6b-3a80f890cd69",
+                    "name": "Бронхит",
+                    "fields": {}
+                }],
+                "childheight": 23,
+                "childnumber": 2,
+                "childweight": 4000,
+                "birthdatetime": "2016-02-14 14:44 +0300"
+            },
+            "object": {
+                "id": "children",
+                "form": "ChildrenGridForm",
+                "name": "История новорожденного",
+                "renderer": "childrenRenderer"
+            },
+            "datetime": "2016-02-14 14:44 +0300"
+        }],
+        "delivery": {
+            "data": {
+                "diagnoses": [{
+                    "id": "79776759-17e3-4445-8b31-ef589c44f8d0",
+                    "name": "Роды",
+                    "fields": {
+                        "number": {
+                            "mu": "- е",
+                            "label": "по счету:<s> </s>",
+                            "order": 1,
+                            "value": 2
+                        },
+                        "period": {
+                            "mu": "-й период",
+                            "label": "<s> </s>",
+                            "order": 6,
+                            "value": 2
+                        },
+                        "gestation": {
+                            "mu": "недель",
+                            "label": "срок:",
+                            "order": 5,
+                            "value": 26
+                        },
+                        "multiplety": {
+                            "mu": "",
+                            "label": "количество плодов:",
+                            "order": 2,
+                            "value": {
+                                "id": "uno",
+                                "name": "одноплодные"
+                            }
+                        }
+                    }
+                }, {
+                    "id": "7918712d-5780-4504-b792-8f2ca7770e27",
+                    "name": "Гастрит",
+                    "fields": {}
+                }],
+                "birthdatetime": "2016-02-15 12:59 +0300"
+            },
+            "object": {
+                "id": "delivery",
+                "form": "DeliveryGridForm",
+                "name": "Протокол родов",
+                "renderer": "deliveryRenderer"
+            },
+            "datetime": "2016-02-15 12:59 +0300"
+        },
+        "beginepicris": {
+            "data": {
+                "diagnoses": [{
+                    "id": "f615c006-7b6b-405d-a0ac-f9e55eab1ec6",
+                    "name": "Беременность",
+                    "fields": {
+                        "gestation": {
+                            "mu": "недель",
+                            "label": "",
+                            "order": 1,
+                            "value": 12
+                        },
+                        "multiplety": {
+                            "mu": "",
+                            "label": "количество плодов:",
+                            "order": 3,
+                            "value": {
+                                "id": "uno",
+                                "name": "одноплодная"
+                            }
+                        },
+                        "progresivity": {
+                            "mu": "",
+                            "label": "прогрессирование:",
+                            "order": 2,
+                            "value": {
+                                "id": "yes",
+                                "name": "прогрессирующая"
+                            }
+                        }
+                    }
+                }]
+            },
+            "object": {
+                "id": "beginepicris",
+                "form": "EpicrisGridForm",
+                "name": "Первичный осмотр",
+                "renderer": "beginEpicrisRenderer"
+            },
+            "datetime": "2016-02-14 14:31 +0300"
+        },
+        "enterorganization": {
+            "data": {
+                "cardnumber": 123
+            },
+            "object": {
+                "id": "enterorganization",
+                "form": "EnterOrganizationGridForm",
+                "name": "Поступление в мед.уч.",
+                "renderer": "enterOrganizationRenderer"
+            },
+            "datetime": "2016-02-14 14:31 +0300"
+        }
+    }
+} {
+    "id": "872a8791-d03f-4269-9709-4a5b1eede366",
+    "fio": "Волченко Анастасия Евгеньевна",
+    "birthday": "2016-02-11",
+    "organization": {
+        "id": "c71ddfe1-ca69-445f-a2fd-60da7f1f92c6",
+        "name": "ККБ №2",
+        "lavelmz": 2,
+        "fullname": "Краевая клиническая больница №2",
+        "is_perinatalcenter": true
+    },
+    "cardname": {
+        "id": "delivery",
+        "name": "Роды"
+    },
+    "store": {
+        "cesarean": {
+            "data": {
+                "diagnoses": [{
+                    "id": "f615c006-7b6b-405d-a0ac-f9e55eab1ec6",
+                    "name": "Беременность",
+                    "fields": {
+                        "gestation": {
+                            "mu": "недель",
+                            "label": "",
+                            "order": 1,
+                            "value": 40
+                        },
+                        "multiplety": {
+                            "mu": "",
+                            "label": "количество плодов:",
+                            "order": 3,
+                            "value": {
+                                "id": "uno",
+                                "name": "одноплодная"
+                            }
+                        },
+                        "progresivity": {
+                            "mu": "",
+                            "label": "прогрессирование:",
+                            "order": 2,
+                            "value": {
+                                "id": "yes",
+                                "name": "прогрессирующая"
+                            }
+                        }
+                    }
+                }, {
+                    "id": "dfe4602b-fac7-4d0b-9b4b-e9eef09af366",
+                    "name": "Предлежание плаценты",
+                    "fields": {}
+                }],
+                "birthdatetime": "2016-02-14 16:30 +0300"
+            },
+            "object": {
+                "id": "cesarean",
+                "form": "CesareanGridForm",
+                "name": "Протокол кесарева сечения",
+                "renderer": "cesareanRenderer"
+            },
+            "datetime": "2016-02-14 16:14 +0300"
+        },
+        "children": [{
+            "data": {
+                "diagnoses": [{
+                    "id": "7918712d-5780-4504-b792-8f2ca7770e27",
+                    "name": "Гастрит",
+                    "fields": {}
+                }],
+                "childheight": 40,
+                "childnumber": 1,
+                "childweight": 3500,
+                "birthdatetime": "2016-02-14 16:14 +0300"
+            },
+            "object": {
+                "id": "children",
+                "form": "ChildrenGridForm",
+                "name": "История новорожденного",
+                "renderer": "childrenRenderer"
+            },
+            "datetime": "2016-02-14 16:14 +0300"
+        }],
+        "beginepicris": {
+            "data": {
+                "diagnoses": [{
+                    "id": "f615c006-7b6b-405d-a0ac-f9e55eab1ec6",
+                    "name": "Беременность",
+                    "fields": {
+                        "gestation": {
+                            "mu": "недель",
+                            "label": "",
+                            "order": 1,
+                            "value": 40
+                        },
+                        "multiplety": {
+                            "mu": "",
+                            "label": "количество плодов:",
+                            "order": 3,
+                            "value": {
+                                "id": "uno",
+                                "name": "одноплодная"
+                            }
+                        },
+                        "progresivity": {
+                            "mu": "",
+                            "label": "прогрессирование:",
+                            "order": 2,
+                            "value": {
+                                "id": "yes",
+                                "name": "прогрессирующая"
+                            }
+                        }
+                    }
+                }, {
+                    "id": "dfe4602b-fac7-4d0b-9b4b-e9eef09af366",
+                    "name": "Предлежание плаценты",
+                    "fields": {}
+                }]
+            },
+            "object": {
+                "id": "beginepicris",
+                "form": "EpicrisGridForm",
+                "name": "Первичный осмотр",
+                "renderer": "beginEpicrisRenderer"
+            },
+            "datetime": "2016-02-14 16:13 +0300"
+        },
+        "finishepicris": {
+            "data": {
+                "diagnoses": [{
+                    "id": "f615c006-7b6b-405d-a0ac-f9e55eab1ec6",
+                    "name": "Беременность",
+                    "fields": {
+                        "gestation": {
+                            "mu": "недель",
+                            "label": "",
+                            "order": 1,
+                            "value": 40
+                        },
+                        "multiplety": {
+                            "mu": "",
+                            "label": "количество плодов:",
+                            "order": 3,
+                            "value": {
+                                "id": "uno",
+                                "name": "одноплодная"
+                            }
+                        },
+                        "progresivity": {
+                            "mu": "",
+                            "label": "прогрессирование:",
+                            "order": 2,
+                            "value": {
+                                "id": "yes",
+                                "name": "прогрессирующая"
+                            }
+                        }
+                    }
+                }, {
+                    "id": "dfe4602b-fac7-4d0b-9b4b-e9eef09af366",
+                    "name": "Предлежание плаценты",
+                    "fields": {}
+                }, {
+                    "id": "27ba3b8e-3a01-4ea2-af07-b302106b2b2d",
+                    "name": "Кесарево сечение",
+                    "fields": {
+                        "category": {
+                            "mu": "",
+                            "label": "<s> </s>",
+                            "order": 1,
+                            "value": {
+                                "id": "lwr",
+                                "name": "в нижнем сегменте"
+                            }
+                        }
+                    }
+                }, {
+                    "id": "42255e31-1a0b-4205-b724-c9740f982e63",
+                    "name": "Длительная эпидуральная анестезия",
+                    "fields": {}
+                }]
+            },
+            "object": {
+                "id": "finishepicris",
+                "form": "EpicrisGridForm",
+                "name": "Выписной эпикриз",
+                "renderer": "finishEpicrisRenderer"
+            },
+            "datetime": "2016-02-14 16:15 +0300"
+        },
+        "enterorganization": {
+            "data": {
+                "cardnumber": 123
+            },
+            "object": {
+                "id": "enterorganization",
+                "form": "EnterOrganizationGridForm",
+                "name": "Поступление в мед.уч.",
+                "renderer": "enterOrganizationRenderer"
+            },
+            "datetime": "2016-02-10 12:23 +0300"
+        }
+    }
+}

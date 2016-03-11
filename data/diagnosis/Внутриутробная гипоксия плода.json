@@ -1,0 +1,25 @@
+{
+    "category": {
+        "order": 1,
+        "label": "<s>, </s>",
+        "value": {
+            "id":"slw",
+            "name":"хроническая"
+        },
+        "mu": "",        
+        "type": {
+            "name": "ComboBoxLocal",
+            "config":{
+                "hidden": false,
+                "width": 150,
+                "style":{
+                    "margin":"0px 0px 0px 0px"
+                },
+                "data": [
+                    ["slw", "хроническая"],
+                    ["spd", "острая"]                    
+                ]
+            }
+        }
+    }
+}

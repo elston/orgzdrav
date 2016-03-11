@@ -1,0 +1,39 @@
+{
+    "category": {
+        "order": 1,
+        "label": "<s>:</s>",
+        "value": {
+            "id":"vsd",
+            "name":"Дефект межжелудочковой перегородки"
+        },
+        "mu": "",        
+        "type": {
+            "name": "ComboBoxLocal",
+            "config":{
+                "hidden": false,
+                "width": 260,
+                "style":{
+                    "margin":"0px 0px 0px 0px"
+                },
+                "data": [
+                    ["vsd", "Дефект межжелудочковой перегородки"],
+                    ["asd","Дефект межпредсердной перегородки"]
+                ]
+            }
+        }
+    },
+    "surgeoned": {
+        "order": 2,
+        "value": "",
+        "label": "<s>Состояние после оперативного лечения в </s>",
+        "mu": "г.",        
+        "type": {
+            "name": "YearNumberField",
+            "config":{
+                "hidden": false,
+                "allowDecimals": false,
+                "allowNegative": false
+            }
+        }
+    }
+}

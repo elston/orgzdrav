@@ -1,0 +1,36 @@
+//kmldo.department
+[{
+    "id":"roddom",
+    "text": "Перинатальный центр",
+    "leaf":false,
+    "singleClickExpand":true,
+    "children":[{
+        "id":"gyn",
+        "text": "Гинекология",
+        "leaf":true
+    },{
+        "id":"rodzal",
+        "text": "Родильное отделение",
+        "leaf":true
+    },{
+        "id":"apb1",
+        "text": "АПБ №1",
+        "leaf":true    
+    },{
+        "id":"apb2",
+        "text": "АПБ №2",
+        "leaf":true
+    },{
+        "id":"fo",
+        "text": "Отделение физиологии",
+        "leaf":true
+    },{
+        "id":"obs",
+        "text": "АО №2",
+        "leaf":true
+    },{
+        "id":"aro3",
+        "text": "АРО №3",
+        "leaf":true
+    }]
+}]

@@ -1,0 +1,208 @@
+id           | 48a5066b-9039-49a6-a211-e8e4f7e6de6c
+fio          | Ильичева Ольга Сергеевна
+birthday     | 1993-07-10
+organization | {"id": "c71ddfe1-ca69-445f-a2fd-60da7f1f92c6", "name": "ККБ №2", "fullname": "Краевая клиническая больница №2"}
+cardname     | {"id": "delivery", "name": "Роды"}
+store        | 
+{
+    "beginepicris": {
+        "data": [{
+            "id": "f615c006-7b6b-405d-a0ac-f9e55eab1ec6",
+            "name": "Беременность",
+            "fields": {
+                "gestation": {
+                    "mu": "недель",
+                    "label": "",
+                    "order": 1,
+                    "value": 39
+                },
+                "multiplety": {
+                    "mu": "",
+                    "label": "количество плодов:",
+                    "order": 3,
+                    "value": {
+                        "id": "uno",
+                        "name": "одноплодная"
+                    }
+                },
+                "progresivity": {
+                    "mu": "",
+                    "label": "прогрессирование:",
+                    "order": 2,
+                    "value": {
+                        "id": "yes",
+                        "name": "прогрессирующая"
+                    }
+                }
+            }
+        }, {
+            "id": "ea5ee130-86ab-4a51-9bcc-0483fe6e357c",
+            "name": "Врожденный порок сердца",
+            "fields": {
+                "category": {
+                    "mu": "",
+                    "label": "<s>:</s>",
+                    "order": 1,
+                    "value": {
+                        "id": "vsd",
+                        "name": "Дефект межжелудочковой перегородки"
+                    }
+                },
+                "surgeoned": {
+                    "mu": "г.",
+                    "label": "<s>Состояние после оперативного лечения в </s>",
+                    "order": 2,
+                    "value": 2003
+                }
+            }
+        }, {
+            "id": "13a7d809-c8b7-4afc-a25a-3f9cdd7cd672",
+            "name": "Пролапс митрального клапана",
+            "fields": {
+                "gestation": {
+                    "mu": "-й степени",
+                    "label": "",
+                    "order": 1,
+                    "value": 1
+                }
+            }
+        }, {
+            "id": "23c2d612-a9f9-4fd4-bd34-22bae384a352",
+            "name": "Легочная гипертензия",
+            "fields": {
+                "power": {
+                    "mu": "",
+                    "label": "<s>, </s>",
+                    "order": 1,
+                    "value": {
+                        "id": "mid",
+                        "name": "умеренная"
+                    }
+                }
+            }
+        }],
+        "object": {
+            "id": "beginepicris",
+            "form": "EpicrisGridForm",
+            "name": "Первичный осмотр",
+            "renderer": "beginEpicrisRenderer"
+        },
+        "datetime": "2016-02-08 16:58 +0300"
+    },
+    "finishepicris": {
+        "data": [{
+            "id": "79776759-17e3-4445-8b31-ef589c44f8d0",
+            "name": "Роды",
+            "fields": {
+                "number": {
+                    "mu": "- е",
+                    "label": "по счету:",
+                    "order": 1,
+                    "value": 1
+                },
+                "gestation": {
+                    "mu": "недель",
+                    "label": "срок:",
+                    "order": 2,
+                    "value": 40
+                }
+            }
+        }, {
+            "id": "f5c96fdb-7d68-4841-bb15-3f40604cbcd0",
+            "name": "Хроническая плацентарная недостаточность",
+            "fields": {
+                "category": {
+                    "mu": "",
+                    "label": "<s>:</s>",
+                    "order": 1,
+                    "value": {
+                        "id": "ifh",
+                        "name": "Внутриутробная гипоксия плода"
+                    }
+                }
+            }
+        }, {
+            "id": "ea5ee130-86ab-4a51-9bcc-0483fe6e357c",
+            "name": "Врожденный порок сердца",
+            "fields": {
+                "category": {
+                    "mu": "",
+                    "label": "<s>:</s>",
+                    "order": 1,
+                    "value": {
+                        "id": "vsd",
+                        "name": "Дефект межжелудочковой перегородки"
+                    }
+                },
+                "surgeoned": {
+                    "mu": "г.",
+                    "label": "<s>Состояние после оперативного лечения в </s>",
+                    "order": 2,
+                    "value": 2003
+                }
+            }
+        }, {
+            "id": "13a7d809-c8b7-4afc-a25a-3f9cdd7cd672",
+            "name": "Пролапс митрального клапана",
+            "fields": {
+                "gestation": {
+                    "mu": "-й степени",
+                    "label": "",
+                    "order": 1,
+                    "value": 1
+                }
+            }
+        }, {
+            "id": "e53f3186-ab26-4129-a614-9ca188237794",
+            "name": "Лапаротомия",
+            "fields": {
+                "incision": {
+                    "mu": "",
+                    "label": "<s> </s>",
+                    "order": 1,
+                    "value": {
+                        "id": "pfn",
+                        "name": "по Пфанненштилю"
+                    }
+                }
+            }
+        }, {
+            "id": "27ba3b8e-3a01-4ea2-af07-b302106b2b2d",
+            "name": "Кесарево сечение",
+            "fields": {
+                "category": {
+                    "mu": "",
+                    "label": "<s> </s>",
+                    "order": 1,
+                    "value": {
+                        "id": "lwr",
+                        "name": "в нижнем сегменте"
+                    }
+                }
+            }
+        }, {
+            "id": "42255e31-1a0b-4205-b724-c9740f982e63",
+            "name": "Длительная эпидуральная анестезия",
+            "fields": {}
+        }, {
+            "id": "1b142060-149e-43be-864d-55bb82ab539b",
+            "name": "Лохиометра",
+            "fields": {}
+        }, {
+            "id": "9f9a5d9d-01e0-4bfe-b843-0c98963bab09",
+            "name": "Вакуум-аспирация содержимого полости матки",
+            "fields": {}
+        }, {
+            "id": "3261dc31-59e2-4c53-8dae-94ae187245ce",
+            "name": "Серома послеоперационного шва",
+            "fields": {}
+        }],
+        "object": {
+            "id": "finishepicris",
+            "form": "EpicrisGridForm",
+            "name": "Выписной эпикриз",
+            "renderer": "finishEpicrisRenderer"
+        },
+        "datetime": "2016-02-08 17:00 +0300"
+    }
+}

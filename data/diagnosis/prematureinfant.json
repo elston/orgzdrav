@@ -1,0 +1,19 @@
+{
+    "gestation": {
+        "order": 1,
+        "value": "",
+        "label": "<s> </s>",
+        "mu": "недель",        
+        "type": {
+            "name": "NumberField",
+            "config":{
+                "width": 30,
+                "hidden": false,
+                "allowDecimals": false,
+                "allowNegative": false,
+                "minValue":4,
+                "maxValue":43
+            }
+        }
+    }
+}

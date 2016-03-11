@@ -1,0 +1,141 @@
+{
+    "number": {
+        "order": 1,
+        "value": "",
+        "label": "по счету:<s> </s>",
+        "mu": "- е",        
+        "type": {
+            "name": "NumberField",
+            "config":{
+                "width": 15,
+                "hidden": false,
+                "allowDecimals": false,
+                "allowNegative": false,
+                "minValue":1,
+                "maxValue":30
+            }
+        }
+    },
+    "multiplety": {
+        "order": 2,
+        "label": "количество плодов:",
+        "value": {
+            "id":"uno",
+            "name":"одноплодные"
+        },
+        "mu": "",        
+        "type": {
+            "name": "ComboBoxLocal",
+            "config":{
+                "hidden": false,
+                "width": 150,
+                "style":{
+                    "margin":"0px 0px 0px 0px"
+                },
+                "data": [
+                    ["uno", "одноплодные"],
+                    ["duo", "двойня"],
+                    ["tre", "тройня"],
+                    ["qua", "четверня"],
+                    ["cin", "пятерня"]
+                ],
+                "rule": {
+                    "value": {
+                        "id":"uno",
+                        "name":"одноплодные"
+                    },
+                    "condition": false,
+                    "fields": ["horionity", "amnionity"],
+                    "hidden": true
+                }                
+            }
+        }
+    },
+    "horionity": {
+        "order": 3,
+        "label": "хорион:",
+        "value": {
+            "id":"mon",
+            "name":"монохориальная"
+        },
+        "mu": "",        
+        "type": {
+            "name": "ComboBoxLocal",
+            "config":{
+                "hidden": true,
+                "width": 150,
+                "style":{
+                    "margin":"0px 0px 0px 0px"
+                },                
+                "data": [
+                    ["mon", "монохориальная"],
+                    ["bis", "бихориальная"],
+                    ["tri", "трихориальная"],
+                    ["tet", "тетрахориальная"],
+                    ["pen", "пентахориальная"]
+                ]                
+            }
+        }
+    },
+    "amnionity": {
+        "order": 4,
+        "label": "амнион:",
+        "value": {
+            "id":"mon",
+            "name":"моноамниотическая"
+        },
+        "mu": "",        
+        "type": {
+            "name": "ComboBoxLocal",
+            "config":{
+                "hidden": true,
+                "width": 150,
+                "style":{
+                    "margin":"0px 0px 0px 0px"
+                },                
+                "data": [
+                    ["mon", "моноамниотическая"],
+                    ["bis", "биамниотическая"],
+                    ["tri", "триамниотическая"],
+                    ["tet", "тетраамниотическая"],
+                    ["pen", "пентаамниотическая"]
+                ]                
+            }
+        }
+    },    
+    "gestation": {
+        "order": 5,
+        "value": "",
+        "label": "срок:",
+        "mu": "недель",        
+        "type": {
+            "name": "NumberField",
+            "config":{
+                "width": 25,                
+                "hidden": false,
+                "allowDecimals": false,
+                "allowNegative": false,
+                "minValue":4,
+                "maxValue":43
+            }
+        }
+    },
+    "period": {
+        "order": 6,
+        "value": "",
+        "label": "<s> </s>",
+        "mu": "-й период",        
+        "type": {
+            "name": "NumberField",
+            "config":{
+                "width": 15,                
+                "hidden": false,
+                "allowDecimals": false,
+                "allowNegative": false,
+                "allowBlank":true,                
+                "minValue":1,
+                "maxValue":2
+            }
+        }
+    }    
+}

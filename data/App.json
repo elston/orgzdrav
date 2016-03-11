@@ -1,0 +1,3 @@
+{"id":"acb3e9c0-716b-469b-9e8e-fc5f32c4ba1c","code":2,"name":"Заболеваемость","xurl":"morbidity:index","descr":"Анализ заболеваемости"}
+{"id":"b1d78bf8-5e7d-4efc-aa76-eb40d71be683","code":1,"name":"Структура","xurl":"structure:index","descr":"Стуктура учреждений"}
+{"id":"ce24c563-ff83-4f4e-8238-2db83ea47619","code":2,"name":"Изменение пароля","xurl":"accounts:passchange","descr":"Изменение пароля"}

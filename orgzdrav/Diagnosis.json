@@ -33,6 +33,14 @@
 },
 {
  "model": "orgzdrav.diagnosis",
+ "pk": "arnoldchiarisyndrome",
+ "fields": {
+  "name": "\u0421\u0438\u043d\u0434\u0440\u043e\u043c \u0410\u0440\u043d\u043e\u043b\u044c\u0434\u0430-\u0425\u0438\u0430\u0440\u0438",
+  "fields": ""
+ }
+},
+{
+ "model": "orgzdrav.diagnosis",
  "pk": "arterialhypertension",
  "fields": {
   "name": "\u0410\u0440\u0442\u0435\u0440\u0438\u0430\u043b\u044c\u043d\u0430\u044f \u0433\u0438\u043f\u0435\u0440\u0442\u0435\u043d\u0437\u0438\u044f",
@@ -41,9 +49,33 @@
 },
 {
  "model": "orgzdrav.diagnosis",
+ "pk": "bacterialsepsisnewborn",
+ "fields": {
+  "name": "\u0411\u0430\u043a\u0442\u0435\u0440\u0438\u0430\u043b\u044c\u043d\u044b\u0439 \u0441\u0435\u043f\u0441\u0438\u0441 \u043d\u043e\u0432\u043e\u0440\u043e\u0436\u0434\u0435\u043d\u043d\u043e\u0433\u043e",
+  "fields": ""
+ }
+},
+{
+ "model": "orgzdrav.diagnosis",
  "pk": "badcoagblood",
  "fields": {
   "name": "\u041d\u0430\u0440\u0443\u0448\u0435\u043d\u0438\u0435 \u0441\u0432\u0435\u0440\u0442\u044b\u0432\u0430\u0435\u043c\u043e\u0441\u0442\u0438 \u043a\u0440\u043e\u0432\u0438",
+  "fields": ""
+ }
+},
+{
+ "model": "orgzdrav.diagnosis",
+ "pk": "birthasphyxia",
+ "fields": {
+  "name": "\u0410\u0441\u0444\u0438\u043a\u0441\u0438\u044f \u043f\u0440\u0438 \u0440\u043e\u0434\u0430\u0445",
+  "fields": ""
+ }
+},
+{
+ "model": "orgzdrav.diagnosis",
+ "pk": "birthtrauma",
+ "fields": {
+  "name": "\u0420\u043e\u0434\u043e\u0432\u0430\u044f \u0442\u0440\u0430\u0432\u043c\u0430",
   "fields": ""
  }
 },
@@ -71,30 +103,38 @@
   "fields": {
    "category": {
     "order": 1,
+    "value": {
+     "name": "\u0432 \u043d\u0438\u0436\u043d\u0435\u043c \u0441\u0435\u0433\u043c\u0435\u043d\u0442\u0435",
+     "id": "lwr"
+    },
+    "label": "<s> </s>",
     "type": {
      "config": {
-      "width": 150,
+      "hidden": false,
       "data": [
        [
         "lwr",
         "\u0432 \u043d\u0438\u0436\u043d\u0435\u043c \u0441\u0435\u0433\u043c\u0435\u043d\u0442\u0435"
        ]
       ],
-      "hidden": false,
+      "width": 150,
       "style": {
        "margin": "0px 0px 0px 0px"
       }
      },
      "name": "ComboBoxLocal"
     },
-    "value": {
-     "id": "lwr",
-     "name": "\u0432 \u043d\u0438\u0436\u043d\u0435\u043c \u0441\u0435\u0433\u043c\u0435\u043d\u0442\u0435"
-    },
-    "mu": "",
-    "label": "<s> </s>"
+    "mu": ""
    }
   }
+ }
+},
+{
+ "model": "orgzdrav.diagnosis",
+ "pk": "congenitalpneumonia",
+ "fields": {
+  "name": "\u0412\u0440\u043e\u0436\u0434\u0451\u043d\u043d\u0430\u044f \u043f\u043d\u0435\u0432\u043c\u043e\u043d\u0438\u044f",
+  "fields": ""
  }
 },
 {
@@ -111,40 +151,16 @@
  "fields": {
   "name": "\u0426\u0438\u0441\u0442\u0438\u0442",
   "fields": {
-   "forma": {
-    "order": 1,
-    "type": {
-     "config": {
-      "width": 150,
-      "data": [
-       [
-        "act",
-        "\u043e\u0441\u0442\u0440\u044b\u0439"
-       ],
-       [
-        "hrn",
-        "\u0445\u0440\u043e\u043d\u0438\u0447\u0435\u0441\u043a\u0438\u0439"
-       ]
-      ],
-      "hidden": false,
-      "style": {
-       "margin": "0px 0px 0px 0px"
-      }
-     },
-     "name": "ComboBoxLocal"
-    },
-    "value": {
-     "id": "hrn",
-     "name": "\u0445\u0440\u043e\u043d\u0438\u0447\u0435\u0441\u043a\u0438\u0439"
-    },
-    "mu": "",
-    "label": "<s> </s>"
-   },
    "stage": {
     "order": 1,
+    "value": {
+     "name": "\u0445\u0440\u043e\u043d\u0438\u0447\u0435\u0441\u043a\u0438\u0439",
+     "id": "hrn"
+    },
+    "label": "<s> </s>",
     "type": {
      "config": {
-      "width": 150,
+      "hidden": false,
       "data": [
        [
         "act",
@@ -155,19 +171,43 @@
         "\u0440\u0435\u043c\u0438\u0441\u0441\u0438\u044f"
        ]
       ],
-      "hidden": false,
+      "width": 150,
       "style": {
        "margin": "0px 0px 0px 0px"
       }
      },
      "name": "ComboBoxLocal"
     },
+    "mu": ""
+   },
+   "forma": {
+    "order": 1,
     "value": {
-     "id": "hrn",
-     "name": "\u0445\u0440\u043e\u043d\u0438\u0447\u0435\u0441\u043a\u0438\u0439"
+     "name": "\u0445\u0440\u043e\u043d\u0438\u0447\u0435\u0441\u043a\u0438\u0439",
+     "id": "hrn"
     },
-    "mu": "",
-    "label": "<s> </s>"
+    "label": "<s> </s>",
+    "type": {
+     "config": {
+      "hidden": false,
+      "data": [
+       [
+        "act",
+        "\u043e\u0441\u0442\u0440\u044b\u0439"
+       ],
+       [
+        "hrn",
+        "\u0445\u0440\u043e\u043d\u0438\u0447\u0435\u0441\u043a\u0438\u0439"
+       ]
+      ],
+      "width": 150,
+      "style": {
+       "margin": "0px 0px 0px 0px"
+      }
+     },
+     "name": "ComboBoxLocal"
+    },
+    "mu": ""
    }
   }
  }
@@ -178,11 +218,33 @@
  "fields": {
   "name": "\u0420\u043e\u0434\u044b",
   "fields": {
-   "amnionity": {
-    "order": 4,
+   "number": {
+    "order": 1,
+    "value": "",
+    "label": "\u043f\u043e \u0441\u0447\u0435\u0442\u0443:<s> </s>",
     "type": {
      "config": {
-      "width": 150,
+      "width": 15,
+      "minValue": 1,
+      "allowDecimals": false,
+      "allowNegative": false,
+      "hidden": false,
+      "maxValue": 30
+     },
+     "name": "NumberField"
+    },
+    "mu": "- \u0435"
+   },
+   "amnionity": {
+    "order": 4,
+    "value": {
+     "name": "\u043c\u043e\u043d\u043e\u0430\u043c\u043d\u0438\u043e\u0442\u0438\u0447\u0435\u0441\u043a\u0430\u044f",
+     "id": "mon"
+    },
+    "label": "\u0430\u043c\u043d\u0438\u043e\u043d:",
+    "type": {
+     "config": {
+      "hidden": true,
       "data": [
        [
         "mon",
@@ -205,104 +267,25 @@
         "\u043f\u0435\u043d\u0442\u0430\u0430\u043c\u043d\u0438\u043e\u0442\u0438\u0447\u0435\u0441\u043a\u0430\u044f"
        ]
       ],
-      "hidden": true,
-      "style": {
-       "margin": "0px 0px 0px 0px"
-      }
-     },
-     "name": "ComboBoxLocal"
-    },
-    "value": {
-     "id": "mon",
-     "name": "\u043c\u043e\u043d\u043e\u0430\u043c\u043d\u0438\u043e\u0442\u0438\u0447\u0435\u0441\u043a\u0430\u044f"
-    },
-    "mu": "",
-    "label": "\u0430\u043c\u043d\u0438\u043e\u043d:"
-   },
-   "period": {
-    "order": 6,
-    "type": {
-     "config": {
-      "allowDecimals": false,
-      "maxValue": 2,
-      "allowNegative": false,
-      "width": 15,
-      "minValue": 1,
-      "hidden": false,
-      "allowBlank": true
-     },
-     "name": "NumberField"
-    },
-    "value": "",
-    "mu": "-\u0439 \u043f\u0435\u0440\u0438\u043e\u0434",
-    "label": "<s> </s>"
-   },
-   "horionity": {
-    "order": 3,
-    "type": {
-     "config": {
       "width": 150,
-      "data": [
-       [
-        "mon",
-        "\u043c\u043e\u043d\u043e\u0445\u043e\u0440\u0438\u0430\u043b\u044c\u043d\u0430\u044f"
-       ],
-       [
-        "bis",
-        "\u0431\u0438\u0445\u043e\u0440\u0438\u0430\u043b\u044c\u043d\u0430\u044f"
-       ],
-       [
-        "tri",
-        "\u0442\u0440\u0438\u0445\u043e\u0440\u0438\u0430\u043b\u044c\u043d\u0430\u044f"
-       ],
-       [
-        "tet",
-        "\u0442\u0435\u0442\u0440\u0430\u0445\u043e\u0440\u0438\u0430\u043b\u044c\u043d\u0430\u044f"
-       ],
-       [
-        "pen",
-        "\u043f\u0435\u043d\u0442\u0430\u0445\u043e\u0440\u0438\u0430\u043b\u044c\u043d\u0430\u044f"
-       ]
-      ],
-      "hidden": true,
       "style": {
        "margin": "0px 0px 0px 0px"
       }
      },
      "name": "ComboBoxLocal"
     },
-    "value": {
-     "id": "mon",
-     "name": "\u043c\u043e\u043d\u043e\u0445\u043e\u0440\u0438\u0430\u043b\u044c\u043d\u0430\u044f"
-    },
-    "mu": "",
-    "label": "\u0445\u043e\u0440\u0438\u043e\u043d:"
-   },
-   "number": {
-    "order": 1,
-    "type": {
-     "config": {
-      "allowDecimals": false,
-      "maxValue": 30,
-      "allowNegative": false,
-      "width": 15,
-      "minValue": 1,
-      "hidden": false
-     },
-     "name": "NumberField"
-    },
-    "value": "",
-    "mu": "- \u0435",
-    "label": "\u043f\u043e \u0441\u0447\u0435\u0442\u0443:<s> </s>"
+    "mu": ""
    },
    "multiplety": {
     "order": 2,
+    "value": {
+     "name": "\u043e\u0434\u043d\u043e\u043f\u043b\u043e\u0434\u043d\u044b\u0435",
+     "id": "uno"
+    },
+    "label": "\u043a\u043e\u043b\u0438\u0447\u0435\u0441\u0442\u0432\u043e \u043f\u043b\u043e\u0434\u043e\u0432:",
     "type": {
      "config": {
-      "width": 150,
-      "style": {
-       "margin": "0px 0px 0px 0px"
-      },
+      "hidden": false,
       "data": [
        [
         "uno",
@@ -325,45 +308,102 @@
         "\u043f\u044f\u0442\u0435\u0440\u043d\u044f"
        ]
       ],
-      "hidden": false,
+      "style": {
+       "margin": "0px 0px 0px 0px"
+      },
+      "width": 150,
       "rule": {
        "value": {
-        "id": "uno",
-        "name": "\u043e\u0434\u043d\u043e\u043f\u043b\u043e\u0434\u043d\u0430\u044f"
+        "name": "\u043e\u0434\u043d\u043e\u043f\u043b\u043e\u0434\u043d\u044b\u0435",
+        "id": "uno"
        },
+       "hidden": true,
+       "condition": false,
        "fields": [
         "horionity",
         "amnionity"
-       ],
-       "condition": false,
-       "hidden": true
+       ]
       }
      },
      "name": "ComboBoxLocal"
     },
-    "value": {
-     "id": "uno",
-     "name": "\u043e\u0434\u043d\u043e\u043f\u043b\u043e\u0434\u043d\u044b\u0435"
-    },
-    "mu": "",
-    "label": "\u043a\u043e\u043b\u0438\u0447\u0435\u0441\u0442\u0432\u043e \u043f\u043b\u043e\u0434\u043e\u0432:"
+    "mu": ""
    },
-   "gestation": {
-    "order": 5,
+   "horionity": {
+    "order": 3,
+    "value": {
+     "name": "\u043c\u043e\u043d\u043e\u0445\u043e\u0440\u0438\u0430\u043b\u044c\u043d\u0430\u044f",
+     "id": "mon"
+    },
+    "label": "\u0445\u043e\u0440\u0438\u043e\u043d:",
     "type": {
      "config": {
+      "hidden": true,
+      "data": [
+       [
+        "mon",
+        "\u043c\u043e\u043d\u043e\u0445\u043e\u0440\u0438\u0430\u043b\u044c\u043d\u0430\u044f"
+       ],
+       [
+        "bis",
+        "\u0431\u0438\u0445\u043e\u0440\u0438\u0430\u043b\u044c\u043d\u0430\u044f"
+       ],
+       [
+        "tri",
+        "\u0442\u0440\u0438\u0445\u043e\u0440\u0438\u0430\u043b\u044c\u043d\u0430\u044f"
+       ],
+       [
+        "tet",
+        "\u0442\u0435\u0442\u0440\u0430\u0445\u043e\u0440\u0438\u0430\u043b\u044c\u043d\u0430\u044f"
+       ],
+       [
+        "pen",
+        "\u043f\u0435\u043d\u0442\u0430\u0445\u043e\u0440\u0438\u0430\u043b\u044c\u043d\u0430\u044f"
+       ]
+      ],
+      "width": 150,
+      "style": {
+       "margin": "0px 0px 0px 0px"
+      }
+     },
+     "name": "ComboBoxLocal"
+    },
+    "mu": ""
+   },
+   "period": {
+    "order": 6,
+    "value": "",
+    "label": "<s> </s>",
+    "type": {
+     "config": {
+      "allowBlank": true,
+      "width": 15,
+      "minValue": 1,
       "allowDecimals": false,
-      "maxValue": 43,
       "allowNegative": false,
-      "width": 25,
-      "minValue": 4,
-      "hidden": false
+      "hidden": false,
+      "maxValue": 2
      },
      "name": "NumberField"
     },
+    "mu": "-\u0439 \u043f\u0435\u0440\u0438\u043e\u0434"
+   },
+   "gestation": {
+    "order": 5,
     "value": "",
-    "mu": "\u043d\u0435\u0434\u0435\u043b\u044c",
-    "label": "\u0441\u0440\u043e\u043a:"
+    "label": "\u0441\u0440\u043e\u043a:",
+    "type": {
+     "config": {
+      "width": 25,
+      "minValue": 4,
+      "allowDecimals": false,
+      "allowNegative": false,
+      "hidden": false,
+      "maxValue": 43
+     },
+     "name": "NumberField"
+    },
+    "mu": "\u043d\u0435\u0434\u0435\u043b\u044c"
    }
   }
  }
@@ -397,6 +437,14 @@
  "pk": "discoordinationlabor",
  "fields": {
   "name": "\u0414\u0438\u0441\u043a\u043e\u043e\u0440\u0434\u0438\u043d\u0430\u0446\u0438\u044f \u0440\u043e\u0434\u043e\u0432\u043e\u0439 \u0434\u0435\u044f\u0442\u0435\u043b\u044c\u043d\u043e\u0441\u0442\u0438",
+  "fields": ""
+ }
+},
+{
+ "model": "orgzdrav.diagnosis",
+ "pk": "dissemintravascoag",
+ "fields": {
+  "name": "\u0414\u0412\u0421 \u043f\u043b\u043e\u0434\u0430 \u0438\u043b\u0438 \u043d\u043e\u0432\u043e\u0440\u043e\u0436\u0434\u0435\u043d\u043d\u043e\u0433\u043e",
   "fields": ""
  }
 },
@@ -448,9 +496,14 @@
   "fields": {
    "degree": {
     "order": 1,
+    "value": {
+     "name": "\u043b\u0435\u0433\u043a\u043e\u0439",
+     "id": "lgt"
+    },
+    "label": "<s> </s>",
     "type": {
      "config": {
-      "width": 150,
+      "hidden": false,
       "data": [
        [
         "lgt",
@@ -465,21 +518,24 @@
         "\u0442\u044f\u0436\u0435\u043b\u043e\u0439"
        ]
       ],
-      "hidden": false,
+      "width": 150,
       "style": {
        "margin": "0px 0px 0px 0px"
       }
      },
      "name": "ComboBoxLocal"
     },
-    "value": {
-     "id": "lgt",
-     "name": "\u043b\u0435\u0433\u043a\u043e\u0439"
-    },
-    "mu": "\u0441\u0442\u0435\u043f\u0435\u043d\u0438",
-    "label": "<s> </s>"
+    "mu": "\u0441\u0442\u0435\u043f\u0435\u043d\u0438"
    }
   }
+ }
+},
+{
+ "model": "orgzdrav.diagnosis",
+ "pk": "haemoldisnewborn",
+ "fields": {
+  "name": "\u0413\u0435\u043c\u043e\u043b\u0438\u0442\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u0431\u043e\u043b\u0435\u0437\u043d\u044c \u043f\u043b\u043e\u0434\u0430 \u0438\u043b\u0438 \u043d\u043e\u0432\u043e\u0440\u043e\u0436\u0434\u0435\u043d\u043d\u043e\u0433\u043e",
+  "fields": ""
  }
 },
 {
@@ -508,9 +564,33 @@
 },
 {
  "model": "orgzdrav.diagnosis",
+ "pk": "impetigo",
+ "fields": {
+  "name": "\u0418\u043c\u043f\u0435\u0442\u0438\u0433\u043e",
+  "fields": ""
+ }
+},
+{
+ "model": "orgzdrav.diagnosis",
  "pk": "incrementplacenta",
  "fields": {
   "name": "\u041f\u0440\u0438\u0440\u0430\u0449\u0435\u043d\u0438\u0435 \u043f\u043b\u0430\u0446\u0435\u043d\u0442\u044b",
+  "fields": ""
+ }
+},
+{
+ "model": "orgzdrav.diagnosis",
+ "pk": "intracranlacerhaemorrhage",
+ "fields": {
+  "name": "\u0412\u043d\u0443\u0442\u0440\u0438\u0447\u0435\u0440\u0435\u043f\u043d\u043e\u0435 \u043f\u043e\u0432\u0440\u0435\u0436\u0434\u0435\u043d\u0438\u0435 \u0442\u043a\u0430\u043d\u0435\u0439 \u0438 \u043a\u0440\u043e\u0432\u043e\u0438\u0437\u043b\u0435\u044f\u043d\u0438\u0435",
+  "fields": ""
+ }
+},
+{
+ "model": "orgzdrav.diagnosis",
+ "pk": "intracrannontraumhaemorrhage",
+ "fields": {
+  "name": "\u0412\u043d\u0443\u0442\u0440\u0438\u0436\u0435\u043b\u0443\u0434\u043e\u0447\u043a\u043e\u0432\u044b\u0435 \u043a\u0440\u043e\u0432\u043e\u0438\u0437\u043b\u0438\u044f\u043d\u0438\u044f (\u043d\u0435\u0442\u0440\u0430\u0432\u043c\u0430\u0442\u0438\u0447\u0435\u0441\u043a\u0438\u0435) \u043d\u043e\u0432\u043e\u0440\u043e\u0436\u0434\u0435\u043d\u043d\u043e\u0433\u043e",
   "fields": ""
  }
 },
@@ -522,19 +602,19 @@
   "fields": {
    "degree": {
     "order": 1,
+    "value": "",
+    "label": "<s> </s>",
     "type": {
      "config": {
-      "allowDecimals": false,
       "allowNegative": false,
-      "maxValue": 3,
+      "hidden": false,
       "minValue": 1,
-      "hidden": false
+      "maxValue": 3,
+      "allowDecimals": false
      },
      "name": "NumberField"
     },
-    "value": "",
-    "mu": "-\u0439 \u0441\u0442\u0435\u043f\u0435\u043d\u0438",
-    "label": "<s> </s>"
+    "mu": "-\u0439 \u0441\u0442\u0435\u043f\u0435\u043d\u0438"
    }
   }
  }
@@ -547,9 +627,14 @@
   "fields": {
    "category": {
     "order": 1,
+    "value": {
+     "name": "\u0445\u0440\u043e\u043d\u0438\u0447\u0435\u0441\u043a\u0430\u044f",
+     "id": "slw"
+    },
+    "label": "<s>, </s>",
     "type": {
      "config": {
-      "width": 150,
+      "hidden": false,
       "data": [
        [
         "slw",
@@ -560,19 +645,14 @@
         "\u043e\u0441\u0442\u0440\u0430\u044f"
        ]
       ],
-      "hidden": false,
+      "width": 150,
       "style": {
        "margin": "0px 0px 0px 0px"
       }
      },
      "name": "ComboBoxLocal"
     },
-    "value": {
-     "id": "slw",
-     "name": "\u0445\u0440\u043e\u043d\u0438\u0447\u0435\u0441\u043a\u0430\u044f"
-    },
-    "mu": "",
-    "label": "<s>, </s>"
+    "mu": ""
    }
   }
  }
@@ -593,28 +673,28 @@
   "fields": {
    "incision": {
     "order": 1,
+    "value": {
+     "name": "\u043f\u043e \u041f\u0444\u0430\u043d\u043d\u0435\u043d\u0448\u0442\u0438\u043b\u044e",
+     "id": "pfn"
+    },
+    "label": "<s> </s>",
     "type": {
      "config": {
-      "width": 150,
+      "hidden": false,
       "data": [
        [
         "pfn",
         "\u043f\u043e \u041f\u0444\u0430\u043d\u043d\u0435\u043d\u0448\u0442\u0438\u043b\u044e"
        ]
       ],
-      "hidden": false,
+      "width": 150,
       "style": {
        "margin": "0px 0px 0px 0px"
       }
      },
      "name": "ComboBoxLocal"
     },
-    "value": {
-     "id": "pfn",
-     "name": "\u043f\u043e \u041f\u0444\u0430\u043d\u043d\u0435\u043d\u0448\u0442\u0438\u043b\u044e"
-    },
-    "mu": "",
-    "label": "<s> </s>"
+    "mu": ""
    }
   }
  }
@@ -643,22 +723,54 @@
   "fields": {
    "degree": {
     "order": 1,
+    "value": "",
+    "label": "<s> </s>",
     "type": {
      "config": {
-      "allowDecimals": false,
-      "maxValue": 3,
-      "allowNegative": false,
       "width": 20,
       "minValue": 1,
-      "hidden": false
+      "allowDecimals": false,
+      "allowNegative": false,
+      "hidden": false,
+      "maxValue": 3
      },
      "name": "NumberField"
     },
-    "value": "",
-    "mu": "-\u0439 \u0441\u0442\u0435\u043f\u0435\u043d\u0438",
-    "label": "<s> </s>"
+    "mu": "-\u0439 \u0441\u0442\u0435\u043f\u0435\u043d\u0438"
    }
   }
+ }
+},
+{
+ "model": "orgzdrav.diagnosis",
+ "pk": "neoasppneumonia",
+ "fields": {
+  "name": "\u041d\u0435\u043e\u043d\u0430\u0442\u0430\u043b\u044c\u043d\u0430\u044f \u0430\u0441\u043f\u0438\u0440\u0430\u0446\u0438\u043e\u043d\u043d\u0430\u044f \u043f\u043d\u0435\u0432\u043c\u043e\u043d\u0438\u044f",
+  "fields": ""
+ }
+},
+{
+ "model": "orgzdrav.diagnosis",
+ "pk": "neoaspsynd",
+ "fields": {
+  "name": "\u041d\u0435\u043e\u043d\u0430\u0442\u0430\u043b\u044c\u043d\u044b\u0439 \u0430\u0441\u043f\u0438\u0440\u0430\u0446\u0438\u043e\u043d\u044b\u0439 \u0441\u0438\u043d\u0434\u0440\u043e\u043c",
+  "fields": ""
+ }
+},
+{
+ "model": "orgzdrav.diagnosis",
+ "pk": "neonatalcoma",
+ "fields": {
+  "name": "\u041d\u0435\u043e\u043d\u0430\u0442\u0430\u043b\u044c\u043d\u0430\u044f \u043a\u043e\u043c\u0430",
+  "fields": ""
+ }
+},
+{
+ "model": "orgzdrav.diagnosis",
+ "pk": "neonataljaundice",
+ "fields": {
+  "name": "\u0416\u0435\u043b\u0442\u0443\u0445\u0430 \u043d\u043e\u0432\u043e\u0440\u043e\u0436\u0434\u0435\u043d\u043d\u043e\u0433\u043e",
+  "fields": ""
  }
 },
 {
@@ -685,9 +797,14 @@
   "fields": {
    "category": {
     "order": 1,
+    "value": {
+     "name": "\u0443\u0433\u0440\u043e\u0436\u0430\u044e\u0449\u0438\u0439",
+     "id": "zro"
+    },
+    "label": "<s> </s>",
     "type": {
      "config": {
-      "width": 150,
+      "hidden": false,
       "data": [
        [
         "zro",
@@ -710,19 +827,14 @@
         "IV \u0441\u0442\u0435\u043f\u0435\u043d\u0438"
        ]
       ],
-      "hidden": false,
+      "width": 150,
       "style": {
        "margin": "0px 0px 0px 0px"
       }
      },
      "name": "ComboBoxLocal"
     },
-    "value": {
-     "id": "zro",
-     "name": "\u0443\u0433\u0440\u043e\u0436\u0430\u044e\u0449\u0438\u0439"
-    },
-    "mu": "",
-    "label": "<s> </s>"
+    "mu": ""
    }
   }
  }
@@ -737,15 +849,28 @@
 },
 {
  "model": "orgzdrav.diagnosis",
+ "pk": "pharyngitis",
+ "fields": {
+  "name": "\u0424\u0430\u0440\u0438\u043d\u0433\u0438\u0442",
+  "fields": ""
+ }
+},
+{
+ "model": "orgzdrav.diagnosis",
  "pk": "placentalinsufficiency",
  "fields": {
   "name": "\u041f\u043b\u0430\u0446\u0435\u043d\u0442\u0430\u0440\u043d\u0430\u044f \u043d\u0435\u0434\u043e\u0441\u0442\u0430\u0442\u043e\u0447\u043d\u043e\u0441\u0442\u044c",
   "fields": {
    "category": {
     "order": 1,
+    "value": {
+     "name": "\u0445\u0440\u043e\u043d\u0438\u0447\u0435\u0441\u043a\u0430\u044f",
+     "id": "slw"
+    },
+    "label": "<s>, </s>",
     "type": {
      "config": {
-      "width": 150,
+      "hidden": false,
       "data": [
        [
         "slw",
@@ -756,19 +881,14 @@
         "\u043e\u0441\u0442\u0440\u0430\u044f"
        ]
       ],
-      "hidden": false,
+      "width": 150,
       "style": {
        "margin": "0px 0px 0px 0px"
       }
      },
      "name": "ComboBoxLocal"
     },
-    "value": {
-     "id": "slw",
-     "name": "\u0445\u0440\u043e\u043d\u0438\u0447\u0435\u0441\u043a\u0430\u044f"
-    },
-    "mu": "",
-    "label": "<s>, </s>"
+    "mu": ""
    }
   }
  }
@@ -789,21 +909,21 @@
   "fields": {
    "day": {
     "order": 1,
+    "value": "",
+    "label": "<s> </s>",
     "type": {
      "config": {
-      "allowDecimals": false,
-      "maxValue": 200,
-      "allowNegative": false,
+      "allowBlank": true,
       "width": 25,
       "minValue": 1,
+      "allowDecimals": false,
+      "allowNegative": false,
       "hidden": false,
-      "allowBlank": true
+      "maxValue": 200
      },
      "name": "NumberField"
     },
-    "value": "",
-    "mu": "- \u0435 \u0441\u0443\u0442\u043a\u0438",
-    "label": "<s> </s>"
+    "mu": "- \u0435 \u0441\u0443\u0442\u043a\u0438"
    }
   }
  }
@@ -832,22 +952,22 @@
   "fields": {
    "surgyear": {
     "order": 1,
+    "value": "",
+    "label": "<s> \u0432 </s>",
     "type": {
      "config": {
+      "allowBlank": true,
+      "width": 40,
       "allowDecimals": false,
       "allowNegative": false,
+      "hidden": false,
       "style": {
        "margin": "0px 0px 0px 0px"
-      },
-      "width": 40,
-      "hidden": false,
-      "allowBlank": true
+      }
      },
      "name": "YearNumberField"
     },
-    "value": "",
-    "mu": "\u0433.",
-    "label": "<s> \u0432 </s>"
+    "mu": "\u0433."
    }
   }
  }
@@ -874,134 +994,33 @@
  "fields": {
   "name": "\u0411\u0435\u0440\u0435\u043c\u0435\u043d\u043d\u043e\u0441\u0442\u044c",
   "fields": {
-   "horionity": {
-    "order": 4,
+   "number": {
+    "order": 1,
+    "value": "",
+    "label": "\u043f\u043e \u0441\u0447\u0435\u0442\u0443:<s> </s>",
     "type": {
      "config": {
-      "width": 150,
-      "data": [
-       [
-        "mon",
-        "\u043c\u043e\u043d\u043e\u0445\u043e\u0440\u0438\u0430\u043b\u044c\u043d\u0430\u044f"
-       ],
-       [
-        "bis",
-        "\u0431\u0438\u0445\u043e\u0440\u0438\u0430\u043b\u044c\u043d\u0430\u044f"
-       ],
-       [
-        "tri",
-        "\u0442\u0440\u0438\u0445\u043e\u0440\u0438\u0430\u043b\u044c\u043d\u0430\u044f"
-       ],
-       [
-        "tet",
-        "\u0442\u0435\u0442\u0440\u0430\u0445\u043e\u0440\u0438\u0430\u043b\u044c\u043d\u0430\u044f"
-       ],
-       [
-        "pen",
-        "\u043f\u0435\u043d\u0442\u0430\u0445\u043e\u0440\u0438\u0430\u043b\u044c\u043d\u0430\u044f"
-       ]
-      ],
-      "hidden": true,
-      "style": {
-       "margin": "0px 0px 0px 0px"
-      }
-     },
-     "name": "ComboBoxLocal"
-    },
-    "value": {
-     "id": "mon",
-     "name": "\u043c\u043e\u043d\u043e\u0445\u043e\u0440\u0438\u0430\u043b\u044c\u043d\u0430\u044f"
-    },
-    "mu": "",
-    "label": "\u0445\u043e\u0440\u0438\u043e\u043d:"
-   },
-   "multiplety": {
-    "order": 3,
-    "type": {
-     "config": {
-      "width": 150,
-      "style": {
-       "margin": "0px 0px 0px 0px"
-      },
-      "data": [
-       [
-        "uno",
-        "\u043e\u0434\u043d\u043e\u043f\u043b\u043e\u0434\u043d\u0430\u044f"
-       ],
-       [
-        "duo",
-        "\u0434\u0432\u043e\u0439\u043d\u044f"
-       ],
-       [
-        "tre",
-        "\u0442\u0440\u043e\u0439\u043d\u044f"
-       ],
-       [
-        "qua",
-        "\u0447\u0435\u0442\u0432\u0435\u0440\u043d\u044f"
-       ],
-       [
-        "cin",
-        "\u043f\u044f\u0442\u0435\u0440\u043d\u044f"
-       ]
-      ],
+      "width": 15,
+      "minValue": 1,
+      "allowDecimals": false,
+      "allowNegative": false,
       "hidden": false,
-      "rule": {
-       "value": {
-        "id": "uno",
-        "name": "\u043e\u0434\u043d\u043e\u043f\u043b\u043e\u0434\u043d\u0430\u044f"
-       },
-       "fields": [
-        "horionity",
-        "amnionity"
-       ],
-       "condition": false,
-       "hidden": true
-      }
+      "maxValue": 30
      },
-     "name": "ComboBoxLocal"
+     "name": "NumberField"
     },
-    "value": {
-     "id": "uno",
-     "name": "\u043e\u0434\u043d\u043e\u043f\u043b\u043e\u0434\u043d\u0430\u044f"
-    },
-    "mu": "",
-    "label": "\u043a\u043e\u043b\u0438\u0447\u0435\u0441\u0442\u0432\u043e \u043f\u043b\u043e\u0434\u043e\u0432:"
-   },
-   "progresivity": {
-    "order": 2,
-    "type": {
-     "config": {
-      "width": 150,
-      "data": [
-       [
-        "yes",
-        "\u043f\u0440\u043e\u0433\u0440\u0435\u0441\u0441\u0438\u0440\u0443\u044e\u0449\u0430\u044f"
-       ],
-       [
-        "no",
-        "\u0437\u0430\u043c\u0435\u0440\u0448\u0430\u044f"
-       ]
-      ],
-      "hidden": false,
-      "style": {
-       "margin": "0px 0px 0px 0px"
-      }
-     },
-     "name": "ComboBoxLocal"
-    },
-    "value": {
-     "id": "yes",
-     "name": "\u043f\u0440\u043e\u0433\u0440\u0435\u0441\u0441\u0438\u0440\u0443\u044e\u0449\u0430\u044f"
-    },
-    "mu": "",
-    "label": "\u043f\u0440\u043e\u0433\u0440\u0435\u0441\u0441\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u0435:"
+    "mu": "- \u044f"
    },
    "amnionity": {
-    "order": 5,
+    "order": 6,
+    "value": {
+     "name": "\u043c\u043e\u043d\u043e\u0430\u043c\u043d\u0438\u043e\u0442\u0438\u0447\u0435\u0441\u043a\u0430\u044f",
+     "id": "mon"
+    },
+    "label": "\u0430\u043c\u043d\u0438\u043e\u043d:",
     "type": {
      "config": {
-      "width": 150,
+      "hidden": true,
       "data": [
        [
         "mon",
@@ -1024,35 +1043,153 @@
         "\u043f\u0435\u043d\u0442\u0430\u0430\u043c\u043d\u0438\u043e\u0442\u0438\u0447\u0435\u0441\u043a\u0430\u044f"
        ]
       ],
-      "hidden": true,
+      "width": 150,
       "style": {
        "margin": "0px 0px 0px 0px"
       }
      },
      "name": "ComboBoxLocal"
     },
-    "value": {
-     "id": "mon",
-     "name": "\u043c\u043e\u043d\u043e\u0430\u043c\u043d\u0438\u043e\u0442\u0438\u0447\u0435\u0441\u043a\u0430\u044f"
-    },
-    "mu": "",
-    "label": "\u0430\u043c\u043d\u0438\u043e\u043d:"
+    "mu": ""
    },
-   "gestation": {
-    "order": 1,
+   "multiplety": {
+    "order": 4,
+    "value": {
+     "name": "\u043e\u0434\u043d\u043e\u043f\u043b\u043e\u0434\u043d\u0430\u044f",
+     "id": "uno"
+    },
+    "label": "\u043a\u043e\u043b\u0438\u0447\u0435\u0441\u0442\u0432\u043e \u043f\u043b\u043e\u0434\u043e\u0432:",
     "type": {
      "config": {
-      "allowDecimals": false,
+      "hidden": false,
+      "data": [
+       [
+        "uno",
+        "\u043e\u0434\u043d\u043e\u043f\u043b\u043e\u0434\u043d\u0430\u044f"
+       ],
+       [
+        "duo",
+        "\u0434\u0432\u043e\u0439\u043d\u044f"
+       ],
+       [
+        "tre",
+        "\u0442\u0440\u043e\u0439\u043d\u044f"
+       ],
+       [
+        "qua",
+        "\u0447\u0435\u0442\u0432\u0435\u0440\u043d\u044f"
+       ],
+       [
+        "cin",
+        "\u043f\u044f\u0442\u0435\u0440\u043d\u044f"
+       ]
+      ],
+      "style": {
+       "margin": "0px 0px 0px 0px"
+      },
+      "width": 150,
+      "rule": {
+       "value": {
+        "name": "\u043e\u0434\u043d\u043e\u043f\u043b\u043e\u0434\u043d\u0430\u044f",
+        "id": "uno"
+       },
+       "hidden": true,
+       "condition": false,
+       "fields": [
+        "horionity",
+        "amnionity"
+       ]
+      }
+     },
+     "name": "ComboBoxLocal"
+    },
+    "mu": ""
+   },
+   "horionity": {
+    "order": 5,
+    "value": {
+     "name": "\u043c\u043e\u043d\u043e\u0445\u043e\u0440\u0438\u0430\u043b\u044c\u043d\u0430\u044f",
+     "id": "mon"
+    },
+    "label": "\u0445\u043e\u0440\u0438\u043e\u043d:",
+    "type": {
+     "config": {
+      "hidden": true,
+      "data": [
+       [
+        "mon",
+        "\u043c\u043e\u043d\u043e\u0445\u043e\u0440\u0438\u0430\u043b\u044c\u043d\u0430\u044f"
+       ],
+       [
+        "bis",
+        "\u0431\u0438\u0445\u043e\u0440\u0438\u0430\u043b\u044c\u043d\u0430\u044f"
+       ],
+       [
+        "tri",
+        "\u0442\u0440\u0438\u0445\u043e\u0440\u0438\u0430\u043b\u044c\u043d\u0430\u044f"
+       ],
+       [
+        "tet",
+        "\u0442\u0435\u0442\u0440\u0430\u0445\u043e\u0440\u0438\u0430\u043b\u044c\u043d\u0430\u044f"
+       ],
+       [
+        "pen",
+        "\u043f\u0435\u043d\u0442\u0430\u0445\u043e\u0440\u0438\u0430\u043b\u044c\u043d\u0430\u044f"
+       ]
+      ],
+      "width": 150,
+      "style": {
+       "margin": "0px 0px 0px 0px"
+      }
+     },
+     "name": "ComboBoxLocal"
+    },
+    "mu": ""
+   },
+   "progresivity": {
+    "order": 3,
+    "value": {
+     "name": "\u043f\u0440\u043e\u0433\u0440\u0435\u0441\u0441\u0438\u0440\u0443\u044e\u0449\u0430\u044f",
+     "id": "yes"
+    },
+    "label": "\u043f\u0440\u043e\u0433\u0440\u0435\u0441\u0441\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u0435:",
+    "type": {
+     "config": {
+      "hidden": false,
+      "data": [
+       [
+        "yes",
+        "\u043f\u0440\u043e\u0433\u0440\u0435\u0441\u0441\u0438\u0440\u0443\u044e\u0449\u0430\u044f"
+       ],
+       [
+        "no",
+        "\u0437\u0430\u043c\u0435\u0440\u0448\u0430\u044f"
+       ]
+      ],
+      "width": 150,
+      "style": {
+       "margin": "0px 0px 0px 0px"
+      }
+     },
+     "name": "ComboBoxLocal"
+    },
+    "mu": ""
+   },
+   "gestation": {
+    "order": 2,
+    "value": "",
+    "label": "",
+    "type": {
+     "config": {
       "allowNegative": false,
-      "maxValue": 43,
+      "hidden": false,
       "minValue": 4,
-      "hidden": false
+      "maxValue": 43,
+      "allowDecimals": false
      },
      "name": "NumberField"
     },
-    "value": "",
-    "mu": "\u043d\u0435\u0434\u0435\u043b\u044c",
-    "label": ""
+    "mu": "\u043d\u0435\u0434\u0435\u043b\u044c"
    }
   }
  }
@@ -1073,20 +1210,20 @@
   "fields": {
    "gestation": {
     "order": 1,
+    "value": "",
+    "label": "<s> </s>",
     "type": {
      "config": {
-      "allowDecimals": false,
-      "maxValue": 43,
-      "allowNegative": false,
       "width": 30,
       "minValue": 4,
-      "hidden": false
+      "allowDecimals": false,
+      "allowNegative": false,
+      "hidden": false,
+      "maxValue": 43
      },
      "name": "NumberField"
     },
-    "value": "",
-    "mu": "\u043d\u0435\u0434\u0435\u043b\u044c",
-    "label": "<s> </s>"
+    "mu": "\u043d\u0435\u0434\u0435\u043b\u044c"
    }
   }
  }
@@ -1107,9 +1244,14 @@
   "fields": {
    "power": {
     "order": 1,
+    "value": {
+     "name": "\u0423\u043c\u0435\u0440\u0435\u043d\u043d\u0430\u044f",
+     "id": "mid"
+    },
+    "label": "<s>, </s>",
     "type": {
      "config": {
-      "width": 150,
+      "hidden": false,
       "data": [
        [
         "mid",
@@ -1120,21 +1262,24 @@
         "\u0432\u044b\u0440\u0430\u0436\u0435\u043d\u043d\u0430\u044f"
        ]
       ],
-      "hidden": false,
+      "width": 150,
       "style": {
        "margin": "0px 0px 0px 0px"
       }
      },
      "name": "ComboBoxLocal"
     },
-    "value": {
-     "id": "mid",
-     "name": "\u0423\u043c\u0435\u0440\u0435\u043d\u043d\u0430\u044f"
-    },
-    "mu": "",
-    "label": "<s>, </s>"
+    "mu": ""
    }
   }
+ }
+},
+{
+ "model": "orgzdrav.diagnosis",
+ "pk": "respiratorydistressnewborn",
+ "fields": {
+  "name": "\u0414\u044b\u0445\u0430\u0442\u0435\u043b\u044c\u043d\u043e\u0435 \u0440\u0430\u0441\u0442\u0440\u043e\u0439\u0441\u0442\u0432\u043e \u0443 \u043d\u043e\u0432\u043e\u0440\u043e\u0436\u0434\u0435\u043d\u043d\u044b\u0445 (\u0434\u0438\u0441\u0442\u0440\u0435\u0441\u0441)",
+  "fields": ""
  }
 },
 {
@@ -1145,9 +1290,14 @@
   "fields": {
    "category": {
     "order": 1,
+    "value": {
+     "name": "\u043f\u0440\u0435\u0436\u0434\u0435\u0432\u0440\u0435\u043c\u0435\u043d\u043d\u043e\u0435",
+     "id": "pmt"
+    },
+    "label": "<s>, </s>",
     "type": {
      "config": {
-      "width": 150,
+      "hidden": false,
       "data": [
        [
         "pmt",
@@ -1162,19 +1312,14 @@
         "\u0440\u0430\u043d\u0435\u0435"
        ]
       ],
-      "hidden": false,
+      "width": 150,
       "style": {
        "margin": "0px 0px 0px 0px"
       }
      },
      "name": "ComboBoxLocal"
     },
-    "value": {
-     "id": "pmt",
-     "name": "\u043f\u0440\u0435\u0436\u0434\u0435\u0432\u0440\u0435\u043c\u0435\u043d\u043d\u043e\u0435"
-    },
-    "mu": "",
-    "label": "<s>, </s>"
+    "mu": ""
    }
   }
  }
@@ -1208,6 +1353,22 @@
  "pk": "shellattachmentcord",
  "fields": {
   "name": "\u041e\u0431\u043e\u043b\u043e\u0447\u0435\u0447\u043d\u043e\u0435 \u043f\u0440\u0438\u043a\u0440\u0435\u043f\u043b\u0435\u043d\u0438\u0435 \u043f\u0443\u043f\u043e\u0432\u0438\u043d\u044b",
+  "fields": ""
+ }
+},
+{
+ "model": "orgzdrav.diagnosis",
+ "pk": "slfetgrowthmalnut",
+ "fields": {
+  "name": "\u0417\u0430\u043c\u0435\u0434\u043b\u0435\u043d\u043d\u044b\u0439 \u0440\u043e\u0441\u0442 \u0438 \u043d\u0435\u0434\u043e\u0441\u0442\u0430\u0442\u043e\u0447\u043d\u043e\u0441\u0442\u044c \u043f\u0438\u0442\u0430\u043d\u0438\u044f \u043f\u043b\u043e\u0434\u0430",
+  "fields": ""
+ }
+},
+{
+ "model": "orgzdrav.diagnosis",
+ "pk": "syndromeinfantdiabeticmother",
+ "fields": {
+  "name": "\u0421\u0438\u043d\u0434\u0440\u043e\u043c \u043d\u043e\u0432\u043e\u0440\u043e\u0436\u0434\u0435\u043d\u043d\u043e\u0433\u043e \u043c\u0430\u0442\u0435\u0440\u0438 \u0441 \u0441\u0430\u0445\u0430\u0440\u043d\u044b\u043c \u0434\u0438\u0430\u0431\u0435\u0442\u043e\u043c",
   "fields": ""
  }
 },

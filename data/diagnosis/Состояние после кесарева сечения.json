@@ -1,0 +1,20 @@
+{
+    "day": {
+        "order": 1,
+        "value": "",
+        "label": "<s> </s>",
+        "mu": "- е сутки",        
+        "type": {
+            "name": "NumberField",
+            "config":{
+                "width": 25,
+                "hidden": false,
+                "allowDecimals": false,
+                "allowNegative": false,
+                "allowBlank":true,
+                "minValue":1,
+                "maxValue":200
+            }
+        }
+    }    
+}

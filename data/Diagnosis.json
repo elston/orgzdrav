@@ -1,0 +1,80 @@
+{"id":"adhesionspelvic","name":"Спаечный процесс малого таза","fields":""}
+{"id":"aids","name":"ВИЧ","fields":""}
+{"id":"amnioticembolism","name":"Эмболия околоплодными водами","fields":""}
+{"id":"antenatal","name":"Антенатальная гибель плода","fields":""}
+{"id":"arterialhypertension","name":"Артериальная гипертензия","fields":""}
+{"id":"badcoagblood","name":"Нарушение свертываемости крови","fields":""}
+{"id":"bronchitis","name":"Бронхит","fields":""}
+{"id":"burdobstetrichist","name":"Отягощенный акушерский анамнез","fields":""}
+{"id":"cesarean","name":"Кесарево сечение","fields":{"category": {"mu": "", "type": {"name": "ComboBoxLocal", "config": {"data": [["lwr", "в нижнем сегменте"]], "style": {"margin": "0px 0px 0px 0px"}, "width": 150, "hidden": false}}, "label": "<s> </s>", "order": 1, "value": {"id": "lwr", "name": "в нижнем сегменте"}}}}
+{"id":"continuousepiduralka","name":"Длительная эпидуральная анестезия","fields":""}
+{"id":"cystitis","name":"Цистит","fields":{"forma": {"mu": "", "type": {"name": "ComboBoxLocal", "config": {"data": [["act", "острый"], ["hrn", "хронический"]], "style": {"margin": "0px 0px 0px 0px"}, "width": 150, "hidden": false}}, "label": "<s> </s>", "order": 1, "value": {"id": "hrn", "name": "хронический"}}, "stage": {"mu": "", "type": {"name": "ComboBoxLocal", "config": {"data": [["act", "обострение"], ["rem", "ремиссия"]], "style": {"margin": "0px 0px 0px 0px"}, "width": 150, "hidden": false}}, "label": "<s> </s>", "order": 1, "value": {"id": "hrn", "name": "хронический"}}}}
+{"id":"delivhemorhag","name":"Кровотечение в родах","fields":""}
+{"id":"detachplacent","name":"Отслойка плаценты","fields":""}
+{"id":"diabetes","name":"Сахарный диабет","fields":""}
+{"id":"discoordinationlabor","name":"Дискоординация родовой деятельности","fields":""}
+{"id":"drugallergy","name":"Медикаментозная аллергия","fields":""}
+{"id":"eclampsia","name":"Эклампсия","fields":""}
+{"id":"failuterinescar","name":"Несостоятельность рубца на матке","fields":""}
+{"id":"forerunnersdelivery","name":"Предвестники родов","fields":""}
+{"id":"gastritis","name":"Гастрит","fields":""}
+{"id":"gestosis","name":"Гестоз","fields":{"degree": {"mu": "степени", "type": {"name": "ComboBoxLocal", "config": {"data": [["lgt", "легкой"], ["mid", "средней"], ["hrd", "тяжелой"]], "style": {"margin": "0px 0px 0px 0px"}, "width": 150, "hidden": false}}, "label": "<s> </s>", "order": 1, "value": {"id": "lgt", "name": "легкой"}}}}
+{"id":"hyperprolactinemia","name":"Гиперпролактинемия","fields":""}
+{"id":"hypothyroidism","name":"Гипотиреоз","fields":""}
+{"id":"hysteromyoma","name":"Миома матки","fields":""}
+{"id":"incrementplacenta","name":"Приращение плаценты","fields":""}
+{"id":"intrautergrowthrest","name":"Задержка внутриутробного развития","fields":{"degree": {"mu": "-й степени", "type": {"name": "NumberField", "config": {"hidden": false, "maxValue": 3, "minValue": 1, "allowDecimals": false, "allowNegative": false}}, "label": "<s> </s>", "order": 1, "value": ""}}}
+{"id":"intrauterinefetalhypoxia","name":"Внутриутробная гипоксия плода","fields":{"category": {"mu": "", "type": {"name": "ComboBoxLocal", "config": {"data": [["slw", "хроническая"], ["spd", "острая"]], "style": {"margin": "0px 0px 0px 0px"}, "width": 150, "hidden": false}}, "label": "<s>, </s>", "order": 1, "value": {"id": "slw", "name": "хроническая"}}}}
+{"id":"ironanemia","name":"Железодефицитная анемия","fields":""}
+{"id":"laparotomy","name":"Лапаротомия","fields":{"incision": {"mu": "", "type": {"name": "ComboBoxLocal", "config": {"data": [["pfn", "по Пфанненштилю"]], "style": {"margin": "0px 0px 0px 0px"}, "width": 150, "hidden": false}}, "label": "<s> </s>", "order": 1, "value": {"id": "pfn", "name": "по Пфанненштилю"}}}}
+{"id":"legvienvaricosity","name":"Варикоз вен нижних конечностей","fields":""}
+{"id":"lohiometra","name":"Лохиометра","fields":""}
+{"id":"mitralprolapse","name":"Пролапс митрального клапана","fields":{"degree": {"mu": "-й степени", "type": {"name": "NumberField", "config": {"width": 20, "hidden": false, "maxValue": 3, "minValue": 1, "allowDecimals": false, "allowNegative": false}}, "label": "<s> </s>", "order": 1, "value": ""}}}
+{"id":"obesity","name":"Ожирение","fields":""}
+{"id":"ovariancystoma","name":"Кистома яичника","fields":""}
+{"id":"perinealtear","name":"Разрыв промежности","fields":{"category": {"mu": "", "type": {"name": "ComboBoxLocal", "config": {"data": [["zro", "угрожающий"], ["one", "I степени"], ["two", "II степени"], ["tre", "III степени"], ["for", "IV степени"]], "style": {"margin": "0px 0px 0px 0px"}, "width": 150, "hidden": false}}, "label": "<s> </s>", "order": 1, "value": {"id": "zro", "name": "угрожающий"}}}}
+{"id":"peritonit","name":"Перитонит","fields":""}
+{"id":"arnoldchiarisyndrome","name":"Синдром Арнольда-Хиари","fields":""}
+{"id":"pharyngitis","name":"Фарингит","fields":""}
+{"id":"impetigo","name":"Импетиго","fields":""}
+{"id":"slfetgrowthmalnut","name":"Замедленный рост и недостаточность питания плода","fields":""}
+{"id":"dissemintravascoag","name":"ДВС плода или новорожденного","fields":""}
+{"id":"haemoldisnewborn","name":"Гемолитическая болезнь плода или новорожденного","fields":""}
+{"id":"neonataljaundice","name":"Желтуха новорожденного","fields":""}
+{"id":"syndromeinfantdiabeticmother","name":"Синдром новорожденного матери с сахарным диабетом","fields":""}
+{"id":"placentalinsufficiency","name":"Плацентарная недостаточность","fields":{"category": {"mu": "", "type": {"name": "ComboBoxLocal", "config": {"data": [["slw", "хроническая"], ["spd", "острая"]], "style": {"margin": "0px 0px 0px 0px"}, "width": 150, "hidden": false}}, "label": "<s>, </s>", "order": 1, "value": {"id": "slw", "name": "хроническая"}}}}
+{"id":"placentaprevia","name":"Предлежание плаценты","fields":""}
+{"id":"postcesarean","name":"Состояние после кесарева сечения","fields":{"day": {"mu": "- е сутки", "type": {"name": "NumberField", "config": {"width": 25, "hidden": false, "maxValue": 200, "minValue": 1, "allowBlank": true, "allowDecimals": false, "allowNegative": false}}, "label": "<s> </s>", "order": 1, "value": ""}}}
+{"id":"postpartum","name":"Послеродовый период","fields":""}
+{"id":"postpartumhemorhag","name":"Кровотечение в послеродовом периоде","fields":""}
+{"id":"postsurgconheartdis","name":"Состояние после оперативного лечения ВПС","fields":{"surgyear": {"mu": "г.", "type": {"name": "YearNumberField", "config": {"style": {"margin": "0px 0px 0px 0px"}, "width": 40, "hidden": false, "allowBlank": true, "allowDecimals": false, "allowNegative": false}}, "label": "<s> в </s>", "order": 1, "value": ""}}}
+{"id":"preeclampsia","name":"Преэклампсия","fields":""}
+{"id":"preghemorhag","name":"Кровотечение при беременности","fields":""}
+{"id":"pregnanthydrops","name":"Водянка беременных","fields":""}
+{"id":"prematureinfant","name":"Недоношенность","fields":{"gestation": {"mu": "недель", "type": {"name": "NumberField", "config": {"width": 30, "hidden": false, "maxValue": 43, "minValue": 4, "allowDecimals": false, "allowNegative": false}}, "label": "<s> </s>", "order": 1, "value": ""}}}
+{"id":"proteinuria","name":"Протеинурия","fields":""}
+{"id":"pulmhypertension","name":"Легочная гипертензия","fields":{"power": {"mu": "", "type": {"name": "ComboBoxLocal", "config": {"data": [["mid", "умеренная"], ["hrd", "выраженная"]], "style": {"margin": "0px 0px 0px 0px"}, "width": 150, "hidden": false}}, "label": "<s>, </s>", "order": 1, "value": {"id": "mid", "name": "Умеренная"}}}}
+{"id":"rupturemembranes","name":"Излитие околоплодных вод","fields":{"category": {"mu": "", "type": {"name": "ComboBoxLocal", "config": {"data": [["pmt", "преждевременное"], ["ptl", "дородовое"], ["erl", "ранее"]], "style": {"margin": "0px 0px 0px 0px"}, "width": 150, "hidden": false}}, "label": "<s>, </s>", "order": 1, "value": {"id": "pmt", "name": "преждевременное"}}}}
+{"id":"sepsis","name":"Сепсис","fields":""}
+{"id":"septiemia","name":"Септицемия","fields":""}
+{"id":"seromapostopersuture","name":"Серома послеоперационного шва","fields":""}
+{"id":"shellattachmentcord","name":"Оболочечное прикрепление пуповины","fields":""}
+{"id":"threatenedmiscarriage","name":"Угрожающий преждевременный выкидыш","fields":""}
+{"id":"uterotear","name":"Разрыв матки","fields":""}
+{"id":"vacuumuterine","name":"Вакуум-аспирация содержимого полости матки","fields":""}
+{"id":"ventseptdefect","name":"Дефект межжелудочковой перегородки","fields":""}
+{"id":"weaknesslabor","name":"Слабость родовой деятельности","fields":""}
+{"id":"сombinedgestosis","name":"Сочетанный гестоз","fields":""}
+{"id":"сonheartdefect","name":"Врожденный порок сердца","fields":""}
+{"id":"delivery","name":"Роды","fields":{"number": {"mu": "- е", "type": {"name": "NumberField", "config": {"width": 15, "hidden": false, "maxValue": 30, "minValue": 1, "allowDecimals": false, "allowNegative": false}}, "label": "по счету:<s> </s>", "order": 1, "value": ""}, "period": {"mu": "-й период", "type": {"name": "NumberField", "config": {"width": 15, "hidden": false, "maxValue": 2, "minValue": 1, "allowBlank": true, "allowDecimals": false, "allowNegative": false}}, "label": "<s> </s>", "order": 6, "value": ""}, "amnionity": {"mu": "", "type": {"name": "ComboBoxLocal", "config": {"data": [["mon", "моноамниотическая"], ["bis", "биамниотическая"], ["tri", "триамниотическая"], ["tet", "тетраамниотическая"], ["pen", "пентаамниотическая"]], "style": {"margin": "0px 0px 0px 0px"}, "width": 150, "hidden": true}}, "label": "амнион:", "order": 4, "value": {"id": "mon", "name": "моноамниотическая"}}, "gestation": {"mu": "недель", "type": {"name": "NumberField", "config": {"width": 25, "hidden": false, "maxValue": 43, "minValue": 4, "allowDecimals": false, "allowNegative": false}}, "label": "срок:", "order": 5, "value": ""}, "horionity": {"mu": "", "type": {"name": "ComboBoxLocal", "config": {"data": [["mon", "монохориальная"], ["bis", "бихориальная"], ["tri", "трихориальная"], ["tet", "тетрахориальная"], ["pen", "пентахориальная"]], "style": {"margin": "0px 0px 0px 0px"}, "width": 150, "hidden": true}}, "label": "хорион:", "order": 3, "value": {"id": "mon", "name": "монохориальная"}}, "multiplety": {"mu": "", "type": {"name": "ComboBoxLocal", "config": {"data": [["uno", "одноплодные"], ["duo", "двойня"], ["tre", "тройня"], ["qua", "четверня"], ["cin", "пятерня"]], "rule": {"value": {"id": "uno", "name": "одноплодные"}, "fields": ["horionity", "amnionity"], "hidden": true, "condition": false}, "style": {"margin": "0px 0px 0px 0px"}, "width": 150, "hidden": false}}, "label": "количество плодов:", "order": 2, "value": {"id": "uno", "name": "одноплодные"}}}}
+{"id":"pregnancy","name":"Беременность","fields":{"number": {"mu": "- я", "type": {"name": "NumberField", "config": {"width": 15, "hidden": false, "maxValue": 30, "minValue": 1, "allowDecimals": false, "allowNegative": false}}, "label": "по счету:<s> </s>", "order": 1, "value": ""}, "amnionity": {"mu": "", "type": {"name": "ComboBoxLocal", "config": {"data": [["mon", "моноамниотическая"], ["bis", "биамниотическая"], ["tri", "триамниотическая"], ["tet", "тетраамниотическая"], ["pen", "пентаамниотическая"]], "style": {"margin": "0px 0px 0px 0px"}, "width": 150, "hidden": true}}, "label": "амнион:", "order": 6, "value": {"id": "mon", "name": "моноамниотическая"}}, "gestation": {"mu": "недель", "type": {"name": "NumberField", "config": {"hidden": false, "maxValue": 43, "minValue": 4, "allowDecimals": false, "allowNegative": false}}, "label": "", "order": 2, "value": ""}, "horionity": {"mu": "", "type": {"name": "ComboBoxLocal", "config": {"data": [["mon", "монохориальная"], ["bis", "бихориальная"], ["tri", "трихориальная"], ["tet", "тетрахориальная"], ["pen", "пентахориальная"]], "style": {"margin": "0px 0px 0px 0px"}, "width": 150, "hidden": true}}, "label": "хорион:", "order": 5, "value": {"id": "mon", "name": "монохориальная"}}, "multiplety": {"mu": "", "type": {"name": "ComboBoxLocal", "config": {"data": [["uno", "одноплодная"], ["duo", "двойня"], ["tre", "тройня"], ["qua", "четверня"], ["cin", "пятерня"]], "rule": {"value": {"id": "uno", "name": "одноплодная"}, "fields": ["horionity", "amnionity"], "hidden": true, "condition": false}, "style": {"margin": "0px 0px 0px 0px"}, "width": 150, "hidden": false}}, "label": "количество плодов:", "order": 4, "value": {"id": "uno", "name": "одноплодная"}}, "progresivity": {"mu": "", "type": {"name": "ComboBoxLocal", "config": {"data": [["yes", "прогрессирующая"], ["no", "замершая"]], "style": {"margin": "0px 0px 0px 0px"}, "width": 150, "hidden": false}}, "label": "прогрессирование:", "order": 3, "value": {"id": "yes", "name": "прогрессирующая"}}}}
+{"id":"birthtrauma","name":"Родовая травма","fields":""}
+{"id":"intracranlacerhaemorrhage","name":"Внутричерепное повреждение тканей и кровоизлеяние","fields":""}
+{"id":"intracrannontraumhaemorrhage","name":"Внутрижелудочковые кровоизлияния (нетравматические) новорожденного","fields":""}
+{"id":"birthasphyxia","name":"Асфиксия при родах","fields":""}
+{"id":"respiratorydistressnewborn","name":"Дыхательное растройство у новорожденных (дистресс)","fields":""}
+{"id":"neoaspsynd","name":"Неонатальный аспирационый синдром","fields":""}
+{"id":"neoasppneumonia","name":"Неонатальная аспирационная пневмония","fields":""}
+{"id":"bacterialsepsisnewborn","name":"Бактериальный сепсис новорожденного","fields":""}
+{"id":"neonatalcoma","name":"Неонатальная кома","fields":""}
+{"id":"congenitalpneumonia","name":"Врождённая пневмония","fields":""}

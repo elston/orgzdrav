@@ -1,0 +1,24 @@
+{
+    "incision": {
+        "order": 1,
+        "label": "<s> </s>",
+        "value": {
+            "id":"pfn",
+            "name":"по Пфанненштилю"
+        },
+        "mu": "",        
+        "type": {
+            "name": "ComboBoxLocal",
+            "config":{
+                "hidden": false,
+                "width": 150,
+                "style":{
+                    "margin":"0px 0px 0px 0px"
+                },
+                "data": [
+                    ["pfn", "по Пфанненштилю"]
+                ]
+            }
+        }
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "surgyear": {
+        "order": 1,
+        "value": "",
+        "label": "<s> в </s>",
+        "mu": "г.",        
+        "type": {
+            "name": "YearNumberField",
+            "config":{
+                "width": 40,
+                "hidden": false,
+                "allowDecimals": false,
+                "allowNegative": false,
+                "allowBlank":true,
+                "style":{
+                    "margin":"0px 0px 0px 0px"
+                }                
+            }
+        }
+    }
+}

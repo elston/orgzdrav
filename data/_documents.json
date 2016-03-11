@@ -1,0 +1,23 @@
+[
+    {
+        "id": "beginepicris",
+        "name": "Первичный осмотр",
+        "renderer": "beginEpicrisRenderer",
+        "form": "EpicrisGridForm"
+        // "data":[diagnisis]
+    },{
+        "id":"finishepicris",
+        "name":"Выписной эпикриз",
+        "renderer":"finishEpicrisRenderer",
+        "form":"EpicrisGridForm",
+        // "data":[diagnisis]
+    },{
+        "id":"enterorganization",
+        "name":"Поступление в мед.уч.",
+        "renderer":"enterOrganizationRenderer",
+        "form":"EnterOrganizationGridForm",
+        "data":{
+            "cardnumber":""
+        }
+    }    
+]

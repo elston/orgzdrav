@@ -1,0 +1,144 @@
+2 bda7cf2 - 64 cf - 49 d5 - 8 d3f - e4c85689df2d | jhg | jhg | gjhg | jhg | 2016 - 01 - 28 | {
+    "id": "c71ddfe1-ca69-445f-a2fd-60da7f1f92c6",
+    "name": "ККБ №2",
+    "fullname": "Краевая клиническая больница №2"
+} | [{
+    "data": {
+        "cardnumber": 123
+    },
+    "object": {
+        "id": "enterorganization",
+        "form": "EnterOrganizationGridForm",
+        "name": "Поступление в мед.уч.",
+        "renderer": "enterOrganizationRenderer"
+    },
+    "datetime": "2016-01-28 13:16 +0300"
+}]
+
+248287 c5 - 3 cee - 456e-87 d7 - 2e97123922 aa | jhgj | hg | gjhg | jhg | 2016 - 01 - 28 | {
+    "id": "c71ddfe1-ca69-445f-a2fd-60da7f1f92c6",
+    "name": "ККБ №2",
+    "fullname": "Краевая клиническая больница №2"
+} | [{
+    "data": {
+        "cardnumber": 123
+    },
+    "object": {
+        "id": "enterorganization",
+        "form": "EnterOrganizationGridForm",
+        "name": "Поступление в мед.уч.",
+        "renderer": "enterOrganizationRenderer"
+    },
+    "datetime": "2016-01-28 16:09 +0300"
+}, {
+    "data": [{
+        "id": "f615c006-7b6b-405d-a0ac-f9e55eab1ec6",
+        "name": "Беременность",
+        "fields": {
+            "amnionity": {
+                "mu": "",
+                "label": "амнион:",
+                "order": 5,
+                "value": {
+                    "id": "bis",
+                    "name": "биамниотическая"
+                }
+            },
+            "gestation": {
+                "mu": "недель",
+                "label": "",
+                "order": 1,
+                "value": 23
+            },
+            "horionity": {
+                "mu": "",
+                "label": "хорион:",
+                "order": 4,
+                "value": {
+                    "id": "bis",
+                    "name": "бихориальная"
+                }
+            },
+            "multiplety": {
+                "mu": "",
+                "label": "количество плодов:",
+                "order": 3,
+                "value": {
+                    "id": "duo",
+                    "name": "двойня"
+                }
+            },
+            "progresivity": {
+                "mu": "",
+                "label": "прогрессирование:",
+                "order": 2,
+                "value": {
+                    "id": "yes",
+                    "name": "прогрессирующая"
+                }
+            }
+        }
+    }, {
+        "id": "9879f995-9798-46a6-a959-d33862991f11",
+        "name": "Угрожающий преждевременный выкидыш",
+        "fields": {}
+    }, {
+        "id": "46cf7ebc-e3d1-4d18-871f-f97ac40455de",
+        "name": "Миома матки",
+        "fields": {}
+    }],
+    "object": {
+        "id": "beginepicris",
+        "form": "EpicrisGridForm",
+        "name": "Первичный осмотр",
+        "renderer": "beginEpicrisRenderer"
+    },
+    "datetime": "2016-01-28 16:09 +0300"
+}]
+
+4 c6a95ca - 9246 - 4083 - a78b - f2511d46b54c | порп | орп | ывпвы | рпопр | 2016 - 01 - 28 | {
+    "id": "23f68139-9439-40a1-b79d-11955844a39a",
+    "name": "БСМП",
+    "fullname": "МБУЗ КГК \"Больница скорой медицинской помощи\""
+} | [{
+    "data": {
+        "cardnumber": 12312
+    },
+    "object": {
+        "id": "enterorganization",
+        "form": "EnterOrganizationGridForm",
+        "name": "Поступление в мед.уч.",
+        "renderer": "enterOrganizationRenderer"
+    },
+    "datetime": "2016-01-28 16:14 +0300"
+}, {
+    "data": [{
+        "id": "79776759-17e3-4445-8b31-ef589c44f8d0",
+        "name": "Роды",
+        "fields": {
+            "number": {
+                "mu": "- е",
+                "label": "по счету:",
+                "order": 1,
+                "value": 3
+            },
+            "gestation": {
+                "mu": "недель",
+                "label": "срок:",
+                "order": 2,
+                "value": 38
+            }
+        }
+    }, {
+        "id": "6eea2727-1000-465d-bb6b-3a80f890cd69",
+        "name": "Бронхит",
+        "fields": {}
+    }],
+    "object": {
+        "id": "beginepicris",
+        "form": "EpicrisGridForm",
+        "name": "Первичный осмотр",
+        "renderer": "beginEpicrisRenderer"
+    },
+    "datetime": "2016-01-28 16:14 +0300"
+}]
