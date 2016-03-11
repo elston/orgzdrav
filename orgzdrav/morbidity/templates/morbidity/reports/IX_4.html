@@ -1,0 +1,382 @@
+{% extends "orgzdrav/blank.html" %}
+
+{% load get %}
+
+{% block title %}
+    {{ caption }}
+{% endblock %}
+
+{% block body %}
+<table class="page-frame">
+    <tr>
+        <td>
+            
+            <div class="header center">
+                <br style="clear:both">
+                <div class="title">{{ organization.fullname }}</div>
+                <div class="title">{{ caption }}</div>
+                <div class="title2">  {{ datetime |date:"d E Yг." }}</div>
+
+            </div>          
+
+            <table width="100%" class="service-list">
+                <tr>
+                    <th rowspan="2">№ стр.</th>
+                    <th rowspan="2">Показатель</th>
+                    <th rowspan="2">Код МКБ-Х</th>                    
+                    {% for item in items|dictsort:"year" %}
+                        <th colspan="3">{{ item.year }}</td>                    
+                    {% endfor %}   
+                </tr>              
+
+                <tr>
+                    {% for item in items|dictsort:"year" %}                    
+                        <th >Абс.ч.</th>
+                        <th >Уд. вес к заболеваниям </th>
+                        <th >на 1000 родов</th>                    
+                    {% endfor %}   
+                </tr>                    
+
+
+
+                <tr>                                        <!-- 1 -->
+                    <th>1</th>
+                    <td style="text-align:left;background:#e6e6fa;">Всего женщин (число физических лиц)</td>
+                    <td style="text-align:left;background:#e6e6fa;"></td>
+                    {% for item in items|dictsort:"year" %}           
+                        <td style="text-align:center;">{{item|get:'1'}}</td>
+                        <td style="text-align:center;"></td>                        
+                        <td style="text-align:center;"></td>
+                    {% endfor %}
+                </tr>
+
+                <tr>                                        <!-- 2 -->
+                    <th >2</th>
+                    <td style="text-align:left;background:#e6e6fa;">Всего заболеваний</td>
+                    <td style="text-align:left;background:#e6e6fa;"></td>
+                    {% for item in items|dictsort:"year" %}           
+                        <td style="text-align:center;">{{item|get:'2'}}</td>
+                        <td style="text-align:center;"></td>
+                        <td style="text-align:center;"></td>
+                    {% endfor %}
+                </tr>
+
+                <tr>                                        <!-- 2.1 -->
+                    <th rowspan=2>2.1</th>
+                    <td style="text-align:left;background:#e6e6fa;">Отеки, протеинурия, гипертензивные расстройства </td>
+                    <td style="text-align:left;background:#e6e6fa;">О10 — О16ч.</td>
+                    {% for item in items|dictsort:"year" %}           
+                        <td style="text-align:center;">{{item|get:'2.1.1'}}</td>
+                        <td style="text-align:center;">{{item|get:'u2.1.1'}}</td>
+                        <td style="text-align:center;">{{item|get:'m2.1.1'}}</td>
+                    {% endfor %}
+                </tr>
+                <tr>                                        
+                    <td style="text-align:left;background:#e6e6fa;">    в т.ч.           преэклампсия, эклампсия</td>
+                    <td style="text-align:left;background:#e6e6fa;">О11, О13, О14, О15.1.2</td>
+                    {% for item in items|dictsort:"year" %}           
+                        <td style="text-align:center;">{{item|get:'2.1.2'}}</td>
+                        <td style="text-align:center;">{{item|get:'u2.1.2'}}</td>
+                        <td style="text-align:center;">{{item|get:'m2.1.2'}}</td>
+                    {% endfor %}
+                </tr>
+
+                 <tr>                                        <!-- 2.2 -->
+                    <th rowspan=4>2.2</th>
+                    <td style="text-align:left;background:#e6e6fa;">Зндокринные заболевания ВСЕГО</td>
+                    <td style="text-align:left;background:#e6e6fa;">O24, O99.2</td>
+                    {% for item in items|dictsort:"year" %}           
+                        <td style="text-align:center;">{{item|get:'2.2.1'}}</td>
+                        <td style="text-align:center;">{{item|get:'u2.2.1'}}</td>
+                        <td style="text-align:center;">{{item|get:'m2.2.1'}}</td>
+                    {% endfor %}
+                </tr>
+                <tr>                 
+                    <td style="text-align:left;background:#e6e6fa;">&nbsp- в т.ч. сахарный диабет</td>
+                    <td style="text-align:left;background:#e6e6fa;">О24 часть</td>
+                    {% for item in items|dictsort:"year" %}           
+                        <td style="text-align:center;">{{item|get:'2.2.2'}}</td>
+                        <td style="text-align:center;">{{item|get:'u2.2.2'}}</td>
+                        <td style="text-align:center;">{{item|get:'m2.2.2'}}</td>                        
+                    {% endfor %}
+                </tr>
+                <tr>
+                    <td style="text-align:left;background:#e6e6fa;">&nbsp- в т.ч. болезни щитовидной железы</td>
+                    <td style="text-align:left;background:#e6e6fa;">O99.2</td>
+                    {% for item in items|dictsort:"year" %}           
+                        <td style="text-align:center;">{{item|get:'2.2.3'}}</td>
+                        <td style="text-align:center;">{{item|get:'u2.2.3'}}</td>
+                        <td style="text-align:center;">{{item|get:'m2.2.3'}}</td>                        
+                    {% endfor %}
+                </tr>
+                <tr>
+                    <td style="text-align:left;background:#e6e6fa;">&nbsp- в т.ч. другие эндокринные заболевания</td>
+                    <td style="text-align:left;background:#e6e6fa;"></td>
+                    {% for item in items|dictsort:"year" %}           
+                        <td style="text-align:center;">{{item|get:'2.2.4'}}</td>
+                        <td style="text-align:center;">{{item|get:'u2.2.4'}}</td>
+                        <td style="text-align:center;">{{item|get:'m2.2.4'}}</td>                        
+                    {% endfor %}
+                </tr>
+
+                <tr>                                        <!-- 2.3 -->
+                    <th >2.3</th>
+                    <td style="text-align:left;background:#e6e6fa;">Преждевременный разрыв плодных оболочек </td>
+                    <td style="text-align:left;background:#e6e6fa;">О42</td>
+                    {% for item in items|dictsort:"year" %}           
+                        <td style="text-align:center;">{{item|get:'2.3'}}</td>
+                        <td style="text-align:center;">{{item|get:'u2.3'}}</td>
+                        <td style="text-align:center;">{{item|get:'m2.3'}}</td>                        
+                    {% endfor %}
+                </tr>
+
+                <tr>                                        <!-- 2.4 -->
+                    <th >2.4</th>
+                    <td style="text-align:left;background:#e6e6fa;">Кровотечения в связи с предлежанием плаценты</td>
+                    <td style="text-align:left;background:#e6e6fa;">О44.1  </td>
+                    {% for item in items|dictsort:"year" %}           
+                        <td style="text-align:center;">{{item|get:'2.4'}}</td>
+                        <td style="text-align:center;">{{item|get:'u2.4'}}</td>
+                        <td style="text-align:center;">{{item|get:'m2.4'}}</td>                        
+                    {% endfor %}
+                </tr>
+
+                <tr>                                        <!-- 2.5 -->
+                    <th >2.5</th>
+                    <td style="text-align:left;background:#e6e6fa;">Кровотечение в связи с нарушением  свертываемости крови (кроме дородового) </td>
+                    <td style="text-align:left;background:#e6e6fa;">О45.0      О67.0  </td>
+                    {% for item in items|dictsort:"year" %}           
+                        <td style="text-align:center;">{{item|get:'2.5'}}</td>
+                        <td style="text-align:center;">{{item|get:'u2.5'}}</td>
+                        <td style="text-align:center;">{{item|get:'m2.5'}}</td>                        
+                    {% endfor %}
+                </tr>
+
+                <tr>                                        <!-- 2.6 -->
+                    <th >2.6</th>
+                    <td style="text-align:left;background:#e6e6fa;">Дородовое кровотечение в связи с нарушением свертываемости крови </td>
+                    <td style="text-align:left;background:#e6e6fa;">O46.0</td>
+                    {% for item in items|dictsort:"year" %}           
+                        <td style="text-align:center;">{{item|get:'2.6'}}</td>
+                        <td style="text-align:center;">{{item|get:'u2.6'}}</td>
+                        <td style="text-align:center;">{{item|get:'m2.6'}}</td>                        
+                    {% endfor %}
+                </tr>
+
+                <tr>                                        <!-- 2.7 -->
+                    <th >2.7</th>
+                    <td style="text-align:left;background:#e6e6fa;">Кровотечение  в связи  с преждевременной отслойкой плаценты</td>
+                    <td style="text-align:left;background:#e6e6fa;">О45.8,  O45.9</td>
+                    {% for item in items|dictsort:"year" %}           
+                        <td style="text-align:center;">{{item|get:'2.7'}}</td>
+                        <td style="text-align:center;">{{item|get:'u2.7'}}</td>
+                        <td style="text-align:center;">{{item|get:'m2.7'}}</td>                        
+                    {% endfor %}
+                </tr>
+
+                <tr>                                        <!-- 2.8 -->
+                    <th rowspan=4>2.8</th>
+                    <td style="text-align:left;background:#e6e6fa;">Нарушения родовой деятельности  </td>
+                    <td style="text-align:left;background:#e6e6fa;">О62</td>
+                    {% for item in items|dictsort:"year" %}           
+                        <td style="text-align:center;">{{item|get:'2.8.1'}}</td>
+                        <td style="text-align:center;">{{item|get:'u2.8.1'}}</td>
+                        <td style="text-align:center;">{{item|get:'m2.8.1'}}</td>                        
+                    {% endfor %}
+                </tr>
+                <tr>
+                    <td style="text-align:left;background:#e6e6fa;">из них: слабость родовой деятельности</td>
+                    <td style="text-align:left;background:#e6e6fa;">О62.0 - О62.2</td>
+                    {% for item in items|dictsort:"year" %}           
+                        <td style="text-align:center;">{{item|get:'2.8.2'}}</td>
+                        <td style="text-align:center;">{{item|get:'u2.8.2'}}</td>
+                        <td style="text-align:center;">{{item|get:'m2.8.2'}}</td>                        
+                    {% endfor %}
+                </tr>
+                <tr>
+                    <td style="text-align:left;background:#e6e6fa;">- стремительные роды</td>
+                    <td style="text-align:left;background:#e6e6fa;">О62.3</td>
+                    {% for item in items|dictsort:"year" %}           
+                        <td style="text-align:center;">{{item|get:'__2.8.3__'|default:'-'}}</td>
+                        <td style="text-align:center;">{{item|get:'__u2.2.1__'}}</td>
+                        <td style="text-align:center;">{{item|get:'__m2.2.1__'}}</td>                        
+                    {% endfor %}
+                </tr>
+                <tr>
+                    <td style="text-align:left;background:#e6e6fa;">- дискоординация родовой деятельности</td>
+                    <td style="text-align:left;background:#e6e6fa;">О62.4</td>
+                    {% for item in items|dictsort:"year" %}           
+                        <td style="text-align:center;">{{item|get:'2.8.4'}}</td>
+                        <td style="text-align:center;">{{item|get:'u2.8.4'}}</td>
+                        <td style="text-align:center;">{{item|get:'m2.8.4'}}</td>                        
+                    {% endfor %}
+                </tr>
+
+                <tr>                                        <!-- 2.9 -->
+                    <th >2.9</th>
+                    <td style="text-align:left;background:#e6e6fa;">Роды, осложненные патологией пуповины</td>
+                    <td style="text-align:left;background:#e6e6fa;">О69 (кроме О69.4)0</td>
+                    {% for item in items|dictsort:"year" %}           
+                        <td style="text-align:center;">{{item|get:'2.9'}}</td>
+                        <td style="text-align:center;">{{item|get:'u2.9'}}</td>
+                        <td style="text-align:center;">{{item|get:'m2.9'}}</td>                        
+                    {% endfor %}
+                </tr>
+
+                <tr>                                        <!-- 2.10 -->
+                    <th >2.10</th>
+                    <td style="text-align:left;background:#e6e6fa;">Затрудненные роды</td>
+                    <td style="text-align:left;background:#e6e6fa;">О64-О66</td>
+                    {% for item in items|dictsort:"year" %}           
+                        <td style="text-align:center;">{{item|get:'__2.10__'|default:'-'}}</td>
+                        <td style="text-align:center;">{{item|get:'__u2.2.1__'}}</td>
+                        <td style="text-align:center;">{{item|get:'__m2.2.1__'}}</td>                        
+                    {% endfor %}
+                </tr>
+
+                <tr>                                        <!-- 2.11 -->
+                    <th >2.11</th>
+                    <td style="text-align:left;background:#e6e6fa;">Разрыв промежности III-IV степени</td>
+                    <td style="text-align:left;background:#e6e6fa;">О70.2</td>
+                    {% for item in items|dictsort:"year" %}           
+                        <td style="text-align:center;">{{item|get:'2.11'}}</td>
+                        <td style="text-align:center;">{{item|get:'u2.11'}}</td>
+                        <td style="text-align:center;">{{item|get:'m2.11'}}</td>
+                    {% endfor %}
+                </tr>
+
+                <tr>                                        <!-- 2.12 -->
+                    <th rowspan=2>2.12</th>
+                    <td style="text-align:left;background:#e6e6fa;">Разрыв матки всего</td>
+                    <td style="text-align:left;background:#e6e6fa;">О71.0,  O71.1</td>
+                    {% for item in items|dictsort:"year" %}           
+                        <td style="text-align:center;">{{item|get:'2.12.1'}}</td>
+                        <td style="text-align:center;">{{item|get:'u2.12.1'}}</td>
+                        <td style="text-align:center;">{{item|get:'m2.12.1'}}</td>                        
+                    {% endfor %}
+                </tr>
+                <tr> 
+                    <td style="text-align:left;background:#e6e6fa;">из них:  вне стационара </td>
+                    <td style="text-align:left;background:#e6e6fa;">О71.0,  O71.1</td>
+                    {% for item in items|dictsort:"year" %}           
+                        <td style="text-align:center;">{{item|get:'__2.12.2__'|default:'-'}}</td>
+                        <td style="text-align:center;">{{item|get:'__u2.11__'}}</td>
+                        <td style="text-align:center;">{{item|get:'__m2.11__'}}</td>                        
+                    {% endfor %}
+                </tr>
+
+                <tr>                                        <!-- 2.13 -->
+                    <th >2.13</th>
+                    <td style="text-align:left;background:#e6e6fa;">Кровотечение в последовом и послеродовом периоде</td>
+                    <td style="text-align:left;background:#e6e6fa;">О72.0, О72.1</td>
+                    {% for item in items|dictsort:"year" %}           
+                        <td style="text-align:center;">{{item|get:'2.13'}}</td>
+                        <td style="text-align:center;">{{item|get:'u2.13'}}</td>
+                        <td style="text-align:center;">{{item|get:'m2.13'}}</td>
+                    {% endfor %}
+                </tr>
+
+                <tr>                                        <!-- 2.14 -->
+                    <th rowspan=4>2.14</th>
+                    <td style="text-align:left;background:#e6e6fa;">Родовой сепсис, разлитая послеродовая инфекция </td>
+                    <td style="text-align:left;background:#e6e6fa;">О75.3, О85</td>
+                    {% for item in items|dictsort:"year" %}           
+                        <td style="text-align:center;">{{item|get:'2.14.1'}}</td>
+                        <td style="text-align:center;">{{item|get:'u2.14.1'}}</td>
+                        <td style="text-align:center;">{{item|get:'m2.14.1'}}</td>                        
+                    {% endfor %}
+                </tr>
+                <tr>
+                    <td style="text-align:left;background:#e6e6fa;">1) Перитонит</td>
+                    <td style="text-align:left;background:#e6e6fa;">О85-часть</td>
+                    {% for item in items|dictsort:"year" %}           
+                        <td style="text-align:center;">{{item|get:'2.14.2'}}</td>
+                        <td style="text-align:center;">{{item|get:'u2.14.2'}}</td>
+                        <td style="text-align:center;">{{item|get:'m2.14.2'}}</td>
+                    {% endfor %}
+                </tr>
+                <tr>
+                    <td style="text-align:left;background:#e6e6fa;">- из них перитонит после операции кесарево сечение</td>
+                    <td style="text-align:left;background:#e6e6fa;">О85-часть</td>
+                    {% for item in items|dictsort:"year" %}           
+                        <td style="text-align:center;">{{item|get:'2.14.3'}}</td>
+                        <td style="text-align:center;">{{item|get:'u2.14.3'}}</td>
+                        <td style="text-align:center;">{{item|get:'m2.14.3'}}</td>                        
+                    {% endfor %}
+                </tr>
+                <tr>
+                    <td style="text-align:left;background:#e6e6fa;">2) Септицемия</td>
+                    <td style="text-align:left;background:#e6e6fa;">О85-часть</td>
+                    {% for item in items|dictsort:"year" %}           
+                        <td style="text-align:center;">{{item|get:'2.14.4'}}</td>
+                        <td style="text-align:center;">{{item|get:'u2.14.4'}}</td>
+                        <td style="text-align:center;">{{item|get:'m2.14.4'}}</td>
+
+                    {% endfor %}
+                </tr>
+
+                <tr>                                        <!-- 2.15 -->
+                    <th >2.15</th>
+                    <td style="text-align:left;background:#e6e6fa;">Болезни мочеполовой  системы</td>
+                    <td style="text-align:left;background:#e6e6fa;">О86.2, O86.3</td>
+                    {% for item in items|dictsort:"year" %}           
+                        <td style="text-align:center;">{{item|get:'2.15'}}</td>
+                        <td style="text-align:center;">{{item|get:'u2.15'}}</td>
+                        <td style="text-align:center;">{{item|get:'m2.15'}}</td>                        
+                    {% endfor %}
+                </tr>
+
+                <tr>                                        <!-- 2.16 -->
+                    <th >2.16</th>
+                    <td style="text-align:left;background:#e6e6fa;">Венозные осложнения</td>
+                    <td style="text-align:left;background:#e6e6fa;">О87</td>
+                    {% for item in items|dictsort:"year" %}           
+                        <td style="text-align:center;">{{item|get:'2.16'}}</td>
+                        <td style="text-align:center;">{{item|get:'u2.16'}}</td>
+                        <td style="text-align:center;">{{item|get:'m2.16'}}</td>                        
+                    {% endfor %}
+                </tr>
+
+                <tr>                                        <!-- 2.17 -->
+                    <th >2.17</th>
+                    <td style="text-align:left;background:#e6e6fa;">Анемия </td>
+                    <td style="text-align:left;background:#e6e6fa;">О99.0 -ч</td>
+                    {% for item in items|dictsort:"year" %}           
+                        <td style="text-align:center;">{{item|get:'2.17'}}</td>
+                        <td style="text-align:center;">{{item|get:'u2.17'}}</td>
+                        <td style="text-align:center;">{{item|get:'m2.17'}}</td>                        
+                    {% endfor %}
+                </tr>
+
+                <tr>                                        <!-- 2.18 -->
+                    <th >2.18</th>
+                    <td style="text-align:left;background:#e6e6fa;">Болезни системы кровообращения </td>
+                    <td style="text-align:left;background:#e6e6fa;">О99.4 ч.</td>
+                    {% for item in items|dictsort:"year" %}           
+                        <td style="text-align:center;">{{item|get:'2.18'}}</td>
+                        <td style="text-align:center;">{{item|get:'u2.18'}}</td>
+                        <td style="text-align:center;">{{item|get:'m2.18'}}</td>                        
+                    {% endfor %}
+                </tr>
+
+                <tr>                                        <!-- 2.19 -->
+                    <th >2.19</th>
+                    <td style="text-align:left;background:#e6e6fa;">Акушерская эмболия</td>
+                    <td style="text-align:left;background:#e6e6fa;">О88</td>
+                    {% for item in items|dictsort:"year" %}           
+                        <td style="text-align:center;">{{item|get:'2.19'}}</td>
+                        <td style="text-align:center;">{{item|get:'u2.19'}}</td>
+                        <td style="text-align:center;">{{item|get:'m2.19'}}</td>                        
+                    {% endfor %}
+                </tr>
+
+
+
+            </table>
+
+        </td>
+    </tr>
+    
+</table>
+
+{% endblock %}

@@ -1,0 +1,69 @@
+{% extends 'dashboard/base.html' %} {% load staticfiles %}
+
+
+{% block title %}
+    Измененние пароля
+{% endblock %}
+
+{% block heady %}
+<!--heady-->
+    {{ block.super }}
+    <div class="button-link" style="float:right; margin-top:10px; margin-right:10px; ">
+        <a href="{% url 'dashboard:index' %}?next=/" style="padding:15px">На главную</a>
+    </div>
+
+    <div id="header" class="ui-widget" >
+        <div  style=" height:20px; text-align: left;margin-top:20px; margin-left:5px; color:white; ">
+            <h3> 
+                Измененние пароля 
+            </h3>
+        </div>
+    </div>    
+<!--heady-->
+{% endblock %} 
+
+
+{% block body %}
+<!--body-->
+{% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li class="{% if message.tags %} {{ message.tags }}{% endif %}">{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+
+<div class="ui-widget" id="container" style="width:500px;margin-top:10px; margin-left:5px;" >
+    <div class="ui-widget-content ui-corner-all">
+        <form action="" method="post" id="chpass_form">
+            {% for field in chpass_form %}
+                <div style="margin:10px 10px 10px 10px;text-align:right;">
+                    {{ field.label_tag }} {{ field }} 
+                </div>
+                {% if field.help_text %}
+                    <div class="help">{{ field.help_text|safe }}</div>
+                {% endif %}
+            {% endfor %}
+
+            {% csrf_token %}
+            <div id=submit_prof_btn  style="float:right;margin:10px 10px 10px 10px;" >
+                <input class="button-submit" type='submit' name="chpass_form_subm_btn" value='Сохранить'
+                style="margin-top:10px;" />
+            </div>
+        </form>        
+    </div>
+</div>
+<!--body-->
+{% endblock %} 
+
+
+{% block scripts %}               
+<!--scripts-->
+    {{ block.super }}
+    <script>
+        $(function(){
+            $('.button-submit').button();
+        });
+    </script>   
+<!--scripts-->
+{% endblock %}

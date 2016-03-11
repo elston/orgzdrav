@@ -1,0 +1,39 @@
+{% extends 'dashboard/base.html' %} {% load staticfiles %}
+
+{% block title %}
+    Главная панель
+{% endblock %}
+
+{% block heady %}
+    {{ block.super }}
+    <div id="header" class="ui-widget" >
+        <div  style=" height:20px; text-align: left;margin-top:20px; margin-left:5px; color:white; ">
+            <h3> 
+                Главная панель 
+            </h3>
+        </div>
+    </div>    
+{% endblock %} 
+
+{% block body %}
+    <!--..user app..-->
+    <div style="margin-top:10px; margin-left:5px;">
+        {% for app in apps %}
+            <a href="{% url app.xurl %}" class="button-link" style="margin-right:10px;">                        
+                 {{app.name}}
+                 {% if user.username == 'admin' %} 
+                    ({{app.descr}})
+                 {% endif %}
+            </a>
+        {% endfor %}
+    </div>
+    <!--..admin app..-->
+    {% if user.is_staff %} 
+        <div style="margin-top:10px; margin-left:5px;">
+            <a href="{% url 'admin:index'  %}" class="button-link" style="margin-right:10px;">                        
+                Админка
+            </a>
+        </div>
+    {% endif %}   
+ 
+{% endblock %} 

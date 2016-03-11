@@ -1,0 +1,72 @@
+{% extends 'orgzdrav/base_extjs.html' %}
+{% load staticfiles %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'plext/resources/morbidity_extjs.css' %}"/>
+
+    <link rel="stylesheet" href="{% static 'extjs/ux/css/GroupSummary.css' %}"/>
+    <link rel="stylesheet" href="{% static 'extjs/ux/css/Spinner.css' %}"/>
+    <link rel="stylesheet" href="{% static 'extjs/ux/fileuploadfield/css/fileuploadfield.css' %}"/>
+
+    <link rel="stylesheet" href="{% static 'plext/resources/gridpanel.css' %}"/>
+    <link rel="stylesheet" href="{% static 'plext/resources/borderpanel.css' %}"/>
+
+    <link rel="stylesheet" href="{% static 'tot2ivn/resources/Ext.ux.tot2ivn.VrTabPanel.css' %}"/>
+    <link rel="stylesheet" href="{% static 'saarsoo/resources/FilterRow.css' %}"/>
+    <link rel="stylesheet" href="{% static 'technomedia/resources/superboxselect-gray-extend.css' %}"/>
+    <link rel="stylesheet" href="{% static 'extnet/resources/core.css' %}"/>
+
+    <link rel="stylesheet" href="{% static 'plext/resources/grouptab.css' %}"/>
+    <link rel="stylesheet" href="{% static 'plext/resources/main_extjs.css' %}"/>
+    <link rel="stylesheet" href="{% static 'plext/resources/supertreeselect.css' %}"/>
+
+    <link rel="stylesheet" href="{% static 'morbidity/resources/main.css' %}"/>
+
+{% endblock %}
+
+
+{% block script %}
+    <script type="text/javascript">
+        var STATIC_URL = {{ STATIC_URL }};
+
+        var USER_NIK = '{{ user }}';            
+        var USER_NAME = '{{ user.last_name  }}'+' '+'{{ user.first_name }}'+' '+'{{ user.mid_name  }}';        
+        // ...
+        var USER_OBJ = {{ USER_OBJ|safe }},
+            ORG_OBJ = {{ ORG_OBJ|safe }};
+        ///...
+        var CARD_NAMES = {{ CARD_NAMES|safe }};
+        // ..
+        Ext.onReady(function(){
+            new Morbidity.Group.Cls();
+        });    
+    </script>
+
+    <script type="text/javascript" src="{% url 'morbidity:api' %}"></script>
+
+    <script type="text/javascript" src="{% static 'extjs/ux/GroupSummary.js' %}"></script>
+    <script type="text/javascript" src="{% static 'extjs/ux/Spinner.js' %}"></script>
+    <script type="text/javascript" src="{% static 'extjs/ux/SpinnerField.js' %}"></script>
+    <script type="text/javascript" src="{% static 'tot2ivn/Ext.ux.tot2ivn.VrTabPanel.js' %}"></script>
+    <script type="text/javascript" src="{% static 'saarsoo/FilterRow.js' %}"></script>
+    <script type="text/javascript" src="{% static 'technomedia/SuperBoxSelect.js' %}"></script>
+    <script type="text/javascript" src="{% static 'extnet/Core.js' %}"></script>
+
+    <script type="text/javascript" src="{% static 'plext/GroupTab.js' %}"></script>
+    <script type="text/javascript" src="{% static 'plext/GroupTabPanel.js' %}"></script>
+    <script type="text/javascript" src="{% static 'plext/SearchField.js' %}"></script>
+
+    <script type="text/javascript" src="{% static 'plext/Core.js' %}"></script>
+    <script type="text/javascript" src="{% static 'plext/Components.js' %}"></script>
+    <script type="text/javascript" src="{% static 'plext/Controllers.js' %}"></script>
+    <script type="text/javascript" src="{% static 'plext/Main.js' %}"></script>
+
+    <script type="text/javascript" src="{% static 'morbidity/Components.js' %}"></script>
+    <script type="text/javascript" src="{% static 'morbidity/Controllers.js' %}"></script>
+    <script type="text/javascript" src="{% static 'morbidity/Main.js' %}"></script>
+    </script>
+
+    <script type="text/javascript">
+        var COMPONENTS = Morbidity.Components
+    </script>
+{% endblock %}

@@ -1,0 +1,238 @@
+{% extends "orgzdrav/blank.html" %}
+
+{% load get %}
+{% load get %}
+{% load cget %}
+{% load ctot %}
+{% load multip %}
+
+{% block title %}
+    {{ caption }}
+{% endblock %}
+
+{% block body %}
+<table class="page-frame">
+    <tr>
+        <td>
+            
+            <div class="header center">
+                <br style="clear:both">
+                <div class="title">{{ organization.fullname }}</div>
+                <div class="title">{{ caption }}</div>
+                <div class="title2">  {{ datetime |date:"d E Yг." }}</div>
+
+            </div>          
+
+            <table width="100%" class="service-list">
+                <tr>
+                    <th rowspan="2">Показатель</th>
+                    <th rowspan="2">№ стр.</th>
+                    <th rowspan="2">Код по МКБ-X</th>                    
+                    {% for item in items|dictsort:"year" %}
+                        <th colspan="3">{{ item.year }}</td>                    
+                    {% endfor %}
+                </tr>              
+
+                <tr>
+                    {% for item in items|dictsort:"year" %}                
+                        <th>Родилось больными и заболело</th>
+                        <th>из них умерло всего</th>
+                        <th>из них в возрасте 0-6 дней</th>
+                    {% endfor %}                    
+                </tr>
+            
+                <tr>
+                    <th>1</th>
+                    <th>2</th>
+                    <th>3</th>
+                    {% for item in items|dictsort:"year" %}                
+                        <th>{{forloop.counter0|multip:"3"|add:"4"}}</th>
+                        <th>{{forloop.counter0|multip:"3"|add:"5"}}</th>
+                        <th>{{forloop.counter0|multip:"3"|add:"6"}}</th>
+                    {% endfor %}                    
+                </tr>             
+
+                <tr>
+                    <td style="text-align:left;background:#e6e6fa;">Родилось живыми</td>
+                    <td style="text-align:left;background:#e6e6fa;">1</td>
+                    <td style="text-align:left;background:#e6e6fa;"></td>
+                    {% for item in items|dictsort:"year" %}           
+                        <td style="text-align:center;">{% cget item 'c_child_alivebirth_count' 'all' %}</td>
+                        <td style="text-align:center;">{% cget item 'c_child_died_count' 'all' %}</td>
+                        <td style="text-align:center;">{% cget item 'c_child_died_6d_count' 'all' %}</td>                        
+                    {% endfor %}
+                </tr>
+
+                <tr>
+                    <td style="text-align:left;background:#e6e6fa;">из них с заболеваниями: отдельные состояния, возникающие в перинатальноми периоде</td>
+                    <td style="text-align:left;background:#e6e6fa;">2</td>
+                    <td style="text-align:left;background:#e6e6fa;">P00-P96</td>
+                    {% for item in items|dictsort:"year" %}           
+                        <td style="text-align:center;">{% ctot item 'c_child_alivebirth_count' at_fields_a %}</td>
+                        <td style="text-align:center;">{% ctot item 'c_child_died_count' at_fields_a %}</td>
+                        <td style="text-align:center;">{% ctot item 'c_child_died_6d_count' at_fields_a %}</td>                        
+                    {% endfor %}
+                </tr>
+
+                <tr>
+                    <td style="text-align:left;background:#e6e6fa;">из них: родовая травма - всего</td>
+                    <td style="text-align:left;background:#e6e6fa;">2.1.</td>
+                    <td style="text-align:left;background:#e6e6fa;">P10-P15</td>
+                    {% for item in items|dictsort:"year" %}           
+                        <td style="text-align:center;">{% cget item 'c_child_alivebirth_count' 'birthtrauma' %}</td>
+                        <td style="text-align:center;">{% cget item 'c_child_died_count' 'birthtrauma' %}</td>
+                        <td style="text-align:center;">{% cget item 'c_child_died_6d_count' 'birthtrauma' %}</td>                        
+                    {% endfor %}
+                </tr>
+
+                <tr>
+                    <td style="text-align:left;background:#e6e6fa;">из них: разрыв внутричерепных тканей и кровоизлияние вследствие родовой травмы</td>
+                    <td style="text-align:left;background:#e6e6fa;">2.1.1.</td>
+                    <td style="text-align:left;background:#e6e6fa;">Р10</td>
+                    {% for item in items|dictsort:"year" %}           
+                        <td style="text-align:center;">{% cget item 'c_child_alivebirth_count' 'intracranlacerhaemorrhage' %}</td>
+                        <td style="text-align:center;">{% cget item 'c_child_died_count' 'intracranlacerhaemorrhage' %}</td>
+                        <td style="text-align:center;">{% cget item 'c_child_died_6d_count' 'intracranlacerhaemorrhage' %}</td>                        
+                    {% endfor %}
+                </tr>                
+
+                <tr>
+                    <td style="text-align:left;background:#e6e6fa;">внутрижелудочковые кровоизлияния</td>
+                    <td style="text-align:left;background:#e6e6fa;">2.2.</td>
+                    <td style="text-align:left;background:#e6e6fa;">Р52</td>
+                    {% for item in items|dictsort:"year" %}           
+                        <td style="text-align:center;">{% cget item 'c_child_alivebirth_count' 'intracrannontraumhaemorrhage' %}</td>
+                        <td style="text-align:center;">{% cget item 'c_child_died_count' 'intracrannontraumhaemorrhage' %}</td>
+                        <td style="text-align:center;">{% cget item 'c_child_died_6d_count' 'intracrannontraumhaemorrhage' %}</td>                        
+                    {% endfor %}
+                </tr>                                
+
+                <tr>
+                    <td style="text-align:left;background:#e6e6fa;">внутриутробная гипоксия, асфиксия при родах</td>
+                    <td style="text-align:left;background:#e6e6fa;">2.3.</td>
+                    <td style="text-align:left;background:#e6e6fa;">P20,P21</td>
+                    {% for item in items|dictsort:"year" %}           
+                        <td style="text-align:center;">{% cget item 'c_child_alivebirth_count' 'intrauterinehypoxia_birthasphyxia' %}</td>
+                        <td style="text-align:center;">{% cget item 'c_child_died_count' 'intrauterinehypoxia_birthasphyxia' %}</td>
+                        <td style="text-align:center;">{% cget item 'c_child_died_6d_count' 'intrauterinehypoxia_birthasphyxia' %}</td>                        
+                    {% endfor %}
+                </tr>
+
+                <tr>
+                    <td style="text-align:left;background:#e6e6fa;">дыхательное растройство у новорожденных (дистресс)</td>
+                    <td style="text-align:left;background:#e6e6fa;">2.4.</td>
+                    <td style="text-align:left;background:#e6e6fa;">P22.0, P22.8-9</td>
+                    {% for item in items|dictsort:"year" %}           
+                        <td style="text-align:center;">{% cget item 'c_child_alivebirth_count' 'respiratorydistressnewborn' %}</td>
+                        <td style="text-align:center;">{% cget item 'c_child_died_count' 'respiratorydistressnewborn' %}</td>
+                        <td style="text-align:center;">{% cget item 'c_child_died_6d_count' 'respiratorydistressnewborn' %}</td>                        
+                    {% endfor %}
+                </tr>
+
+                <tr>
+                    <td style="text-align:left;background:#e6e6fa;">врождённая пневмония</td>
+                    <td style="text-align:left;background:#e6e6fa;">2.5.</td>
+                    <td style="text-align:left;background:#e6e6fa;">P23</td>
+                    {% for item in items|dictsort:"year" %}           
+                        <td style="text-align:center;">{% cget item 'c_child_alivebirth_count' 'сongenitalpneumonia' %}</td>
+                        <td style="text-align:center;">{% cget item 'c_child_died_count' 'сongenitalpneumonia' %}</td>
+                        <td style="text-align:center;">{% cget item 'c_child_died_6d_count' 'сongenitalpneumonia' %}</td>                        
+                    {% endfor %}
+                </tr>
+
+                <tr>
+                    <td style="text-align:left;background:#e6e6fa;">неонатальные аспирационные синдромы</td>
+                    <td style="text-align:left;background:#e6e6fa;">2.6.</td>
+                    <td style="text-align:left;background:#e6e6fa;">P24.0-3,8</td>
+                    {% for item in items|dictsort:"year" %}           
+                        <td style="text-align:center;">{% cget item 'c_child_alivebirth_count' 'neoaspsynd' %}</td>
+                        <td style="text-align:center;">{% cget item 'c_child_died_count' 'neoaspsynd' %}</td>
+                        <td style="text-align:center;">{% cget item 'c_child_died_6d_count' 'neoaspsynd' %}</td>                        
+                    {% endfor %}
+                </tr>
+
+                <tr>
+                    <td style="text-align:left;background:#e6e6fa;">неонатальная аспирационная пневмония</td>
+                    <td style="text-align:left;background:#e6e6fa;">2.7.</td>
+                    <td style="text-align:left;background:#e6e6fa;">P24.9</td>
+                    {% for item in items|dictsort:"year" %}           
+                        <td style="text-align:center;">{% cget item 'c_child_alivebirth_count' 'neoasppneumonia' %}</td>
+                        <td style="text-align:center;">{% cget item 'c_child_died_count' 'neoasppneumonia' %}</td>
+                        <td style="text-align:center;">{% cget item 'c_child_died_6d_count' 'neoasppneumonia' %}</td>                        
+                    {% endfor %}
+                </tr>        
+
+                <tr>
+                    <td style="text-align:left;background:#e6e6fa;">инфекционные болезни специфичные для перинатального периода - всего</td>
+                    <td style="text-align:left;background:#e6e6fa;">2.8.</td>
+                    <td style="text-align:left;background:#e6e6fa;">P35-P39</td>
+                    {% for item in items|dictsort:"year" %}           
+                        <td style="text-align:center;">{% ctot item 'c_child_alivebirth_count' at_fields_a_1 %}</td>
+                        <td style="text-align:center;">{% ctot item 'c_child_died_count' at_fields_a_1 %}</td>
+                        <td style="text-align:center;">{% ctot item 'c_child_died_6d_count' at_fields_a_1 %}</td>                        
+                    {% endfor %}
+                </tr>                                
+
+                <tr>
+                    <td style="text-align:left;background:#e6e6fa;">из них:  бактериальный сепсис новорожденного</td>
+                    <td style="text-align:left;background:#e6e6fa;">2.8.1.</td>
+                    <td style="text-align:left;background:#e6e6fa;">P36</td>
+                    {% for item in items|dictsort:"year" %}           
+                        <td style="text-align:center;">{% cget item 'c_child_alivebirth_count' 'bacterialsepsisnewborn' %}</td>
+                        <td style="text-align:center;">{% cget item 'c_child_died_count' 'bacterialsepsisnewborn' %}</td>
+                        <td style="text-align:center;">{% cget item 'c_child_died_6d_count' 'bacterialsepsisnewborn' %}</td>                        
+                    {% endfor %}
+                </tr>   
+
+                <tr>
+                    <td style="text-align:left;background:#e6e6fa;">другие нарушения церебрального статуса новорожденного</td>
+                    <td style="text-align:left;background:#e6e6fa;">2.9</td>
+                    <td style="text-align:left;background:#e6e6fa;">P91</td>
+                    {% for item in items|dictsort:"year" %}           
+                        <td style="text-align:center;">{% cget item 'c_child_alivebirth_count' 'disturbances_of_cerebral_status' %}</td>
+                        <td style="text-align:center;">{% cget item 'c_child_died_count' 'disturbances_of_cerebral_status' %}</td>
+                        <td style="text-align:center;">{% cget item 'c_child_died_6d_count' 'disturbances_of_cerebral_status' %}</td>                        
+                    {% endfor %}
+                </tr>   
+
+                <tr>
+                    <td style="text-align:left;background:#e6e6fa;">врожденные аномалии (пороки развития). Деформации и хромосомные нарущения</td>
+                    <td style="text-align:left;background:#e6e6fa;">3</td>
+                    <td style="text-align:left;background:#e6e6fa;">Q00-Q99</td>
+                    {% for item in items|dictsort:"year" %}           
+                        <td style="text-align:center;">{% ctot item 'c_child_alivebirth_count' at_fields_b %}</td>
+                        <td style="text-align:center;">{% ctot item 'c_child_died_count' at_fields_b %}</td>
+                        <td style="text-align:center;">{% ctot item 'c_child_died_6d_count' at_fields_b %}</td>                        
+                    {% endfor %}
+                </tr>
+
+                <tr>
+                    <td style="text-align:left;background:#e6e6fa;">прочие болезни</td>
+                    <td style="text-align:left;background:#e6e6fa;">4</td>
+                    <td style="text-align:left;background:#e6e6fa;"></td>
+                    {% for item in items|dictsort:"year" %}           
+                        <td style="text-align:center;">{% ctot item 'c_child_alivebirth_count' at_fields_c %}</td>
+                        <td style="text-align:center;">{% ctot item 'c_child_died_count' at_fields_c %}</td>
+                        <td style="text-align:center;">{% ctot item 'c_child_died_6d_count' at_fields_c %}</td>                        
+                    {% endfor %}
+                </tr>
+
+                <tr>
+                    <td style="text-align:left;background:#e6e6fa;">Число случаев заболеваний всего</td>
+                    <td style="text-align:left;background:#e6e6fa;"></td>
+                    <td style="text-align:left;background:#e6e6fa;"></td>
+                    {% for item in items|dictsort:"year" %}           
+                        <td style="text-align:center;">{% ctot item 'c_child_alivebirth_count' at_fields %}</td>
+                        <td style="text-align:center;">{% ctot item 'c_child_died_count' at_fields %}</td>
+                        <td style="text-align:center;">{% ctot item 'c_child_died_6d_count' at_fields %}</td>                        
+                    {% endfor %}
+                </tr>
+
+            </table>
+
+        </td>
+    </tr>
+    
+</table>
+
+{% endblock %}

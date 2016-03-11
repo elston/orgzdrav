@@ -1,0 +1,52 @@
+<!doctype html>{% load staticfiles %}
+<!--[if IE 9 ]><html class="ie9"><![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" type="image/ico" href="{% static 'favicon.ico' %}"/>
+        <title>
+            {% block title %} 
+                Портал 
+            {% endblock %}
+        </title>
+
+        {% block styles %}
+        <link href="{% static 'plext/resources/reset.css' %}" rel="stylesheet"/>
+        <link href="{% static 'jquery/resources/jquery-ui-1.8.2.custom.css' %}" rel="stylesheet"/>
+        <link href="{% static 'plext/resources/main.css' %}" rel="stylesheet"/>
+        <link href="{% static 'plext/resources/dashboard.css' %}" rel="stylesheet"/>
+        {% endblock %}
+
+        {% block extra_headers %}
+        {% endblock %}
+    </head>
+    <body>
+        {% block heady %}
+            <div class="button-link" style="float:right; margin-top:10px; margin-right:10px;">
+                <a href="{% url 'accounts:logout' %}?next=/" style="padding:15px;">Выход</a>
+            </div>        
+        {% endblock %} 
+
+        <div class="ui-widget-content ui-corner-all ui-widget" 
+             style="margin:15px 5px 5px 5px; padding:15px ;background: transparent; color: white; text-align: left;  ">
+            <h3> {{user.last_name}}  {{user.first_name}}  {{user.mid_name}}  ( {{user}} )</h3>
+        </div>
+
+        {% block body %}
+        {% endblock %} 
+
+        {% block scripts %}               
+            <script src="{% static 'jquery/jquery-1.7.1.min.js' %}"></script>
+            <script src="{% static 'jquery/jquery-ui-1.8.2.custom.min.js' %}"></script>
+
+            <script>
+                $(function(){
+                    $('.button-link').button();
+                });
+            </script>            
+        {% endblock %}
+    </body>
+</html>

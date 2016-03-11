@@ -1,0 +1,16 @@
+
+/******** textfield-icon **************/
+.x-textfield-icon{
+    background-repeat:no-repeat;
+    background-position:0 50%;
+    width:16px;
+    height:16px;
+    margin-left:1px;
+}
+.x-textfield-icon-input{
+    padding-left:20px;
+}
+.x-form-field-wrap .x-textfield-icon{
+    top:3px;
+    left:2px;
+}

@@ -1,0 +1,50 @@
+{% extends "orgzdrav/blank.html" %}
+
+{% load get %}
+
+{% block title %}
+    {{ caption }}
+{% endblock %}
+
+{% block body %}
+<table class="page-frame">
+    <tr>
+        <td>
+            
+            <div class="header center">
+                <br style="clear:both">
+                <div class="title">{{ organization.fullname }}</div>
+                <div class="title">{{ caption }}</div>
+                <div class="title2">  {{ datetime |date:"d E Yг." }}</div>
+
+            </div>          
+
+            <table width="100%" class="service-list">
+                <tr>
+                    <th>№ стр.</th>
+                    <th>Показатель</th>
+                    {% for item in items|dictsort:"year" %}
+                        <th>{{ item.year }}</td>                    
+                    {% endfor %}   
+                </tr>              
+
+
+                {% for code in codes %}
+                    <tr>
+                        <th>{{code.code}}</th>
+                        <td style="text-align:left;background:#e6e6fa;">{{code.name}}</td>
+                        {% for item in items|dictsort:"year" %}                            
+                            <td style="text-align:center;">{{item|get:code.code|get:'value'}}</td>                            
+                        {% endfor %}                                
+                    </tr>
+                {% endfor %}   
+
+
+            </table>
+
+        </td>
+    </tr>
+    
+</table>
+
+{% endblock %}

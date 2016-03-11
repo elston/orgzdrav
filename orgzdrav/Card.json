@@ -1,0 +1,686 @@
+[
+{
+ "model": "orgzdrav.card",
+ "pk": "35b3eac1-a6cc-49f7-876c-cb5a6b8bac02",
+ "fields": {
+  "fio": "\u0412\u0430\u0449\u0435\u043d\u043a\u043e \u042e\u043b\u0438\u044f \u0414\u043c\u0438\u0442\u0440\u0438\u0435\u0432\u043d\u0430",
+  "birthday": "2013-02-11",
+  "organization": {
+   "fullname": "\u041a\u0440\u0430\u0435\u0432\u0430\u044f \u043a\u043b\u0438\u043d\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u0431\u043e\u043b\u044c\u043d\u0438\u0446\u0430 \u21162",
+   "is_perinatalcenter": true,
+   "id": "c71ddfe1-ca69-445f-a2fd-60da7f1f92c6",
+   "name": "\u041a\u041a\u0411 \u21162",
+   "lavelmz": 2
+  },
+  "cardname": {
+   "id": "delivery",
+   "name": "\u0420\u043e\u0434\u044b"
+  },
+  "store": {
+   "children": [
+    {
+     "datetime": "2016-02-25 14:22 +0300",
+     "object": {
+      "id": "child",
+      "name": "\u0418\u0441\u0442\u043e\u0440\u0438\u044f \u043d\u043e\u0432\u043e\u0440\u043e\u0436\u0434\u0435\u043d\u043d\u043e\u0433\u043e",
+      "form": "ChildGridForm",
+      "renderer": "childRenderer"
+     },
+     "data": {
+      "diagnoses": [
+       {
+        "id": "bronchitis",
+        "name": "\u0411\u0440\u043e\u043d\u0445\u0438\u0442",
+        "fields": {}
+       }
+      ],
+      "childweight": 3200,
+      "childheight": 42,
+      "birthdatetime": "2016-02-25 14:22 +0300",
+      "childnumber": 1
+     }
+    }
+   ],
+   "enterorganization": {
+    "datetime": "2016-02-20 17:42 +0300",
+    "object": {
+     "id": "enterorganization",
+     "name": "\u041f\u043e\u0441\u0442\u0443\u043f\u043b\u0435\u043d\u0438\u0435 \u0432 \u043c\u0435\u0434.\u0443\u0447.",
+     "form": "EnterOrganizationGridForm",
+     "renderer": "enterOrganizationRenderer"
+    },
+    "data": {
+     "cardnumber": 123
+    }
+   },
+   "finishepicris": {
+    "datetime": "2015-02-20 17:42 +0300",
+    "object": {
+     "id": "finishepicris",
+     "name": "\u0412\u044b\u043f\u0438\u0441\u043d\u043e\u0439 \u044d\u043f\u0438\u043a\u0440\u0438\u0437",
+     "form": "EpicrisGridForm",
+     "renderer": "finishEpicrisRenderer"
+    },
+    "data": {
+     "diagnoses": [
+      {
+       "id": "diabetes",
+       "name": "\u0421\u0430\u0445\u0430\u0440\u043d\u044b\u0439 \u0434\u0438\u0430\u0431\u0435\u0442",
+       "fields": {}
+      },
+      {
+       "id": "pregnancy",
+       "name": "\u0411\u0435\u0440\u0435\u043c\u0435\u043d\u043d\u043e\u0441\u0442\u044c",
+       "fields": {
+        "gestation": {
+         "order": 1,
+         "label": "",
+         "value": 35,
+         "mu": "\u043d\u0435\u0434\u0435\u043b\u044c"
+        },
+        "multiplety": {
+         "order": 3,
+         "label": "\u043a\u043e\u043b\u0438\u0447\u0435\u0441\u0442\u0432\u043e \u043f\u043b\u043e\u0434\u043e\u0432:",
+         "value": {
+          "id": "uno",
+          "name": "\u043e\u0434\u043d\u043e\u043f\u043b\u043e\u0434\u043d\u0430\u044f"
+         },
+         "mu": ""
+        },
+        "progresivity": {
+         "order": 2,
+         "label": "\u043f\u0440\u043e\u0433\u0440\u0435\u0441\u0441\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u0435:",
+         "value": {
+          "id": "yes",
+          "name": "\u043f\u0440\u043e\u0433\u0440\u0435\u0441\u0441\u0438\u0440\u0443\u044e\u0449\u0430\u044f"
+         },
+         "mu": ""
+        }
+       }
+      },
+      {
+       "id": "cesarean",
+       "name": "\u041a\u0435\u0441\u0430\u0440\u0435\u0432\u043e \u0441\u0435\u0447\u0435\u043d\u0438\u0435",
+       "fields": {
+        "category": {
+         "order": 1,
+         "label": "<s> </s>",
+         "value": {
+          "id": "lwr",
+          "name": "\u0432 \u043d\u0438\u0436\u043d\u0435\u043c \u0441\u0435\u0433\u043c\u0435\u043d\u0442\u0435"
+         },
+         "mu": ""
+        }
+       }
+      }
+     ]
+    }
+   }
+  }
+ }
+},
+{
+ "model": "orgzdrav.card",
+ "pk": "40960d17-2c7d-4490-8958-5a436bfdcdc9",
+ "fields": {
+  "fio": "\u0418\u043b\u044c\u0447\u0435\u043d\u043a\u043e \u0414\u0438\u0430\u043d\u0430 \u0421\u0435\u0440\u0433\u0435\u0435\u0432\u043d\u0430",
+  "birthday": "2005-07-10",
+  "organization": {
+   "fullname": "\u041a\u0440\u0430\u0435\u0432\u0430\u044f \u043a\u043b\u0438\u043d\u0438\u0447\u0435\u0441\u043a\u0430\u044f \u0431\u043e\u043b\u044c\u043d\u0438\u0446\u0430 \u21162",
+   "is_perinatalcenter": true,
+   "id": "c71ddfe1-ca69-445f-a2fd-60da7f1f92c6",
+   "name": "\u041a\u041a\u0411 \u21162",
+   "lavelmz": 2
+  },
+  "cardname": {
+   "id": "delivery",
+   "name": "\u0420\u043e\u0434\u044b"
+  },
+  "store": {
+   "children": [
+    {
+     "datetime": "2016-02-19 15:39 +0300",
+     "object": {
+      "id": "child",
+      "name": "\u0418\u0441\u0442\u043e\u0440\u0438\u044f \u043d\u043e\u0432\u043e\u0440\u043e\u0436\u0434\u0435\u043d\u043d\u043e\u0433\u043e",
+      "form": "ChildGridForm",
+      "renderer": "childRenderer"
+     },
+     "data": {
+      "diagnoses": [
+       {
+        "id": "antenatal",
+        "name": "\u0410\u043d\u0442\u0435\u043d\u0430\u0442\u0430\u043b\u044c\u043d\u0430\u044f \u0433\u0438\u0431\u0435\u043b\u044c \u043f\u043b\u043e\u0434\u0430",
+        "fields": {}
+       },
+       {
+        "id": "prematureinfant",
+        "name": "\u041d\u0435\u0434\u043e\u043d\u043e\u0448\u0435\u043d\u043d\u043e\u0441\u0442\u044c",
+        "fields": {
+         "gestation": {
+          "order": 1,
+          "label": "<s> </s>",
+          "value": 26,
+          "mu": "\u043d\u0435\u0434\u0435\u043b\u044c"
+         }
+        }
+       }
+      ],
+      "birthdatetime": "2016-02-19 15:39 +0300",
+      "childnumber": 1,
+      "mortepicris": {
+       "datetime": "2016-02-19 15:40 +0300",
+       "object": {
+        "id": "childmortepicris",
+        "name": "\u041f\u043e\u0441\u043c\u0435\u0440\u0442\u043d\u044b\u0439 \u044d\u043f\u0438\u043a\u0440\u0438\u0437 \u043d\u043e\u0432\u043e\u0440\u043e\u0436\u0434\u0435\u043d\u043d\u043e\u0433\u043e",
+        "form": "ChildmortepicrisGridForm",
+        "renderer": "childmortepicrisRenderer"
+       },
+       "data": {
+        "diagnoses": [
+         {
+          "id": "antenatal",
+          "name": "\u0410\u043d\u0442\u0435\u043d\u0430\u0442\u0430\u043b\u044c\u043d\u0430\u044f \u0433\u0438\u0431\u0435\u043b\u044c \u043f\u043b\u043e\u0434\u0430",
+          "fields": {}
+         }
+        ],
+        "mortdatetime": "2016-02-19 15:40 +0300",
+        "childnumber": 1
+       }
+      },
+      "childweight": 4500,
+      "childheight": 45
+     }
+    },
+    {
+     "datetime": "2016-02-19 15:40 +0300",
+     "object": {
+      "id": "child",
+      "name": "\u0418\u0441\u0442\u043e\u0440\u0438\u044f \u043d\u043e\u0432\u043e\u0440\u043e\u0436\u0434\u0435\u043d\u043d\u043e\u0433\u043e",
+      "form": "ChildGridForm",
+      "renderer": "childRenderer"
+     },
+     "data": {
+      "diagnoses": [
+       {
+        "id": "bronchitis",
+        "name": "\u0411\u0440\u043e\u043d\u0445\u0438\u0442",
+        "fields": {}
+       }
+      ],
+      "childweight": 2000,
+      "childheight": 45,
+      "birthdatetime": "2016-02-19 15:40 +0300",
+      "childnumber": 2
+     }
+    }
+   ],
+   "beginepicris": {
+    "datetime": "2016-01-01 02:00 +0300",
+    "object": {
+     "id": "beginepicris",
+     "name": "\u041f\u0435\u0440\u0432\u0438\u0447\u043d\u044b\u0439 \u043e\u0441\u043c\u043e\u0442\u0440",
+     "form": "EpicrisGridForm",
+     "renderer": "beginEpicrisRenderer"
+    },
+    "data": {
+     "diagnoses": [
+      {
+       "id": "pregnancy",
+       "name": "\u0411\u0435\u0440\u0435\u043c\u0435\u043d\u043d\u043e\u0441\u0442\u044c",
+       "fields": {
+        "gestation": {
+         "order": 1,
+         "label": "",
+         "value": 40,
+         "mu": "\u043d\u0435\u0434\u0435\u043b\u044c"
+        },
+        "multiplety": {
+         "order": 3,
+         "label": "\u043a\u043e\u043b\u0438\u0447\u0435\u0441\u0442\u0432\u043e \u043f\u043b\u043e\u0434\u043e\u0432:",
+         "value": {
+          "id": "uno",
+          "name": "\u043e\u0434\u043d\u043e\u043f\u043b\u043e\u0434\u043d\u0430\u044f"
+         },
+         "mu": ""
+        },
+        "progresivity": {
+         "order": 2,
+         "label": "\u043f\u0440\u043e\u0433\u0440\u0435\u0441\u0441\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u0435:",
+         "value": {
+          "id": "yes",
+          "name": "\u043f\u0440\u043e\u0433\u0440\u0435\u0441\u0441\u0438\u0440\u0443\u044e\u0449\u0430\u044f"
+         },
+         "mu": ""
+        }
+       }
+      },
+      {
+       "id": "forerunnersdelivery",
+       "name": "\u041f\u0440\u0435\u0434\u0432\u0435\u0441\u0442\u043d\u0438\u043a\u0438 \u0440\u043e\u0434\u043e\u0432",
+       "fields": {}
+      },
+      {
+       "id": "\u0441onheartdefect",
+       "name": "\u0412\u0440\u043e\u0436\u0434\u0435\u043d\u043d\u044b\u0439 \u043f\u043e\u0440\u043e\u043a \u0441\u0435\u0440\u0434\u0446\u0430",
+       "fields": {}
+      },
+      {
+       "id": "ventseptdefect",
+       "name": "\u0414\u0435\u0444\u0435\u043a\u0442 \u043c\u0435\u0436\u0436\u0435\u043b\u0443\u0434\u043e\u0447\u043a\u043e\u0432\u043e\u0439 \u043f\u0435\u0440\u0435\u0433\u043e\u0440\u043e\u0434\u043a\u0438",
+       "fields": {}
+      },
+      {
+       "id": "mitralprolapse",
+       "name": "\u041f\u0440\u043e\u043b\u0430\u043f\u0441 \u043c\u0438\u0442\u0440\u0430\u043b\u044c\u043d\u043e\u0433\u043e \u043a\u043b\u0430\u043f\u0430\u043d\u0430",
+       "fields": {
+        "degree": {
+         "order": 1,
+         "label": "<s> </s>",
+         "value": 1,
+         "mu": "-\u0439 \u0441\u0442\u0435\u043f\u0435\u043d\u0438"
+        }
+       }
+      },
+      {
+       "id": "pulmhypertension",
+       "name": "\u041b\u0435\u0433\u043e\u0447\u043d\u0430\u044f \u0433\u0438\u043f\u0435\u0440\u0442\u0435\u043d\u0437\u0438\u044f",
+       "fields": {
+        "power": {
+         "order": 1,
+         "label": "<s>, </s>",
+         "value": {
+          "id": "mid",
+          "name": "\u0443\u043c\u0435\u0440\u0435\u043d\u043d\u0430\u044f"
+         },
+         "mu": ""
+        }
+       }
+      }
+     ]
+    }
+   },
+   "cesarean": {
+    "datetime": "2016-01-04 04:35 +0300",
+    "object": {
+     "id": "cesarean",
+     "name": "\u041f\u0440\u043e\u0442\u043e\u043a\u043e\u043b \u043a\u0435\u0441\u0430\u0440\u0435\u0432\u0430 \u0441\u0435\u0447\u0435\u043d\u0438\u044f",
+     "form": "CesareanGridForm",
+     "renderer": "cesareanRenderer"
+    },
+    "data": {
+     "diagnoses": [
+      {
+       "id": "delivery",
+       "name": "\u0420\u043e\u0434\u044b",
+       "fields": {
+        "multiplety": {
+         "order": 2,
+         "label": "\u043a\u043e\u043b\u0438\u0447\u0435\u0441\u0442\u0432\u043e \u043f\u043b\u043e\u0434\u043e\u0432:",
+         "value": {
+          "id": "uno",
+          "name": "\u043e\u0434\u043d\u043e\u043f\u043b\u043e\u0434\u043d\u044b\u0435"
+         },
+         "mu": ""
+        },
+        "gestation": {
+         "order": 5,
+         "label": "\u0441\u0440\u043e\u043a:",
+         "value": 40,
+         "mu": "\u043d\u0435\u0434\u0435\u043b\u044c"
+        },
+        "period": {
+         "order": 6,
+         "label": "<s> </s>",
+         "value": 1,
+         "mu": "-\u0439 \u043f\u0435\u0440\u0438\u043e\u0434"
+        },
+        "number": {
+         "order": 1,
+         "label": "\u043f\u043e \u0441\u0447\u0435\u0442\u0443:<s> </s>",
+         "value": 1,
+         "mu": "- \u0435"
+        }
+       }
+      },
+      {
+       "id": "placentalinsufficiency",
+       "name": "\u041f\u043b\u0430\u0446\u0435\u043d\u0442\u0430\u0440\u043d\u0430\u044f \u043d\u0435\u0434\u043e\u0441\u0442\u0430\u0442\u043e\u0447\u043d\u043e\u0441\u0442\u044c",
+       "fields": {
+        "category": {
+         "order": 1,
+         "label": "<s>, </s>",
+         "value": {
+          "id": "slw",
+          "name": "\u0445\u0440\u043e\u043d\u0438\u0447\u0435\u0441\u043a\u0430\u044f"
+         },
+         "mu": ""
+        }
+       }
+      },
+      {
+       "id": "intrauterinefetalhypoxia",
+       "name": "\u0412\u043d\u0443\u0442\u0440\u0438\u0443\u0442\u0440\u043e\u0431\u043d\u0430\u044f \u0433\u0438\u043f\u043e\u043a\u0441\u0438\u044f \u043f\u043b\u043e\u0434\u0430",
+       "fields": {
+        "category": {
+         "order": 1,
+         "label": "<s>, </s>",
+         "value": {
+          "id": "slw",
+          "name": "\u0445\u0440\u043e\u043d\u0438\u0447\u0435\u0441\u043a\u0430\u044f"
+         },
+         "mu": ""
+        }
+       }
+      },
+      {
+       "id": "intrautergrowthrest",
+       "name": "\u0417\u0430\u0434\u0435\u0440\u0436\u043a\u0430 \u0432\u043d\u0443\u0442\u0440\u0438\u0443\u0442\u0440\u043e\u0431\u043d\u043e\u0433\u043e \u0440\u0430\u0437\u0432\u0438\u0442\u0438\u044f",
+       "fields": {
+        "degree": {
+         "order": 1,
+         "label": "<s> </s>",
+         "value": 2,
+         "mu": "-\u0439 \u0441\u0442\u0435\u043f\u0435\u043d\u0438"
+        }
+       }
+      },
+      {
+       "id": "rupturemembranes",
+       "name": "\u0418\u0437\u043b\u0438\u0442\u0438\u0435 \u043e\u043a\u043e\u043b\u043e\u043f\u043b\u043e\u0434\u043d\u044b\u0445 \u0432\u043e\u0434",
+       "fields": {
+        "category": {
+         "order": 1,
+         "label": "<s>, </s>",
+         "value": {
+          "id": "erl",
+          "name": "\u0440\u0430\u043d\u0435\u0435"
+         },
+         "mu": ""
+        }
+       }
+      },
+      {
+       "id": "\u0441onheartdefect",
+       "name": "\u0412\u0440\u043e\u0436\u0434\u0435\u043d\u043d\u044b\u0439 \u043f\u043e\u0440\u043e\u043a \u0441\u0435\u0440\u0434\u0446\u0430",
+       "fields": {}
+      },
+      {
+       "id": "ventseptdefect",
+       "name": "\u0414\u0435\u0444\u0435\u043a\u0442 \u043c\u0435\u0436\u0436\u0435\u043b\u0443\u0434\u043e\u0447\u043a\u043e\u0432\u043e\u0439 \u043f\u0435\u0440\u0435\u0433\u043e\u0440\u043e\u0434\u043a\u0438",
+       "fields": {}
+      },
+      {
+       "id": "mitralprolapse",
+       "name": "\u041f\u0440\u043e\u043b\u0430\u043f\u0441 \u043c\u0438\u0442\u0440\u0430\u043b\u044c\u043d\u043e\u0433\u043e \u043a\u043b\u0430\u043f\u0430\u043d\u0430",
+       "fields": {
+        "degree": {
+         "order": 1,
+         "label": "<s> </s>",
+         "value": 1,
+         "mu": "-\u0439 \u0441\u0442\u0435\u043f\u0435\u043d\u0438"
+        }
+       }
+      },
+      {
+       "id": "drugallergy",
+       "name": "\u041c\u0435\u0434\u0438\u043a\u0430\u043c\u0435\u043d\u0442\u043e\u0437\u043d\u0430\u044f \u0430\u043b\u043b\u0435\u0440\u0433\u0438\u044f",
+       "fields": {}
+      },
+      {
+       "id": "laparotomy",
+       "name": "\u041b\u0430\u043f\u0430\u0440\u043e\u0442\u043e\u043c\u0438\u044f",
+       "fields": {
+        "incision": {
+         "order": 1,
+         "label": "<s> </s>",
+         "value": {
+          "id": "pfn",
+          "name": "\u043f\u043e \u041f\u0444\u0430\u043d\u043d\u0435\u043d\u0448\u0442\u0438\u043b\u044e"
+         },
+         "mu": ""
+        }
+       }
+      },
+      {
+       "id": "cesarean",
+       "name": "\u041a\u0435\u0441\u0430\u0440\u0435\u0432\u043e \u0441\u0435\u0447\u0435\u043d\u0438\u0435",
+       "fields": {
+        "category": {
+         "order": 1,
+         "label": "<s> </s>",
+         "value": {
+          "id": "lwr",
+          "name": "\u0432 \u043d\u0438\u0436\u043d\u0435\u043c \u0441\u0435\u0433\u043c\u0435\u043d\u0442\u0435"
+         },
+         "mu": ""
+        }
+       }
+      },
+      {
+       "id": "continuousepiduralka",
+       "name": "\u0414\u043b\u0438\u0442\u0435\u043b\u044c\u043d\u0430\u044f \u044d\u043f\u0438\u0434\u0443\u0440\u0430\u043b\u044c\u043d\u0430\u044f \u0430\u043d\u0435\u0441\u0442\u0435\u0437\u0438\u044f",
+       "fields": {}
+      }
+     ],
+     "birthdatetime": "2016-01-04 04:36 +0300"
+    }
+   },
+   "obmenka": {
+    "datetime": "2016-01-01 01:46 +0300",
+    "object": {
+     "id": "obmenka",
+     "name": "O\u0431\u043c\u0435\u043d\u043d\u0430\u044f \u043a\u0430\u0440\u0442\u0430",
+     "form": "ObmenkaGridForm",
+     "renderer": "obmenkaRenderer"
+    },
+    "data": {
+     "gestation": 7,
+     "visit": "2015-05-21"
+    }
+   },
+   "finishepicris": {
+    "datetime": "2016-01-21 13:44 +0300",
+    "object": {
+     "id": "finishepicris",
+     "name": "\u0412\u044b\u043f\u0438\u0441\u043d\u043e\u0439 \u044d\u043f\u0438\u043a\u0440\u0438\u0437",
+     "form": "EpicrisGridForm",
+     "renderer": "finishEpicrisRenderer"
+    },
+    "data": {
+     "diagnoses": [
+      {
+       "id": "delivery",
+       "name": "\u0420\u043e\u0434\u044b",
+       "fields": {
+        "gestation": {
+         "order": 5,
+         "label": "\u0441\u0440\u043e\u043a:",
+         "value": 40,
+         "mu": "\u043d\u0435\u0434\u0435\u043b\u044c"
+        },
+        "multiplety": {
+         "order": 2,
+         "label": "\u043a\u043e\u043b\u0438\u0447\u0435\u0441\u0442\u0432\u043e \u043f\u043b\u043e\u0434\u043e\u0432:",
+         "value": {
+          "id": "uno",
+          "name": "\u043e\u0434\u043d\u043e\u043f\u043b\u043e\u0434\u043d\u044b\u0435"
+         },
+         "mu": ""
+        },
+        "number": {
+         "order": 1,
+         "label": "\u043f\u043e \u0441\u0447\u0435\u0442\u0443:<s> </s>",
+         "value": 1,
+         "mu": "- \u0435"
+        }
+       }
+      },
+      {
+       "id": "placentalinsufficiency",
+       "name": "\u041f\u043b\u0430\u0446\u0435\u043d\u0442\u0430\u0440\u043d\u0430\u044f \u043d\u0435\u0434\u043e\u0441\u0442\u0430\u0442\u043e\u0447\u043d\u043e\u0441\u0442\u044c",
+       "fields": {
+        "category": {
+         "order": 1,
+         "label": "<s>, </s>",
+         "value": {
+          "id": "slw",
+          "name": "\u0445\u0440\u043e\u043d\u0438\u0447\u0435\u0441\u043a\u0430\u044f"
+         },
+         "mu": ""
+        }
+       }
+      },
+      {
+       "id": "intrauterinefetalhypoxia",
+       "name": "\u0412\u043d\u0443\u0442\u0440\u0438\u0443\u0442\u0440\u043e\u0431\u043d\u0430\u044f \u0433\u0438\u043f\u043e\u043a\u0441\u0438\u044f \u043f\u043b\u043e\u0434\u0430",
+       "fields": {
+        "category": {
+         "order": 1,
+         "label": "<s>, </s>",
+         "value": {
+          "id": "slw",
+          "name": "\u0445\u0440\u043e\u043d\u0438\u0447\u0435\u0441\u043a\u0430\u044f"
+         },
+         "mu": ""
+        }
+       }
+      },
+      {
+       "id": "intrautergrowthrest",
+       "name": "\u0417\u0430\u0434\u0435\u0440\u0436\u043a\u0430 \u0432\u043d\u0443\u0442\u0440\u0438\u0443\u0442\u0440\u043e\u0431\u043d\u043e\u0433\u043e \u0440\u0430\u0437\u0432\u0438\u0442\u0438\u044f",
+       "fields": {
+        "degree": {
+         "order": 1,
+         "label": "<s> </s>",
+         "value": 2,
+         "mu": "-\u0439 \u0441\u0442\u0435\u043f\u0435\u043d\u0438"
+        }
+       }
+      },
+      {
+       "id": "rupturemembranes",
+       "name": "\u0418\u0437\u043b\u0438\u0442\u0438\u0435 \u043e\u043a\u043e\u043b\u043e\u043f\u043b\u043e\u0434\u043d\u044b\u0445 \u0432\u043e\u0434",
+       "fields": {
+        "category": {
+         "order": 1,
+         "label": "<s>, </s>",
+         "value": {
+          "id": "erl",
+          "name": "\u0440\u0430\u043d\u0435\u0435"
+         },
+         "mu": ""
+        }
+       }
+      },
+      {
+       "id": "\u0441onheartdefect",
+       "name": "\u0412\u0440\u043e\u0436\u0434\u0435\u043d\u043d\u044b\u0439 \u043f\u043e\u0440\u043e\u043a \u0441\u0435\u0440\u0434\u0446\u0430",
+       "fields": {}
+      },
+      {
+       "id": "ventseptdefect",
+       "name": "\u0414\u0435\u0444\u0435\u043a\u0442 \u043c\u0435\u0436\u0436\u0435\u043b\u0443\u0434\u043e\u0447\u043a\u043e\u0432\u043e\u0439 \u043f\u0435\u0440\u0435\u0433\u043e\u0440\u043e\u0434\u043a\u0438",
+       "fields": {}
+      },
+      {
+       "id": "mitralprolapse",
+       "name": "\u041f\u0440\u043e\u043b\u0430\u043f\u0441 \u043c\u0438\u0442\u0440\u0430\u043b\u044c\u043d\u043e\u0433\u043e \u043a\u043b\u0430\u043f\u0430\u043d\u0430",
+       "fields": {
+        "degree": {
+         "order": 1,
+         "label": "<s> </s>",
+         "value": 1,
+         "mu": "-\u0439 \u0441\u0442\u0435\u043f\u0435\u043d\u0438"
+        }
+       }
+      },
+      {
+       "id": "drugallergy",
+       "name": "\u041c\u0435\u0434\u0438\u043a\u0430\u043c\u0435\u043d\u0442\u043e\u0437\u043d\u0430\u044f \u0430\u043b\u043b\u0435\u0440\u0433\u0438\u044f",
+       "fields": {}
+      },
+      {
+       "id": "laparotomy",
+       "name": "\u041b\u0430\u043f\u0430\u0440\u043e\u0442\u043e\u043c\u0438\u044f",
+       "fields": {
+        "incision": {
+         "order": 1,
+         "label": "<s> </s>",
+         "value": {
+          "id": "pfn",
+          "name": "\u043f\u043e \u041f\u0444\u0430\u043d\u043d\u0435\u043d\u0448\u0442\u0438\u043b\u044e"
+         },
+         "mu": ""
+        }
+       }
+      },
+      {
+       "id": "cesarean",
+       "name": "\u041a\u0435\u0441\u0430\u0440\u0435\u0432\u043e \u0441\u0435\u0447\u0435\u043d\u0438\u0435",
+       "fields": {
+        "category": {
+         "order": 1,
+         "label": "<s> </s>",
+         "value": {
+          "id": "lwr",
+          "name": "\u0432 \u043d\u0438\u0436\u043d\u0435\u043c \u0441\u0435\u0433\u043c\u0435\u043d\u0442\u0435"
+         },
+         "mu": ""
+        }
+       }
+      },
+      {
+       "id": "continuousepiduralka",
+       "name": "\u0414\u043b\u0438\u0442\u0435\u043b\u044c\u043d\u0430\u044f \u044d\u043f\u0438\u0434\u0443\u0440\u0430\u043b\u044c\u043d\u0430\u044f \u0430\u043d\u0435\u0441\u0442\u0435\u0437\u0438\u044f",
+       "fields": {}
+      },
+      {
+       "id": "lohiometra",
+       "name": "\u041b\u043e\u0445\u0438\u043e\u043c\u0435\u0442\u0440\u0430",
+       "fields": {}
+      },
+      {
+       "id": "vacuumuterine",
+       "name": "\u0412\u0430\u043a\u0443\u0443\u043c-\u0430\u0441\u043f\u0438\u0440\u0430\u0446\u0438\u044f \u0441\u043e\u0434\u0435\u0440\u0436\u0438\u043c\u043e\u0433\u043e \u043f\u043e\u043b\u043e\u0441\u0442\u0438 \u043c\u0430\u0442\u043a\u0438",
+       "fields": {}
+      },
+      {
+       "id": "seromapostopersuture",
+       "name": "\u0421\u0435\u0440\u043e\u043c\u0430 \u043f\u043e\u0441\u043b\u0435\u043e\u043f\u0435\u0440\u0430\u0446\u0438\u043e\u043d\u043d\u043e\u0433\u043e \u0448\u0432\u0430",
+       "fields": {}
+      },
+      {
+       "id": "postpartum",
+       "name": "\u041f\u043e\u0441\u043b\u0435\u0440\u043e\u0434\u043e\u0432\u044b\u0439 \u043f\u0435\u0440\u0438\u043e\u0434",
+       "fields": {}
+      },
+      {
+       "id": "hyperprolactinemia",
+       "name": "\u0413\u0438\u043f\u0435\u0440\u043f\u0440\u043e\u043b\u0430\u043a\u0442\u0438\u043d\u0435\u043c\u0438\u044f",
+       "fields": {}
+      },
+      {
+       "id": "diabetes",
+       "name": "\u0421\u0430\u0445\u0430\u0440\u043d\u044b\u0439 \u0434\u0438\u0430\u0431\u0435\u0442",
+       "fields": {}
+      }
+     ]
+    }
+   },
+   "enterorganization": {
+    "datetime": "2016-01-01 01:45 +0300",
+    "object": {
+     "id": "enterorganization",
+     "name": "\u041f\u043e\u0441\u0442\u0443\u043f\u043b\u0435\u043d\u0438\u0435 \u0432 \u043c\u0435\u0434.\u0443\u0447.",
+     "form": "EnterOrganizationGridForm",
+     "renderer": "enterOrganizationRenderer"
+    },
+    "data": {
+     "cardnumber": 2
+    }
+   }
+  }
+ }
+}
+]

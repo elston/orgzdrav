@@ -1,0 +1,7 @@
+Django==1.9
+path.py
+psycopg2
+django-annoying
+boto
+pytz
+

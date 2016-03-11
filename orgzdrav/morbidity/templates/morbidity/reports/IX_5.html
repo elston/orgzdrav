@@ -1,0 +1,124 @@
+{% extends "orgzdrav/blank.html" %}
+
+{% load get %}
+
+{% block title %}
+    {{ caption }}
+{% endblock %}
+
+{% block body %}
+<table class="page-frame">
+    <tr>
+        <td>
+            
+            <div class="header center">
+                <br style="clear:both">
+                <div class="title">{{ organization.fullname }}</div>
+                <div class="title">{{ caption }}</div>
+                <div class="title2">  {{ datetime |date:"d E Yг." }}</div>
+
+            </div>          
+
+            <table width="100%" class="service-list">
+                <tr>
+                    <th rowspan="2">№ стр.</th>
+                    <th rowspan="2">Показатель</th>
+                    <th rowspan="2">Код МКБ-Х</th>                    
+                    {% for item in items|dictsort:"year" %}
+                        <th colspan="3">{{ item.year }}</td>                    
+                    {% endfor %}   
+                </tr>              
+
+                <tr>
+                    {% for item in items|dictsort:"year" %}                    
+                        <th >Абс.ч.</th>
+                        <th >Уд. вес к заболеваниям </th>
+                        <th >на 1000 родов</th>                    
+                    {% endfor %}   
+                </tr>                    
+
+               <tr>                                        <!-- 1 -->
+                    <th rowspan=8>3</th>
+                    <td style="text-align:left;background:#e6e6fa;">Всего поздних гестозов</td>
+                    <td style="text-align:left;background:#e6e6fa;"></td>
+                    {% for item in items|dictsort:"year" %}           
+                        <td style="text-align:center;">{{item|get:'3.1'}}</td>
+                        <td style="text-align:center;"></td>                        
+                        <td style="text-align:center;">{{item|get:'m3.1'}}</td>
+                    {% endfor %}
+                </tr>
+
+                <tr>                                        
+                    <td style="text-align:left;background:#e6e6fa;">Водянка беременных</td>
+                    <td style="text-align:left;background:#e6e6fa;">О12.0</td>
+                    {% for item in items|dictsort:"year" %}           
+                        <td style="text-align:center;">{{item|get:'3.2'}}</td>
+                        <td style="text-align:center;">{{item|get:'u3.2'}}</td>
+                        <td style="text-align:center;">{{item|get:'m3.2'}}</td>
+                    {% endfor %}
+                </tr>
+                <tr>                                        
+                    <td style="text-align:left;background:#e6e6fa;">Гестоз легкой степени тяжести</td>
+                    <td style="text-align:left;background:#e6e6fa;">О13.0</td>
+                    {% for item in items|dictsort:"year" %}           
+                        <td style="text-align:center;">{{item|get:'3.3'}}</td>
+                        <td style="text-align:center;">{{item|get:'u3.3'}}</td>
+                        <td style="text-align:center;">{{item|get:'m3.3'}}</td>
+                    {% endfor %}
+                </tr>
+                <tr>                                        
+                    <td style="text-align:left;background:#e6e6fa;">Гестоз средней степени тяжести</td>
+                    <td style="text-align:left;background:#e6e6fa;">О14.0</td>
+                    {% for item in items|dictsort:"year" %}           
+                        <td style="text-align:center;">{{item|get:'3.4'}}</td>
+                        <td style="text-align:center;">{{item|get:'u3.4'}}</td>
+                        <td style="text-align:center;">{{item|get:'m3.4'}}</td>
+                    {% endfor %}
+                </tr>
+                <tr>                                        
+                    <td style="text-align:left;background:#e6e6fa;">Тяжелый гестоз</td>
+                    <td style="text-align:left;background:#e6e6fa;">О14.1</td>
+                    {% for item in items|dictsort:"year" %}           
+                        <td style="text-align:center;">{{item|get:'3.5'}}</td>
+                        <td style="text-align:center;">{{item|get:'u3.5'}}</td>
+                        <td style="text-align:center;">{{item|get:'m3.5'}}</td>
+                    {% endfor %}
+                </tr>
+                <tr>                                        
+                    <td style="text-align:left;background:#e6e6fa;">Преэклампсия</td>
+                    <td style="text-align:left;background:#e6e6fa;">О14.9</td>
+                    {% for item in items|dictsort:"year" %}           
+                        <td style="text-align:center;">{{item|get:'3.6'}}</td>
+                        <td style="text-align:center;">{{item|get:'u3.6'}}</td>
+                        <td style="text-align:center;">{{item|get:'m3.6'}}</td>
+                    {% endfor %}
+                </tr>
+                <tr>                                        
+                    <td style="text-align:left;background:#e6e6fa;">Эклампсия</td>
+                    <td style="text-align:left;background:#e6e6fa;">О15.0</td>
+                    {% for item in items|dictsort:"year" %}           
+                        <td style="text-align:center;">{{item|get:'3.7'}}</td>
+                        <td style="text-align:center;">{{item|get:'u3.7'}}</td>
+                        <td style="text-align:center;">{{item|get:'m3.7'}}</td>
+                    {% endfor %}
+                </tr>
+                <tr>                                        
+                    <td style="text-align:left;background:#e6e6fa;">Сочетанные гестозы</td>
+                    <td style="text-align:left;background:#e6e6fa;">О11.0</td>
+                    {% for item in items|dictsort:"year" %}           
+                        <td style="text-align:center;">{{item|get:'3.8'}}</td>
+                        <td style="text-align:center;">{{item|get:'u3.8'}}</td>
+                        <td style="text-align:center;">{{item|get:'m3.8'}}</td>
+                    {% endfor %}
+                </tr>
+
+
+
+            </table>
+
+        </td>
+    </tr>
+    
+</table>
+
+{% endblock %}

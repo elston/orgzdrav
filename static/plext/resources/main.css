@@ -1,0 +1,40 @@
+/*********** Messages ***********/
+#message-container { width: 600px; padding: 15px;}
+.messages li { margin: 3px; padding: 5px;}
+.messages .error { background: #f55f49;}
+.messages .warning { background: #f7b048;}
+.messages .success { background: #51ee80;}
+.messages .info { background: #68d7d7;}
+.messages .debug { background: #a29e9d;}
+
+/******** Index **************/
+#container { width: 99.3%; padding: 0.3%;}
+#container .ui-widget-content { margin: 1px; padding: 10px;}
+#container .ui-widget-content .ui-widget-header { margin: -3px -3px 10px; padding: 7px;}
+
+#header { width: 99.3%; padding: 0.3%;}
+
+table.app-table td {
+    padding: 1px 1px 1px 1px; 
+}
+
+/******** notice **************/
+.container-notice
+{ width: 99.3%; padding: 0.3%;}
+
+.container-notice
+.ui-widget-content
+{ margin: 1px; padding: 10px;}
+
+.container-notice
+.ui-widget-content
+.ui-widget-header
+{ margin: -3px -3px 10px; padding: 7px;}
+
+.container-notice-table th {
+    padding: 1px 1px 1px 1px; 
+}
+.container-notice-table td {
+    padding: 1px 1px 1px 1px; 
+    vertical-align:middle;
+}

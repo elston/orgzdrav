@@ -1,0 +1,41 @@
+[
+{
+ "model": "orgzdrav.app",
+ "pk": "acb3e9c0-716b-469b-9e8e-fc5f32c4ba1c",
+ "fields": {
+  "code": 2,
+  "name": "\u0417\u0430\u0431\u043e\u043b\u0435\u0432\u0430\u0435\u043c\u043e\u0441\u0442\u044c",
+  "xurl": "morbidity:index",
+  "descr": "\u0410\u043d\u0430\u043b\u0438\u0437 \u0437\u0430\u0431\u043e\u043b\u0435\u0432\u0430\u0435\u043c\u043e\u0441\u0442\u0438",
+  "users": [
+   1
+  ]
+ }
+},
+{
+ "model": "orgzdrav.app",
+ "pk": "b1d78bf8-5e7d-4efc-aa76-eb40d71be683",
+ "fields": {
+  "code": 1,
+  "name": "\u0421\u0442\u0440\u0443\u043a\u0442\u0443\u0440\u0430",
+  "xurl": "structure:index",
+  "descr": "\u0421\u0442\u0443\u043a\u0442\u0443\u0440\u0430 \u0443\u0447\u0440\u0435\u0436\u0434\u0435\u043d\u0438\u0439",
+  "users": [
+   1
+  ]
+ }
+},
+{
+ "model": "orgzdrav.app",
+ "pk": "ce24c563-ff83-4f4e-8238-2db83ea47619",
+ "fields": {
+  "code": 2,
+  "name": "\u0418\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u0435 \u043f\u0430\u0440\u043e\u043b\u044f",
+  "xurl": "accounts:passchange",
+  "descr": "\u0418\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u0435 \u043f\u0430\u0440\u043e\u043b\u044f",
+  "users": [
+   1
+  ]
+ }
+}
+]

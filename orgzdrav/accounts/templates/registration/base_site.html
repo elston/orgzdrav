@@ -1,0 +1,14 @@
+{% extends 'registration/base.html' %}
+
+{% block title %} 
+    Портал
+{% endblock %}
+
+{% block branding %}
+    <h1 id="site-name">
+        <a href="{% url 'dashboard:index' %}">{{ site_header|default:_('Портал') }}</a>
+    </h1>
+{% endblock %}
+
+{% block nav-global %}
+{% endblock %}

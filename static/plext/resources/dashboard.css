@@ -1,0 +1,14 @@
+body {
+    background-color: #1f2312 !important;                                             
+    background-image: url(images/Early_Blossom_by_Dh0r.jpg) !important;    
+    background-size: 100% auto !important;       
+    background-repeat: no-repeat !important;       
+}
+
+
+.help ul  { 
+    font-size: 14px;       
+    list-style-type: square; /* Маркеры в виде квадрата */
+    list-style-position: outside; /* Маркеры размещаются за пределами текстового блока */
+    color: teal; /* Цвет текста списка */
+}

@@ -1,0 +1,261 @@
+{% extends "orgzdrav/blank.html" %}
+
+{% load get %}
+
+{% block title %}
+    {{ caption }}
+{% endblock %}
+
+{% block body %}
+<table class="page-frame">
+    <tr>
+        <td>
+            
+            <div class="header center">
+                <br style="clear:both">
+                <div class="title">{{ organization.fullname }}</div>
+                <div class="title">{{ caption }}</div>
+                <div class="title2">  {{ datetime |date:"d E Yг." }}</div>
+
+            </div>          
+
+            <table width="100%" class="service-list">
+                <tr>
+                    <th>№ стр.</th>
+                    <th>Показатель</th>
+                    {% for item in items|dictsort:"year" %}
+                        <th>{{ item.year }}</td>                    
+                    {% endfor %}   
+                </tr>              
+
+
+                <tr>                                       <!-- 0 -->
+                    <th></th>
+                    <td style="text-align:left;background:#e6e6fa;">Родов всего</td>
+                    {% for item in items|dictsort:"year" %}           
+                        <td style="text-align:center;">{{item|get:'0'}}</td>
+                    {% endfor %}
+                </tr>
+
+                <tr>                                        <!-- 1 -->
+                    <th rowspan=4>1</th>
+                    <td style="text-align:left;background:#e6e6fa;">Принято  родов (с 28 недель, в стационаре) всего</td>
+                    {% for item in items|dictsort:"year" %}           
+                        <td style="text-align:center;">{{item|get:'1'}}</td>
+                    {% endfor %}
+                </tr>
+                <tr>
+                    <td style="text-align:left;background:#e6e6fa;">Удельный вес</td>
+                    {% for item in items|dictsort:"year" %}           
+                        <td style="text-align:center;">{{item|get:'1.1'}}</td>
+                    {% endfor %}                    
+                </tr>
+                <tr>
+                    <td style="text-align:left;background:#e6e6fa;">Кроме того, поступило родивших вне родильного отделения</td>
+                    {% for item in items|dictsort:"year" %}           
+                        <td style="text-align:center;">{{item|get:'1.2'}}</td>
+                    {% endfor %}                    
+                </tr>
+                <tr>
+                    <td style="text-align:left;background:#e6e6fa;">Удельный вес</td>
+                    {% for item in items|dictsort:"year" %}           
+                        <td style="text-align:center;">{{item|get:'1.3'}}</td>
+                    {% endfor %}                    
+                </tr>
+
+
+                <tr>                                        <!-- 2 -->
+                    <th rowspan=2>2</th>
+                    <td style="text-align:left;background:#e6e6fa;">Из общего числа родов: принято родов у детей до 14 лет</td>
+                    {% for item in items|dictsort:"year" %}           
+                        <td style="text-align:center;">{{item|get:'2.1'}}</td>
+                    {% endfor %}
+                </tr>
+                <tr>
+                    <td style="text-align:left;background:#e6e6fa;">Удельный вес</td>
+                    {% for item in items|dictsort:"year" %}           
+                        <td style="text-align:center;">{{item|get:'2.2'}}</td>
+                    {% endfor %}                    
+                </tr>
+
+                <tr>                                        <!-- 3 -->
+                    <th rowspan=2>3</th>
+                    <td style="text-align:left;background:#e6e6fa;">Из общего числа родов: принято родов у детей до 14 лет</td>
+                    {% for item in items|dictsort:"year" %}           
+                        <td style="text-align:center;">{{item|get:'3.1'}}</td>
+                    {% endfor %}
+                </tr>
+                <tr>
+                    <td style="text-align:left;background:#e6e6fa;">Удельный вес</td>
+                    {% for item in items|dictsort:"year" %}           
+                        <td style="text-align:center;">{{item|get:'3.2'}}</td>
+                    {% endfor %}                    
+                </tr>
+
+                <tr>                                        <!-- 4 -->
+                    <th rowspan=2>4</th>
+                    <td style="text-align:left;background:#e6e6fa;">Из общего числа родов: нормальные (одноплодыне)</td>
+                    {% for item in items|dictsort:"year" %}           
+                        <td style="text-align:center;">{{item|get:'4.1'}}</td>
+                    {% endfor %}
+                </tr>
+                <tr>
+                    <td style="text-align:left;background:#e6e6fa;">Удельный вес</td>
+                    {% for item in items|dictsort:"year" %}           
+                        <td style="text-align:center;">{{item|get:'4.2'}}</td>
+                    {% endfor %}                    
+                </tr>
+
+                <tr>                                        <!-- 5 -->
+                    <th rowspan=5>5</th>
+                    <td style="text-align:left;background:#e6e6fa;">Из общего числа родов: - многоплодные</td>
+                    {% for item in items|dictsort:"year" %}           
+                        <td style="text-align:center;">{{item|get:'5.1'}}</td>
+                    {% endfor %}
+                </tr>
+                <tr>
+                    <td style="text-align:left;background:#e6e6fa;">Удельный вес</td>
+                    {% for item in items|dictsort:"year" %}           
+                        <td style="text-align:center;">{{item|get:'5.2'}}</td>
+                    {% endfor %}                    
+                </tr>
+                <tr>
+                    <td style="text-align:left;background:#e6e6fa;">из них (из многоплодных) - двоен</td>
+                    {% for item in items|dictsort:"year" %}           
+                        <td style="text-align:center;">{{item|get:'5.3'}}</td>
+                    {% endfor %}                    
+                </tr>
+                <tr>
+                    <td style="text-align:left;background:#e6e6fa;">из них (из многоплодных) - троен</td>
+                    {% for item in items|dictsort:"year" %}           
+                        <td style="text-align:center;">{{item|get:'5.4'}}</td>
+                    {% endfor %}
+                </tr>
+                <tr>
+                    <td style="text-align:left;background:#e6e6fa;">из них (из многоплодных) - четыре и более ребенка</td>
+                    {% for item in items|dictsort:"year" %}           
+                        <td style="text-align:center;">{{item|get:'5.5'}}</td>
+                    {% endfor %}
+                </tr>
+
+                <tr>                                        <!-- 6 -->
+                    <th rowspan=7>6</th>
+                    <td style="text-align:left;background:#e6e6fa;">Родилось детей всего</td>
+                    {% for item in items|dictsort:"year" %}           
+                        <td style="text-align:center;">{{item|get:'6.1'}}</td>
+                    {% endfor %}
+                </tr>
+                <tr>
+                    <td style="text-align:left;background:#e6e6fa;">из них:     родилось мёртвыми</td>
+                    {% for item in items|dictsort:"year" %}           
+                        <td style="text-align:center;">{{item|get:'6.2'}}</td>
+                    {% endfor %}
+                </tr>
+                <tr>
+                    <td style="text-align:left;background:#e6e6fa;">из них антенатально</td>
+                    {% for item in items|dictsort:"year" %}           
+                        <td style="text-align:center;">{{item|get:'6.3'}}</td>
+                    {% endfor %}
+                </tr>
+                <tr>
+                    <td style="text-align:left;background:#e6e6fa;">родилось детей живыми</td>
+                    {% for item in items|dictsort:"year" %}           
+                        <td style="text-align:center;">{{item|get:'6.4'}}</td>
+                    {% endfor %}
+                </tr>
+                <tr>
+                    <td style="text-align:left;background:#e6e6fa;">из них:     умерло детей всего</td>
+                    {% for item in items|dictsort:"year" %}           
+                        <td style="text-align:center;">{{item|get:'6.5'}}</td>
+                    {% endfor %}
+                </tr>
+                <tr>
+                    <td style="text-align:left;background:#e6e6fa;">из них:      умерло в первые 168 часов</td>
+                    {% for item in items|dictsort:"year" %}           
+                        <td style="text-align:center;">{{item|get:'6.6'}}</td>
+                    {% endfor %}
+                </tr>
+                <tr>
+                    <td style="text-align:left;background:#e6e6fa;">из них:     в первые 0-24  часа  </td>
+                    {% for item in items|dictsort:"year" %}           
+                        <td style="text-align:center;">{{item|get:'6.7'}}</td>
+                    {% endfor %}
+                </tr>
+
+
+                <tr >                        <!-- 7 -->
+                    <th rowspan=4>7</th>
+                    <td style="text-align:left;background:#e6e6fa;">Принято родов у женщин, не состоявших под наблюдением женской консультации</td>
+                    {% for item in items|dictsort:"year" %}           
+                        <td style="text-align:center;">{{item|get:'7.1'}}</td>
+                    {% endfor %}
+                </tr>
+                <tr>
+                    <td style="text-align:left;background:#e6e6fa;">Удельный вес</td>
+                    {% for item in items|dictsort:"year" %}           
+                        <td style="text-align:center;">{{item|get:'7.2'}}</td>
+                    {% endfor %}
+                </tr>
+
+                <tr>             
+                    <td style="text-align:left;background:#e6e6fa;">Из них у ВИЧ инфицированных женщин</td>
+                    {% for item in items|dictsort:"year" %}           
+                        <td style="text-align:center;">{{item|get:'7.3'}}</td>
+                    {% endfor %}
+                </tr>
+                <tr>
+                    <td style="text-align:left;background:#e6e6fa;">Удельный вес</td>
+                    {% for item in items|dictsort:"year" %}           
+                        <td style="text-align:center;">{{item|get:'7.4'}}</td>
+                    {% endfor %}
+                </tr>
+
+
+                <tr>                                    <!-- 8 -->
+                    <th rowspan=3>8</th>                
+                    <td style="text-align:left;background:#e6e6fa;">Кроме того, закончили беременность в сроки 22-27 недель </td>
+                    {% for item in items|dictsort:"year" %}           
+                        <td style="text-align:center;">{{item|get:'8.1'}}</td>
+                    {% endfor %}
+                </tr>
+                <tr>
+                    <td style="text-align:left;background:#e6e6fa;"> - из них не состояло под наблюдением в женской консультации</td>
+                    {% for item in items|dictsort:"year" %}           
+                        <td style="text-align:center;">{{item|get:'8.2'}}</td>
+                    {% endfor %}
+                </tr>
+                <tr>
+                    <td style="text-align:left;background:#e6e6fa;">Удельный вес</td>
+                    {% for item in items|dictsort:"year" %}           
+                        <td style="text-align:center;">{{item|get:'8.3'}}</td>
+                    {% endfor %}
+                </tr>
+
+
+                <tr>                     <!-- 9 -->
+                    <th>9</th>
+                    <td style="text-align:left;background:#e6e6fa;">Число плодов с врожденными пороками развития, выявленных по УЗИ беременных</td>
+                    {% for item in items|dictsort:"year" %}           
+                        <td style="text-align:center;">{{item|get:'9'}}</td>
+                    {% endfor %}
+                </tr>
+
+
+                <tr>          <!-- 10 -->
+                    <th>10</th>                
+                    <td style="text-align:left;background:#e6e6fa;">Незарегистрированные роды (в стационар по поводу родов не обращалась), ребенок зарегистрирован</td>
+                    {% for item in items|dictsort:"year" %}           
+                        <td style="text-align:center;">{{item|get:'10'}}</td>
+                    {% endfor %}
+                </tr>
+
+
+
+            </table>
+
+        </td>
+    </tr>
+    
+</table>
+
+{% endblock %}

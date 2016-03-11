@@ -1,0 +1,14 @@
+.glyph-add{background-image:url('glyph/add.png');background-repeat: no-repeat; }
+.glyph-remove{background-image:url('glyph/remove.png');background-repeat: no-repeat; }
+.glyph-filter{background-image:url('glyph/filter.png');background-repeat: no-repeat; }
+.glyph-save{background-image:url('glyph/save.png');background-repeat: no-repeat; }
+.glyph-back{background-image:url('glyph/back.png');background-repeat: no-repeat; }
+.glyph-triangle{background-image:url('glyph/triangle.png');background-repeat: no-repeat; }
+.glyph-cogwheel{background-image:url('glyph/cogwheel.png');background-repeat: no-repeat; }
+.glyph-label{background-image:url('glyph/label.png');background-repeat: no-repeat; }
+.glyph-forward{background-image:url('glyph/forward.png');background-repeat: no-repeat; }
+
+
+.glyph-flaggray{background-image:url('glyph/flaggray.png');background-repeat: no-repeat; }
+.glyph-flagred{background-image:url('glyph/flagred.png');background-repeat: no-repeat; }
+.glyph-flagblank{background-image:url('glyph/flagblank.png');background-repeat: no-repeat; }

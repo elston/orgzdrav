@@ -1,0 +1,114 @@
+{% extends "orgzdrav/blank.html" %}
+
+{% load get %}
+
+{% block title %}
+    {{ caption }}
+{% endblock %}
+
+{% block body %}
+<table class="page-frame">
+    <tr>
+        <td>
+            
+            <div class="header center">
+                <br style="clear:both">
+                <div class="title">{{ organization.fullname }}</div>
+                <div class="title">{{ caption }}</div>
+                <div class="title2">  {{ datetime |date:"d E Yг." }}</div>
+
+            </div>          
+
+            <table width="100%" class="service-list">
+                <tr>
+                    <th>Показатель</th>
+                    <th>№ стр.</th>
+                    {% for item in items|dictsort:"year" %}
+                        <th>{{ item.year }}</td>                    
+                    {% endfor %}   
+                </tr>              
+
+                <tr>
+                    <td style="text-align:left;background:#e6e6fa;">Сделано противотуберкулёзных прививок</td>
+                    <th>1</th>
+                    {% for item in items|dictsort:"year" %}           
+                        <td style="text-align:center;">{{item|get:'c_child_vaccinetuberculosis_count'}}</td>
+                    {% endfor %}
+                </tr>
+
+                <tr>
+                    <td style="text-align:left;background:#e6e6fa;">против гепатита В</td>
+                    <th>2</th>
+                    {% for item in items|dictsort:"year" %}           
+                        <td style="text-align:center;">{{item|get:'c_child_vaccinationhepatitisb_count'}}</td>
+                    {% endfor %}
+                </tr>
+                <tr>
+                    <td style="text-align:left;background:#e6e6fa;">из числа родившихся взята проба    для  неонатального скрининга на наследственные заболевания</td>
+                    <th>3</th>
+                    {% for item in items|dictsort:"year" %}           
+                        <td style="text-align:center;">{{item|get:'c_child_heredmetabolscreening_count'}}</td>
+                    {% endfor %}
+                </tr>
+                <tr>
+                    <td style="text-align:left;background:#e6e6fa;">число родившихся,  у которых проведен аудиологический скрининг</td>
+                    <th>4</th>
+                    {% for item in items|dictsort:"year" %}           
+                        <td style="text-align:center;">{{item|get:'c_child_hearingscreening_count'}}</td>
+                    {% endfor %}
+                </tr>
+                <tr>
+                    <td style="text-align:left;background:#e6e6fa;">Переведено родившихся в другие стационары (отделения для выхаживания недоношенных и патологии новорожденных)</td>
+                    <th>1</th>
+                    {% for item in items|dictsort:"year" %}           
+                        <td style="text-align:center;">{{item|get:'c_child_is_retreatment_count'}}</td>
+                    {% endfor %}
+                </tr>
+                <tr>
+                    <td style="text-align:left;background:#e6e6fa;">Число родившихся от ВИЧ-инфицированных матерей </td>
+                    <th>1</th>
+                    {% for item in items|dictsort:"year" %}           
+                        <td style="text-align:center;">{{item|get:'c_child_aidsmother_count'}}</td>
+                    {% endfor %}
+                </tr>
+                <tr>
+                    <td style="text-align:left;background:#e6e6fa;">в том числе родилось живыми </td>
+                    <th>2</th>
+                    {% for item in items|dictsort:"year" %}           
+                        <td style="text-align:center;">{{item|get:'c_child_alivebirth_aidsmother_count'}}</td>
+                    {% endfor %}
+                </tr>
+                <tr>
+                    <td style="text-align:left;background:#e6e6fa;">из них умерло </td>
+                    <th>3</th>
+                    {% for item in items|dictsort:"year" %}           
+                        <td style="text-align:center;">{{item|get:'c_child_died_aidsmother_count'}}</td>
+                    {% endfor %}
+                </tr>
+                <tr>
+                    <td style="text-align:left;background:#e6e6fa;">в том числе в возрасте 0 – 168 часов включительно </td>
+                    <th>4</th>
+                    {% for item in items|dictsort:"year" %}           
+                        <td style="text-align:center;">{{item|get:'c_child_died_168h_aidsmother_count'}}</td>
+                    {% endfor %}
+                </tr>
+                <tr>
+                    <td style="text-align:left;background:#e6e6fa;">в возрасте 7 –  27  дней включительно </td>
+                    <th>5</th>
+                    {% for item in items|dictsort:"year" %}           
+                        <td style="text-align:center;">{{item|get:'c_child_died_7d_27d_aidsmother_count'}}</td>
+                    {% endfor %}
+                </tr>
+
+             
+
+
+
+            </table>
+
+        </td>
+    </tr>
+    
+</table>
+
+{% endblock %}

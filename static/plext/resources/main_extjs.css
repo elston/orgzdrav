@@ -1,0 +1,68 @@
+.silk-menu{
+    background-image:url(images/menu.png) !important;    
+    background-repeat: no-repeat;
+}
+.silk-photo-menu{
+    background-image:url(images/photo.png) !important;    
+    background-repeat: no-repeat;
+}
+.x-form-field-wrap .x-form-ellipsis-trigger{
+    background-image:url(images/ellipsis.gif);
+    cursor:pointer;
+}
+.x-order-combo-list{
+    width: 520px;
+    font: 11px tahoma,arial,helvetica,sans-serif;
+}
+.x-order-combo-list th{
+    font-weight: bold;
+}
+.x-order-combo-list td, .x-order-combo-list th{
+    padding: 3px;
+}
+.x-grid3-cell-inner{
+    font-family : "segoe ui",tahoma, arial, sans-serif;
+}
+.x-grid-group-hd div{
+    font-family : "segoe ui",tahoma, arial, sans-serif;
+}
+.x-grid3-hd-inner{
+    font-family : "segoe ui",tahoma, arial, sans-serif;
+    font-size : 12px;
+}
+.x-grid3-body .x-grid3-td-Cost{
+    /* background-color : #f1f2f4;
+    */
+    font-weight:bold;
+}
+.x-grid3-summary-row .x-grid3-td-Cost{
+    background-color : #bbbcbe;
+}
+.total-field{
+    background-color : #bbbcbe;
+    font-weight : bold !important;
+    color : #000;
+    border : solid 1px silver;
+    padding : 3px;
+    margin-right : 1px;
+}
+
+
+
+/* Icon combo styles */
+.ux-lighttitle-combo-input {
+    height: 32px;
+    padding-top: 16px;
+}
+
+.ux-lighttitle-combo-icon {
+
+    width: 18px;
+    height: 14px;
+}
+
+.x-form-field-wrap .ux-lighttitle-combo-icon {
+    top: 3px;
+    left: 5px;
+}
+

@@ -1,0 +1,15 @@
+*.pyc
+*.pid
+*.db
+*.out
+*.log
+*django.log*
+*upload/*
+*storage/*
+*data/*
+*csv/*
+settings_local.py
+env
+*.sublime/*
+*.vagrant/*
+__pycache__

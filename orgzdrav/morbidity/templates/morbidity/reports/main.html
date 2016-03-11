@@ -1,0 +1,147 @@
+{% extends "orgzdrav/blank.html" %}
+
+{% load tupl2name %}
+{% load monthname %}
+{% load fromtempl %}
+
+
+{% block title %}
+    {{ caption }}
+{% endblock %}
+
+{% block body %}
+<table class="page-frame">
+    <tr>
+        <td>
+            
+            <div class="header center">
+                <br style="clear:both">
+                <div class="title">{{ caption }}</div>
+                <div class="title">от {{ datetime |date:"d E Yг." }}</div>                                              
+
+            </div>          
+
+            {% for year in items|dictsort:"xcode" %}
+            <div>&nbsp</div>
+            <div class="title2" style="background:#729fcf">Год: <strong>{{ year.xcode }}</strong></div>
+
+            <div class="title2"><strong>Акушерство</strong></div>
+            <table width="100%" class="service-list">
+                <tr>
+                    <th>Месяц</th>
+                    {% for item in ds_templ_obs %}
+                        <th>{{item|tupl2name}}</th>
+                    {% endfor %}
+                </tr>                    
+
+
+                {% for month in year.month|dictsort:"xcode" %}
+                    <tr>
+                        <td>{{month.month|monthname}}</td>
+                        {% for item_templ in ds_templ_obs %}
+                            <td style="text-align:center;">{{item_templ|fromtempl:month.diagnoses}}</td>
+                        {% endfor %}
+                    </tr>
+                {% endfor %}
+
+            </table>
+
+            <!-- --------- -->
+
+            <div class="title2"><strong>Гинекология</strong></div>
+            <table width="80%" class="service-list">
+                <tr>
+                    <th>Месяц</th>
+                    {% for item in ds_templ_gyn %}
+                        <th>{{item|tupl2name}}</th>
+                    {% endfor %}
+                </tr>                    
+
+
+                {% for month in year.month|dictsort:"xcode" %}
+                    <tr>
+                        <td>{{month.month|monthname}}</td>
+                        {% for item_templ in ds_templ_gyn %}
+                            <td style="text-align:center;">{{item_templ|fromtempl:month.diagnoses}}</td>
+                        {% endfor %}
+                    </tr>
+                {% endfor %}                
+
+            </table>
+
+            <!-- --------- -->
+
+            <div class="title2"><strong>Гематология</strong></div>
+            <table width="50%" class="service-list">
+                <tr>
+                    <th>Месяц</th>
+                    {% for item in ds_templ_gem %}
+                        <th>{{item|tupl2name}}</th>
+                    {% endfor %}
+                </tr>                    
+
+
+                {% for month in year.month|dictsort:"xcode" %}
+                    <tr>
+                        <td>{{month.month|monthname}}</td>
+                        {% for item_templ in ds_templ_gem %}
+                            <td style="text-align:center;">{{item_templ|fromtempl:month.diagnoses}}</td>
+                        {% endfor %}
+                    </tr>
+                {% endfor %}                
+
+            </table>
+
+            <!-- --------- -->
+
+            <div class="title2"><strong>Сердечно-легочные</strong></div>
+            <table width="40%" class="service-list">
+                <tr>
+                    <th>Месяц</th>
+                    {% for item in ds_templ_corpulm %}
+                        <th>{{item|tupl2name}}</th>
+                    {% endfor %}
+                </tr>                    
+
+
+                {% for month in year.month|dictsort:"xcode" %}
+                    <tr>
+                        <td>{{month.month|monthname}}</td>
+                        {% for item_templ in ds_templ_corpulm %}
+                            <td style="text-align:center;">{{item_templ|fromtempl:month.diagnoses}}</td>
+                        {% endfor %}
+                    </tr>
+                {% endfor %}                
+
+            </table>
+
+            <!-- --------- -->
+
+            <div class="title2"><strong>Эндокринные</strong></div>
+            <table width="40%" class="service-list">
+                <tr>
+                    <th>Месяц</th>
+                    {% for item in ds_templ_endocrin %}
+                        <th>{{item|tupl2name}}</th>
+                    {% endfor %}
+                </tr>                    
+
+
+                {% for month in year.month|dictsort:"xcode" %}
+                    <tr>
+                        <td>{{month.month|monthname}}</td>
+                        {% for item_templ in ds_templ_endocrin %}
+                            <td style="text-align:center;">{{item_templ|fromtempl:month.diagnoses}}</td>
+                        {% endfor %}
+                    </tr>
+                {% endfor %}                
+
+            </table>
+
+            {% endfor %}
+        </td>
+    </tr>
+    
+</table>
+
+{% endblock %}
