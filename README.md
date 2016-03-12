@@ -28,6 +28,6 @@ SmartHospital (SmartHl ERP system)
 Отчет
 ![12](https://github.com/elston/orgzdrav/blob/master/screen/12.png "12")
 
-![13](https://github.com/elston/orgzdrav/blob/master/screen/12.png "13")
+![13](https://github.com/elston/orgzdrav/blob/master/screen/13.png "13")
 
-![14](https://github.com/elston/orgzdrav/blob/master/screen/12.png "14")
+![14](https://github.com/elston/orgzdrav/blob/master/screen/14.png "14")
