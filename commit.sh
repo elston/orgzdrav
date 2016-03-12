@@ -1,6 +1,8 @@
 #!/bin/bash
-text="commits"
+text="next commit"
+# ...
 if [[ $1 != '' ]]; then
     text=$1
 fi
-hg addremove && hg commit -m "$text" && hg push
+# ...
+git add -A && git commit -a -m "$text" && git push -u origin master
