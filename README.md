@@ -1,5 +1,8 @@
 SmartHospital (SmartHl ERP system)
 ====================================
+javascript extjs-3.5 python-3.4 django-1.9 postgresql-9.4 nosql vagrant
+
+
 Логин
 ![01](https://github.com/elston/orgzdrav/blob/master/screen/01.png "01")
 Главная панель с приложениями
